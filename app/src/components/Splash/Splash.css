@@ -1,0 +1,34 @@
+.SplashComponent {
+    background-image: url("../../components/Splash/faviconGreensquare.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.firstColumn {
+    height: 298px;
+    width: 227px;
+    margin-left: 257px;
+    margin-top: 392px;
+    background-color: seagreen;
+    position: absolute;
+}
+
+.secondColumn {
+    height: 600px;
+    width: 227px;
+    margin-left: 604px;
+    margin-top: 93px;
+    background-color: seagreen;
+    position: absolute;
+}
+
+.thirdColumn {
+    height: 692px;
+    width: 227px;
+    margin-left: 949px;
+    margin-top: 0px;
+    background-color: seagreen;
+    position: absolute;
+}

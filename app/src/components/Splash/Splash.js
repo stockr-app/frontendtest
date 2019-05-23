@@ -2,20 +2,28 @@ import React, { Component } from 'react'
 import './Splash.css'
 
 export default class Splash extends Component {
+
     render() {
+
+       const clickChange = () =>  {
+                document.getElementById("Column1").style.display = "none";
+                document.getElementById("Column2").style.display = "none";
+                document.getElementById("Column3").style.display = "none";
+        }
+
         return (
             <div className="SplashComponent">
-                <div className="firstColumn">
+                <section className="firstColumn" id="Column1">
+                </section>
 
-                </div>
+                <section className="secondColumn" id="Column2">
 
-                <div className="secondColumn">
+                </section>
 
-                </div>
+                <section className="thirdColumn" id="Column3">
+                    <button onClick={clickChange}>Register</button>
 
-                <div className="thirdColumn">
-
-                </div>
+                </section>
             </div>
         )
     }

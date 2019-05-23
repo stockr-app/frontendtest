@@ -7,12 +7,13 @@
 }
 
 .firstColumn {
-    height: 298px;
-    width: 227px;
+    height: 299px;
+    width: 228px;
     margin-left: 257px;
     margin-top: 392px;
     background-color: seagreen;
     position: absolute;
+    transition: all .3s ease-out;
 }
 
 .secondColumn {
@@ -29,6 +30,9 @@
     width: 227px;
     margin-left: 949px;
     margin-top: 0px;
-    background-color: seagreen;
+    background-color: #2e8b57;
     position: absolute;
 }
+
+
+

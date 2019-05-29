@@ -4,5 +4,8 @@
   "main": "index.js",
   "repository": "https://github.com/stockr-app/frontendtest.git",
   "author": "Andrew <andrewryanogle@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "reactstrap": "^8.0.0"
+  }
 }

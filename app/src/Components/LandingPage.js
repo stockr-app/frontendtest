@@ -39,26 +39,27 @@ class LandingPage extends Component {
           className="btn btn-secondary btn-lg btn-block my-5"
           onClick={this.toggleModal.bind(this)}
         >
-          Sign up
+          Sign In
         </button>
 
         <Modal isOpen={this.state.modalIsOpen}>
-          <ModalHeader toggle={this.toggleModal.bind(this)}>Title</ModalHeader>
+          <ModalHeader toggle={this.toggleModal.bind(this)}>Sign In</ModalHeader>
 
           <ModalBody>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum."
+            <div className="form-group">
+              <label for="usr">Username:</label>
+              <input type="text" className="form-control" id="usr" />
+            </div>
+            <div>
+              <label for="pwd">Password:</label>
+              <input type="password" className="form-control" id="pwd" />
+            </div>
           </ModalBody>
 
           <ModalFooter>
-            <button color="primary">Sign Up</button>
+            <button className="btn btn-primary">Sign In</button>
 
-            <button color="secondary" onClick={this.toggleModal.bind(this)}>
+            <button className="btn btn-secondary" onClick={this.toggleModal.bind(this)}>
               Cancel
             </button>
           </ModalFooter>

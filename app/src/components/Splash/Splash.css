@@ -1,37 +1,89 @@
-.SplashComponent {
-    background-image: url("../../components/Splash/faviconGreensquare.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100vh;
+.splashBigLogo {
+    margin-top: 10px;
+    width: 82%; 
+    margin-right: 50px;
+}
+
+.splashContent {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.splashForm {
+    border: 1px solid lightgrey;
+    border-radius: 25px;
+    color: #152911;
+    height: 625px;
+    width: 250px;
+    margin-right: 25px;
+    margin-top: 10px;
+    background-color: lightgrey;
+
+}
+
+.splashLogoDiv {
+    margin-left: 50px;
+}
+
+.splashLogo {
+    height: 10%;
+    width: 10%;
+    margin-left: 5px;
+    padding: 15px;
+
+}
+
+.splashNav {
+    display: flex;
+    flex-direction: row;
+    background-color: lightgrey;
     width: 100vw;
+    position: relative;
+    padding-left: 30px;
+}
+
+.splashText {
+    width: 25%;
+    border: 1px solid #152911;
+    border-radius: 25px;
+    margin-top: 5px;
+    margin-left: 25px;
+    color: white;
+    background-color: #152911;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .firstColumn {
-    height: 299px;
-    width: 228px;
-    margin-left: 257px;
-    margin-top: 392px;
-    background-color: seagreen;
+    height: 230px;
+    width: 173px;
+    margin-left: 98px;
+    margin-top: -230px;
+    background-color: #152911;
     position: absolute;
     transition: all .3s ease-out;
+
 }
 
 .secondColumn {
-    height: 600px;
-    width: 227px;
-    margin-left: 604px;
-    margin-top: 93px;
-    background-color: seagreen;
+    height: 448px;
+    width: 180px;
+    margin-left: 345px;
+    margin-top: -448px;
+    background-color: #152911;
+    transition: all .3s ease-out;
     position: absolute;
 }
 
 .thirdColumn {
-    height: 692px;
-    width: 227px;
-    margin-left: 949px;
-    margin-top: 0px;
-    background-color: #2e8b57;
+    height: 640px;
+    width: 181px;
+    margin-left: 591px;
+    margin-top: -642px;
+    background-color: #152911;
     position: absolute;
+    transition: all .3s ease-out;
 }
 
 

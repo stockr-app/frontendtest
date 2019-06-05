@@ -2,17 +2,32 @@ import React, { Component } from "react";
 import FacebookLogin from "react-facebook-login";
 import GoogleLogin from 'react-google-login';
 import './Splash.css';
-
+import axios from 'axios';
 
 export default class Facebook extends Component {
 
   state = {
     isLoggedIn: false,
-    Facebookname: "",
-    Facebookemail: "",
-    Googlename: "",
-    Googleemail: "",
+    fbUser: {
+      Facebookname: "",
+      Facebookemail: "",
+    },
+    gUser: {
+      Googlename: "",
+      Googleemail: "",
+    }
+  
   };
+
+  componentWillMount() {
+    console.log('State object', this.state);
+
+    axios.post('https://stockrbackend.herokuapp.com/', this.state.newCustomerData).then((response) => {
+      let { user } = this.state;
+      user.push(response.data);
+      //console.log(response.data)
+    });
+  }
 
   onSuccess(resp) {
       console.log(resp)
@@ -31,6 +46,9 @@ export default class Facebook extends Component {
   };
 
   facebookClicked = () => console.log("Facebook Auth Fired");
+  googleClicked = () => console.log("Google Auth fired");
+
+ 
 
   render() {
     let fbContent;
@@ -44,14 +62,15 @@ export default class Facebook extends Component {
 
     if (this.state.isLoggedIn) {
         fbContent = (
-            <FacebookLogin
-     appId="274333116817522"
-     autoLoad={false}
-     fields="name,email"
-     onClick={this.facebookClicked}
-     callback={this.responseFacebook}
-     textButton='Sign up with Facebook'
-     />
+          <FacebookLogin
+            appId="274333116817522"
+            autoLoad={false}
+            fields="name,email"
+            onClick={this.facebookClicked}
+            callback={this.responseFacebook}
+            cssClass="btnFacebook"
+            textButton='Sign up with Facebook'
+            />
     )
 
     googleContent = (
@@ -59,8 +78,11 @@ export default class Facebook extends Component {
             clientId="432634226022-37hop4nb2mal0810tile8vmlkf8f1rs3.apps.googleusercontent.com"
             buttonText="Sign up with Google"
             autoLoad={false}
+            icon={false}
+            onClick={this.googleClicked}
             onSuccess={resp => this.onSuccess(resp)}
             cookiePolicy={'single_host_origin'}
+            className="btnGoogle"
             />
       )
 
@@ -73,6 +95,7 @@ export default class Facebook extends Component {
           fields="name,email"
           onClick={this.facebookClicked}
           callback={this.responseFacebook}
+          cssClass="btnFacebook"
           textButton='Sign up with Facebook'
           />
       );
@@ -82,8 +105,12 @@ export default class Facebook extends Component {
             clientId="432634226022-37hop4nb2mal0810tile8vmlkf8f1rs3.apps.googleusercontent.com"
             buttonText="Sign up with Google"
             autoLoad={false}
+            icon={false}
+            onClick={this.googleClicked}
             onSuccess={resp => this.onSuccess(resp)}
             cookiePolicy={'single_host_origin'}
+            className="btnGoogle"
+            
             />
       );
     }
@@ -140,12 +167,20 @@ export default class Facebook extends Component {
                     <input type="text" defaultValue={this.state.Facebookemail || this.state.Googleemail} ></input>
                     <h3>Phone Number</h3>
                     <input placeholder="phone number"></input>
+                    <br></br>
+                    <br></br>
                     <div>
                         <div>{fbContent}</div>
-                        <div>{googleContent}</div>
+                    </div>
+                    <br></br>
+                    <div>
+                      <div>{googleContent}</div>
                     </div>
                 </form>
+                <br></br>
                 <button onClick={clickChange}>Register</button>
+                <br></br>
+                <img id="registerLogo" alt="StockrLogo" src={require("../../components/Splash/stockrlogo.png")}/>
             </div>
         </div>
     </div>

@@ -66,6 +66,10 @@
 
 }
 
+#registerLogo {
+    margin-top: 50px;
+    width: 60%;
+}
 .secondColumn {
     height: 448px;
     width: 180px;
@@ -86,5 +90,28 @@
     transition: all .3s ease-out;
 }
 
+.btnFacebook { 
+    width: 165px;
+    height:35px;  
+    border-radius: 4px;
+    background: #3b5998;
+    color:white;
+    border:0px transparent;  
+    text-align: center;
+    margin:5px;
+    display: inline-block;
+    cursor: pointer;
+  }
 
+  .btnGoogle { 
+    width: 165px;
+    height:35px;  
+    border-radius: 10px;
+    background: #db3236;
+    color:white;
+    border:0px transparent;  
+    text-align: center;
+    margin:5px;
+    display: inline-block;
+  }
 

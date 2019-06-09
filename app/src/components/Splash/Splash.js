@@ -1,90 +1,70 @@
 import React, { Component } from "react";
 import FacebookLogin from "react-facebook-login";
 import GoogleLogin from 'react-google-login';
-import './Splash.css';
 import axios from 'axios';
+import './Splash.css';
 
 export default class Facebook extends Component {
 
   state = {
-    isLoggedIn: false,
-    fbUser: {
-      Facebookname: "",
-      Facebookemail: "",
-    },
-    gUser: {
-      Googlename: "",
-      Googleemail: "",
+      name: "",
+      email: "",
+      phoneNumber: "",
+      premium: ""
     }
-  
-  };
-
-  componentWillMount() {
-    console.log('State object', this.state);
-
-    axios.post('https://stockrbackend.herokuapp.com/', this.state.newCustomerData).then((response) => {
-      let { user } = this.state;
-      user.push(response.data);
-      //console.log(response.data)
-    });
-  }
 
   onSuccess(resp) {
-      console.log(resp)
       this.setState({
-        Googlename: resp.profileObj.name,
-        Googleemail: resp.profileObj.email
+        name: resp.profileObj.name,
+        email: resp.profileObj.email
       })
   }
 
   responseFacebook = response => {
     this.setState({
-      isLoggedIn: true,
-      Facebookname: response.name,
-      Facebookemail: response.email,
+      name: response.name,
+      email: response.email,
     });
   };
 
-  facebookClicked = () => console.log("Facebook Auth Fired");
-  googleClicked = () => console.log("Google Auth fired");
+  FakeRegister = () => {
+    console.log(this.state)
+  }
 
- 
+  addUser = () => {
+    axios.post('https://stockrbackend.herokuapp.com/users', this.state).then((response) => {
+    console.log(response)
+    });
+    document.getElementById("overlayLogo").style.display = "none";
+  };
 
   render() {
     let fbContent;
     let googleContent;
 
-    const clickChange = () =>  {
-        document.getElementById("Column1").style.display = "none";
-        document.getElementById("Column2").style.display = "none";
-        document.getElementById("Column3").style.display = "none";
-    }
-
     if (this.state.isLoggedIn) {
-        fbContent = (
-          <FacebookLogin
-            appId="274333116817522"
-            autoLoad={false}
-            fields="name,email"
-            onClick={this.facebookClicked}
-            callback={this.responseFacebook}
-            cssClass="btnFacebook"
-            textButton='Sign up with Facebook'
-            />
-    )
 
-    googleContent = (
-        <GoogleLogin
-            clientId="432634226022-37hop4nb2mal0810tile8vmlkf8f1rs3.apps.googleusercontent.com"
-            buttonText="Sign up with Google"
-            autoLoad={false}
-            icon={false}
-            onClick={this.googleClicked}
-            onSuccess={resp => this.onSuccess(resp)}
-            cookiePolicy={'single_host_origin'}
-            className="btnGoogle"
-            />
-      )
+        // fbContent = (
+        //   <FacebookLogin
+        //     appId="274333116817522"
+        //     autoLoad={false}
+        //     fields="name,email"
+        //     onClick={this.facebookClicked}
+        //     callback={this.responseFacebook}
+        //     cssClass="btnFacebook"
+        //     textButton='Sign up with Facebook'
+        //     />)
+        // googleContent = (
+        //   <GoogleLogin
+        //       clientId="432634226022-37hop4nb2mal0810tile8vmlkf8f1rs3.apps.googleusercontent.com"
+        //       buttonText="Sign up with Google"
+        //       autoLoad={false}
+        //       icon={false}
+        //       onClick={this.googleClicked}
+        //       onSuccess={resp => this.onSuccess(resp)}
+        //       cookiePolicy={'single_host_origin'}
+        //       className="btnGoogle"
+        //       />)
 
     } else {
         
@@ -147,26 +127,25 @@ export default class Facebook extends Component {
                 sit amet blandit odio sagittis in. 
                 </p>
             </div>
-        
 
-        <div>
+          <div className="logoParent">
             <div className="splashLogoDiv">
-                    <img className="splashBigLogo" alt="StockrLogo" src={require("../../components/Splash/faviconGreensquare.png")} />
-                </div>
-                    <section className="firstColumn" id="Column1"></section>
-                    <section className="secondColumn" id="Column2"></section>
-                    <section className="thirdColumn" id="Column3"></section>
+                    <img className="splashBigLogo" alt="StockrLogo" src={require("../../components/Splash/StockrLogoNoBG.png")} />
             </div>
 
+            <div className="splashLogoDiv2">
+                    <img className="splashBigLogo2" id="overlayLogo" alt="StockrLogo" src={require("../../components/Splash/Stockrlogonostripenobg.png")} />
+            </div>
+          </div>
             <div className="splashForm">
                 <form>
                     <h1>Sign Up</h1>
                     <h3>Name</h3>
-                    <input type="text" defaultValue={this.state.Facebookname || this.state.Googlename}></input>
+                    <input type="text" defaultValue={this.state.name || this.state.name}></input>
                     <h3>Email</h3>
-                    <input type="text" defaultValue={this.state.Facebookemail || this.state.Googleemail} ></input>
+                    <input type="text" defaultValue={this.state.email || this.state.email} ></input>
                     <h3>Phone Number</h3>
-                    <input placeholder="phone number"></input>
+                    <input type="text" name="phoneNumber" placeholder="phone number"></input>
                     <br></br>
                     <br></br>
                     <div>
@@ -178,8 +157,9 @@ export default class Facebook extends Component {
                     </div>
                 </form>
                 <br></br>
-                <button onClick={clickChange}>Register</button>
+                <button onClick={this.FakeRegister}>Register</button>
                 <br></br>
+                <p>Learn about <a href="xxx">Stockr Premium</a></p>
                 <img id="registerLogo" alt="StockrLogo" src={require("../../components/Splash/stockrlogo.png")}/>
             </div>
         </div>

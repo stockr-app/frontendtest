@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import './Footer.css';
 
 export default class Footer extends Component {
     render() {
         return (
-            <div>
-                Hello World!
+            <div className="footer">
+                Stockr App - Lambda School 2019
             </div>
         )
     }

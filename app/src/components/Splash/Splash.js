@@ -3,6 +3,7 @@ import FacebookLogin from "react-facebook-login";
 import GoogleLogin from 'react-google-login';
 import axios from 'axios';
 import './Splash.css';
+import Footer from '../Footer/Footer';
 
 export default class Facebook extends Component {
 
@@ -163,6 +164,7 @@ export default class Facebook extends Component {
                 <img id="registerLogo" alt="StockrLogo" src={require("../../components/Splash/stockrlogo.png")}/>
             </div>
         </div>
+        <Footer />
     </div>
     )}
 }

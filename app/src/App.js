@@ -1,24 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import './App.css';
+
+//components
+import Splash from './components/Splash/Splash';
+import Landing from './components/Landing/Landing';
+import Dashboard from './components/Dashboard/Dashboard';
+import KeyIndicators from './components/KeyIndicators/KeyIndicators';
+import Targets from './components/Targets/Targets';
+import Billing from './components/Billing/Billing';
+import AccountSettings from './components/AccountSettings/AccountSettings';
+import Reports from './components/Reports/Reports';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-         This is an init commit.
-        </a>
-      </header>
+      <Router>
+      <div>
+        <Route path="/" exact component={Splash} />
+        <Route path="/login" exact component={Landing} />
+        <Route path="/home" exact component={Dashboard} />
+        <Route path="/reports" exact component={Reports} />
+        <Route path="/targets" exact component={Targets} />
+        <Route path="/keyindicators" exact component={KeyIndicators} />
+        <Route path="/billing" exact component={Billing} />
+        <Route path="/settings" exact component={AccountSettings} />
+      </div>
+    </Router>
     </div>
   );
 }

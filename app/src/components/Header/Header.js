@@ -4,9 +4,9 @@ export default class Header extends Component {
     render() {
         return (
             <div>
-                <nav className="splashNav">
+                <span className="splashNav">
                     <img className="splashLogo" alt="StockrLogo" src={require("../../components/Header/stockrlogo.png")}/>
-                </nav>
+                </span>
             </div>
         )
     }

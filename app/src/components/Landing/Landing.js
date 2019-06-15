@@ -17,6 +17,7 @@ import finance3 from "../Landing/finance3.jpg";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from '../Header/Header'
+import Footer from '../Footer/Footer';
 // import NewsCard from "./Card.js";
 
 
@@ -124,6 +125,7 @@ class LandingPage extends Component {
     return (
       <div>
         <Header />
+        <Footer />
       </div>
       // <div className="container mw-100">
        //  <div>

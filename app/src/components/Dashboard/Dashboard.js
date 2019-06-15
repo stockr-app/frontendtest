@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
 
 
 export default class Dashboard extends Component {
@@ -8,6 +9,7 @@ export default class Dashboard extends Component {
             <div>
                 <Header />
                 <h1>Dashboard</h1>
+                <Footer />
             </div>
         )
     }

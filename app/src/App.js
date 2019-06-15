@@ -11,7 +11,7 @@ import Targets from './components/Targets/Targets';
 import Billing from './components/Billing/Billing';
 import AccountSettings from './components/AccountSettings/AccountSettings';
 import Reports from './components/Reports/Reports';
-
+import NavBar from './components/NavBar/NavBar.js';
 
 function App() {
   return (
@@ -19,13 +19,14 @@ function App() {
       <Router>
       <div>
         <Route path="/" exact component={Splash} />
+        <Route path="/app" component={NavBar} />
         <Route path="/login" exact component={Landing} />
-        <Route path="/home" exact component={Dashboard} />
-        <Route path="/reports" exact component={Reports} />
-        <Route path="/targets" exact component={Targets} />
-        <Route path="/keyindicators" exact component={KeyIndicators} />
-        <Route path="/billing" exact component={Billing} />
-        <Route path="/settings" exact component={AccountSettings} />
+        <Route path="/app/home" exact component={Dashboard} />
+        <Route path="/app/reports" exact component={Reports} />
+        <Route path="/app/targets" exact component={Targets} />
+        <Route path="/app/keyindicators" exact component={KeyIndicators} />
+        <Route path="/app/billing" exact component={Billing} />
+        <Route path="/app/settings" exact component={AccountSettings} />
       </div>
     </Router>
     </div>

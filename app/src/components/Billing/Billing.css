@@ -1,0 +1,22 @@
+.uiCheckbox {
+    display: flex;
+    flex-direction: column;
+}
+/* const Container = styled.section`
+margin-left: 50px;
+`;
+
+const Wrapper = styled.section`
+border: 1px solid black;
+width: 250px;
+text-align: center;
+padding: 25px;
+margin-bottom 25px;
+`;
+
+const Button = styled.button`
+margin-top: 25px;
+height: 100px;
+width: 250px;
+font-size: 35px;
+`; */

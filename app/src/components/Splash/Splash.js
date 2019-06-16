@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import FacebookLogin from "react-facebook-login";
 import GoogleLogin from 'react-google-login';
+import {Modal, Button} from 'react-bootstrap';
+import Header from '../Header/Header'
 import axios from 'axios';
 import './Splash.css';
 
@@ -37,6 +39,26 @@ export default class Facebook extends Component {
     });
     document.getElementById("overlayLogo").style.display = "none";
   };
+
+  constructor(props, context) {
+    super(props, context);
+
+    this.handleShow = this.handleShow.bind(this);
+    this.handleClose = this.handleClose.bind(this);
+
+    this.state = {
+      show: false,
+    };
+  }
+
+  handleClose() {
+    this.setState({ show: false });
+  }
+
+  handleShow() {
+    this.setState({ show: true });
+  }
+
 
   render() {
     let fbContent;
@@ -96,7 +118,44 @@ export default class Facebook extends Component {
     }
 
     return (
-    <div>
+
+<div>
+        <Modal show={this.state.show} onHide={this.handleClose}>
+          <Modal.Header closeButton>
+            <Modal.Title>Get more with Stockr Premium!</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Ut gravida, erat at semper semper, elit dui accumsan purus, 
+                nec tristique neque est ac odio. Proin sodales, orci non 
+                condimentum aliquam, erat lacus sollicitudin arcu, vel auctor 
+                ex justo sit amet neque. Etiam at cursus lacus, vel laoreet 
+                leo. Aenean efficitur nulla in ante vulputate, et pretium ex 
+                maximus. Praesent condimentum metus id cursus interdum. In 
+                hac habitasse platea dictumst. Curabitur turpis neque, 
+                cursus feugiat auctor sit amet, faucibus convallis libero. 
+                Pellentesque eu condimentum ipsum, a laoreet lacus. Praesent 
+                consectetur tempor lorem et iaculis. Cras porta fringilla 
+                neque, eu molestie est viverra eu. 
+                </p>
+                <div className="subscriptionBox">
+                        <span className="subscriptionBoxes">
+                        <input className="subscriptionCheckbox" type="checkbox" name="Monthly"/>
+                        <h4>$9.99 Monthly</h4>
+                        </span>
+                        <span className="subscriptionBoxes">
+                        <input className="subscriptionCheckbox" type="checkbox" name="Yearly"/>
+                        <h4>$99.99 Yearly</h4>
+                        </span>
+                   </div>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={this.handleClose}>
+              Close
+            </Button>
+          </Modal.Footer>
+        </Modal>
         <nav className="splashNav">
             <img className="splashLogo" alt="StockrLogo" src={require("../../components/Splash/stockrlogo.png")}/>
         </nav>
@@ -157,9 +216,12 @@ export default class Facebook extends Component {
                     </div>
                 </form>
                 <br></br>
-                <button onClick={this.FakeRegister}>Register</button>
+                <p>Learn more about <a href="#" onClick={this.handleShow}>Stockr Premium</a></p>
+                <div className="splashPremium">
+                <input id="checkbox" type="checkbox" checked></input><p>Go Premium!</p>
+                </div>
                 <br></br>
-                <p>Learn about <a href="xxx">Stockr Premium</a></p>
+                <Button className="formButton" onClick={this.FakeRegister}>Register</Button>
                 <img id="registerLogo" alt="StockrLogo" src={require("../../components/Splash/stockrlogo.png")}/>
             </div>
         </div>

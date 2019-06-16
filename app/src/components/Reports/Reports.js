@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from '../Header/Header';
+import Ticker from '../Ticker/Ticker';
 
 
 export default class q extends Component {
@@ -7,6 +8,7 @@ export default class q extends Component {
         return (
             <div>
                 <Header />
+                <Ticker />
                 <h1>Reports</h1>
             </div>
         )

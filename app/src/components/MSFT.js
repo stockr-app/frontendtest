@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import StockCard from "./StockCard";
-import Title from './Title'
+
 
 class StockCardView extends Component {
   state = { 
@@ -13,7 +12,7 @@ class StockCardView extends Component {
 
     const alpha = require('alphavantage')({ key: 'ZPD5IOU7QAZSLWEA' });
  
-    alpha.data.daily(`GOOGL`).then(res => {
+    alpha.data.daily(`MSFT`).then(res => {
 
 
       this.setState({meta : [res['Meta Data']]})
@@ -21,11 +20,9 @@ class StockCardView extends Component {
 
 
 
-      const datas = (this.state.data[0])
+      const datas = (this.state.data[0]['2019-04-15'])
 
       this.setState({daily : [datas]})
-
-      Object.entries(this.state.daily).map()
     });
 
   }
@@ -39,22 +36,22 @@ class StockCardView extends Component {
 
           {this.state.meta.map(p =>{
             return(
-              <Title 
-                symbol = {p["2. Symbol"]}
-              />
+      
+                <h2>{p["2. Symbol"]}</h2>
+            
             )
           })}
 
 
-           {Object.entries(this.state.daily).map(p => {
+           {this.state.daily.map(p => {
            return (
-             <StockCard
-               key = {p["2. high" * "5. volume"]}
-               open = {p["1. open"]}
-               high = {p["2. high"]}
-               low = {p["3. low"]}
-               close = {p["2. high"]}
-             />
+             <div>
+               <h4>key: {p["2. high" * "5. volume"]}</h4>
+               <h4>open: {p["1. open"]}</h4>
+               <h4>high: {p["2. high"]}</h4>
+               <h4>low: {p["3. low"]}</h4>
+               <h4>close: {p["2. high"]}</h4>
+             </div>
             )
             })}  
 

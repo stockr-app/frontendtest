@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import StockCardView from './components/StockCardView';
+import StockCardView from './components/MSFT';
 
 function App() {
   return (

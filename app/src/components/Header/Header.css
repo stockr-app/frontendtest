@@ -1,0 +1,20 @@
+i {
+    padding-left: 15px;
+    color: white;
+}
+.socialBar {
+    margin-top: 15px;
+    margin-right: 25px;
+}
+.splashNav {
+    display: flex;
+    flex-direction: row;
+    background-color: lightgrey;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    padding-left: 30px;
+    margin: 0 auto;
+}
+
+

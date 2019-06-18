@@ -1,0 +1,134 @@
+a {
+    color: #152911;
+}
+
+#checkbox {
+    margin-top: 7px;
+}
+
+.logoParent {
+    position: relative;
+    margin-left: 20px;
+    top: 0;
+    left: 0;
+    
+}
+
+
+.splashBigLogo {
+    top: 0;
+    left: 0;    
+    width: 120%;
+    margin-left: 40px;
+    margin-top: 25px;
+    position: relative;
+    
+}
+
+.splashBigLogo2 {
+    top: 0;
+    left: 0; 
+    width: 110%;
+    margin-left: 89px;
+    margin-top: 20px;
+    position: absolute;
+}
+
+.splashContent {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.splashForm {
+    border: 1px solid lightgrey;
+    border-radius: 25px;
+    color: #152911;
+    height: 630px;
+    width: 290px;
+    margin-left: 250px;
+    margin-right: 25px;
+    margin-top: 20px;
+    background-color: lightgrey;
+
+}
+
+.splashLogoDiv {
+    margin-left: 50px;
+}
+
+.splashLogoDiv2 {
+    margin-left: 50px;
+}
+
+.splashLogo {
+    height: 10%;
+    width: 10%;
+    margin-left: 5px;
+    padding: 15px;
+
+}
+
+.splashNav {
+    display: flex;
+    flex-direction: row;
+    background-color: lightgrey;
+    width: 100%;
+    position: relative;
+    padding-left: 30px;
+    margin: 0 auto;
+}
+
+.splashPremium {
+    display: flex;
+    flex-direction: row;
+    margin-left: 75px;
+}
+
+.splashText {
+    width: 25%;
+    height: 630px;
+    border: 1px solid #152911;
+    border-radius: 25px;
+    margin-top: 20px;
+    margin-left: 25px;
+    color: white;
+    background-color: #152911;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#registerLogo {
+    margin-top: 25px;
+    width: 60%;
+}
+
+.formButton {
+    width: 70%;
+}
+
+.btnFacebook { 
+    width: 180px;
+    height:35px;  
+    border-radius: 4px;
+    background: #3b5998;
+    color:white;
+    border:0px transparent;  
+    text-align: center;
+    margin: 0 auto;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .btnGoogle { 
+    width: 180px;
+    height:35px;  
+    border-radius: 10px;
+    background: #db3236;
+    color:white;
+    border:0px transparent;  
+    text-align: center;
+    margin:5px;
+    display: inline-block;
+  }
+ 

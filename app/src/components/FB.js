@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-export default class MSFT extends Component {
+export default class FB extends Component {
 
   state = {
     stock: [],
   }
   
   componentDidMount() {
-    axios.get('https://sandbox.iexapis.com/stable/stock/MSFT/quote?token=Tpk_521edcea4a3542dca944cb368cc0ec7b').then((response) => {
+    axios.get('https://sandbox.iexapis.com/stable/stock/FB/quote?token=Tpk_521edcea4a3542dca944cb368cc0ec7b').then((response) => {
       this.setState({stock: response.data})
     });
   }

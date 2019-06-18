@@ -11,12 +11,12 @@ export default class NavBar extends Component {
     render() {
         return (
             <div className="vertical-menu">
-            <Link id="Link" to="/">Home</Link>
-            <Link id="Link" to="/reports">Reports</Link>
-            <Link id="Link" to="/targets">Targets</Link>
-            <Link id="Link" to="/keyIndicators">Key Indicators</Link>
-            <Link id="Link" to="/settings">Account Settings</Link>
-            <Link id="Link" to="/billing">Billing</Link>
+            <Link id="Link" to="/home"><i className="fas fa-home"></i>Home</Link>
+            <Link id="Link" to="/reports"><i class="far fa-sticky-note"></i>Reports</Link>
+            <Link id="Link" to="/targets"><i class="fas fa-crosshairs"></i>Targets</Link>
+            <Link id="Link" to="/keyIndicators"><i class="fas fa-exclamation-triangle"></i>Key Indicators</Link>
+            <Link id="Link" to="/settings"><i class="fas fa-cog"></i>Account Settings</Link>
+            <Link id="Link" to="/billing"><i class="fas fa-file-invoice-dollar"></i>Billing</Link>
           </div>
         )
     }

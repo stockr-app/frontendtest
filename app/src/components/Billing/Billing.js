@@ -3,6 +3,7 @@ import {StripeProvider, Elements} from 'react-stripe-elements';
 import { Button, Collapse, } from 'react-bootstrap';
 import './Billing.css';
 import Header from '../Header/Header';
+import NavBar from '../NavBar/NavBar';
 import PromoCode from './PromoCode/PromoCode';
 
 export default class Billing extends Component {
@@ -18,6 +19,7 @@ export default class Billing extends Component {
         return (
             <div>
                <Header />
+               <NavBar />
                <div className="billingContainer">
                    <div className="premiumPane">
                    <h1>Stockr Premium</h1>

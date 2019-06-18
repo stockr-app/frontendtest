@@ -6,6 +6,7 @@ export default class AccountSettings extends Component {
         return (
             <div>
                 <Header />
+                <NavBar />
             </div>
         )
     }

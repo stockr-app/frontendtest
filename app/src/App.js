@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import NavBar from './components/NavBar/NavBar';
 import './App.css';
 
 //components
@@ -28,7 +27,6 @@ function App() {
         <Route path="/billing" exact component={Billing} />
         <Route path="/settings" exact component={AccountSettings} />
       </div>
-      <NavBar />
     </Router>
     </div>
   );

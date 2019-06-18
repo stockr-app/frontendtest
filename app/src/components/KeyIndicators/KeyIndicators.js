@@ -9,6 +9,7 @@ export default class KeyIndicators extends Component {
             <div>
                 <Header />
                 <Ticker />
+                <NavBar />
            </div>
         )
     }

@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-export default class MSFT extends Component {
+export default class AMZN extends Component {
 
   state = {
     stock: [],
   }
   
   componentDidMount() {
-    axios.get('https://sandbox.iexapis.com/stable/stock/MSFT/quote?token=Tpk_521edcea4a3542dca944cb368cc0ec7b').then((response) => {
+    axios.get('https://sandbox.iexapis.com/stable/stock/AMZN/quote?token=Tpk_521edcea4a3542dca944cb368cc0ec7b').then((response) => {
       this.setState({stock: response.data})
     });
   }
@@ -18,7 +18,7 @@ export default class MSFT extends Component {
   render() {
       return (
         <div className="stock">
-          <h3>{this.state.stock.symbol}</h3>
+          <h4>{this.state.stock.symbol}</h4>
           <p id="stockName">{this.state.stock.companyName}</p>
           <div className="stockInfo">
             <div className="stockActivity">

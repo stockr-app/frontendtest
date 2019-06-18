@@ -3,7 +3,8 @@ import {StripeProvider, Elements} from 'react-stripe-elements';
 import { Button, Collapse, } from 'react-bootstrap';
 import './Billing.css';
 import Header from '../Header/Header';
-import PromoCode from './PromoCode/PromoCode'
+import PromoCode from './PromoCode/PromoCode';
+
 export default class Billing extends Component {
 
     constructor(props) {
@@ -14,8 +15,6 @@ export default class Billing extends Component {
     }
 
     render(){
-
-
         return (
             <div>
                <Header />
@@ -33,8 +32,7 @@ export default class Billing extends Component {
                 leo. Aenean efficitur nulla in ante vulputate, et pretium ex 
                 maximus. Praesent condimentum metus id cursus interdum. In 
                 hac habitasse platea dictumst.</p>
-                   </div>
-              
+                   </div>              
                <div className="billingPane">
                    <h2>Choose Subscription</h2>
                    <div className="subscriptionBox">
@@ -56,7 +54,6 @@ export default class Billing extends Component {
                     {this.state.open === false ? ` +` : ` -` }
                 </Button>
                 <h1>Billing Details</h1>
-
                 <Collapse in={this.state.open}>
                     <div>                      
                         <input placeholder="Name on Card"></input>

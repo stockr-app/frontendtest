@@ -8,10 +8,10 @@ export default class Header extends Component {
                 <nav className="splashNav">
                     <img className="splashLogo" alt="StockrLogo" src={require("../../components/Header/stockrlogo.png")}/>
                     <div className="socialBar">
-                    <a href=""><i class="fab fa-facebook"></i></a>
-                    <a href=""><i class="fab fa-instagram"></i></a>
-                    <a href=""><i class="fab fa-twitter-square"></i></a>
-                    <a href=""><i class="fab fa-linkedin"></i></a>
+                    <a href=""><i className="fab fa-facebook"></i></a>
+                    <a href=""><i className="fab fa-instagram"></i></a>
+                    <a href=""><i className="fab fa-twitter-square"></i></a>
+                    <a href=""><i className="fab fa-linkedin"></i></a>
                     </div>
                 </nav>
             </div>

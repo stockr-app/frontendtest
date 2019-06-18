@@ -1,12 +1,13 @@
-import React, { Component } from 'react'
-import './Ticker.css'
+import React, { Component } from 'react';
+import './Ticker.css';
 
 export default class Ticker extends Component {
+    
     render() {
         return (
 
-<div class="tech-slideshow">
-  <div class="mover-1">
+<div className="tech-slideshow">
+  <div className="mover-1">
       <div className="Div">
       <h1>Stock 1</h1>  
       <h1>Stock 2</h1> 

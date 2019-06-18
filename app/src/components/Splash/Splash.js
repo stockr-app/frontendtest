@@ -156,10 +156,7 @@ export default class Facebook extends Component {
             </Button>
           </Modal.Footer>
         </Modal>
-        <nav className="splashNav">
-            <img className="splashLogo" alt="StockrLogo" src={require("../../components/Splash/stockrlogo.png")}/>
-        </nav>
-
+        <Header/>
         <div className="splashContent"> 
             <div className="splashText">
                 <p>

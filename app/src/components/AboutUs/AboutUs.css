@@ -1,0 +1,24 @@
+.image-container {
+    /* border: 2px solid black; */
+    width: 85%;
+    float: right;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2%;
+}
+
+.profile-image {
+    /* border: 2px solid red; */
+    width: 50%;
+    margin-bottom: 2%;
+}
+
+.image {
+    width: 50%;
+    height: auto;
+    border-radius: 30%;
+}
+
+.link {
+    color: black;
+}

@@ -37,12 +37,7 @@ export default class Header extends Component {
               Billing
             </Link>
           </div>
-          {/* <div className="socialBar">
-                    <a href=""><i className="fab fa-facebook"></i></a>
-                    <a href=""><i className="fab fa-instagram"></i></a>
-                    <a href=""><i className="fab fa-twitter-square"></i></a>
-                    <a href=""><i className="fab fa-linkedin"></i></a>
-                    </div> */}
+
         </nav>
       </div>
     );

@@ -8,6 +8,7 @@ export default class Targets extends Component {
         return (
             <div>
                 <Ticker />
+                <p>Targets</p>
             </div>
         )
     }

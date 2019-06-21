@@ -1,9 +1,8 @@
-.vertical-menu {
+/* .vertical-menu {
     width: 100%;
     display: flex;
     background-color: lightgrey;
     justify-content: space-around;
-    border-top: 1px solid white;
   }
   
   .vertical-menu Link {
@@ -20,4 +19,4 @@
   .vertical-menu Link.active {
     background-color: #4CAF50;
     color: white;
-  }
+  } */

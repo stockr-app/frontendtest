@@ -1,12 +1,8 @@
-import React, { Component } from 'react';
-import Header from '../Header/Header';
-import NavBar from '../NavBar/NavBar';
+import React, { Component } from "react";
+import Header from "../Header/Header";
+import NavBar from "../NavBar/NavBar";
 export default class AccountSettings extends Component {
-    render() {
-        return (
-            <div>
-
-            </div>
-        )
-    }
+  render() {
+    return <div>Account Settings</div>;
+  }
 }

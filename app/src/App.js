@@ -11,7 +11,8 @@ import Targets from './components/Targets/Targets';
 import Billing from './components/Billing/Billing';
 import AccountSettings from './components/AccountSettings/AccountSettings';
 import Reports from './components/Reports/Reports';
-import Header from './components/Header/Header'
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
         <Route path="/billing" exact component={Billing} />
         <Route path="/settings" exact component={AccountSettings} />
       </div>
+      <Footer />
     </Router>
     </div>
   );

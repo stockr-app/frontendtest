@@ -8,6 +8,7 @@ export default class q extends Component {
         return (
             <div>
                 <Ticker />
+                <p>Reports</p>
             </div>
         )
     }

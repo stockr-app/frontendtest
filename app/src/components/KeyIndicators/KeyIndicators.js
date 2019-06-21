@@ -7,9 +7,7 @@ export default class KeyIndicators extends Component {
     render() {
         return (
             <div>
-                <Header />
                 <Ticker />
-                <NavBar />
            </div>
         )
     }

@@ -11,11 +11,13 @@ import Targets from './components/Targets/Targets';
 import Billing from './components/Billing/Billing';
 import AccountSettings from './components/AccountSettings/AccountSettings';
 import Reports from './components/Reports/Reports';
+import Header from './components/Header/Header'
 
 
 function App() {
   return (
     <div className="App">
+      <Header />
       <Router>
       <div>
         <Route path="/" exact component={Splash} />

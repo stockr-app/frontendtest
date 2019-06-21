@@ -18,8 +18,7 @@ export default class Billing extends Component {
     render(){
         return (
             <div>
-               <Header />
-               <NavBar />
+
                <div className="billingContainer">
                    <div className="premiumPane">
                    <h1>Stockr Premium</h1>

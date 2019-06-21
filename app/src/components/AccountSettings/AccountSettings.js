@@ -5,8 +5,7 @@ export default class AccountSettings extends Component {
     render() {
         return (
             <div>
-                <Header />
-                <NavBar />
+
             </div>
         )
     }

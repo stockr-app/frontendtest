@@ -7,9 +7,7 @@ export default class Targets extends Component {
     render() {
         return (
             <div>
-                <Header />
                 <Ticker />
-                <NavBar />
             </div>
         )
     }

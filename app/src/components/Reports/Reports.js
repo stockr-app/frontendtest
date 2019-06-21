@@ -7,9 +7,7 @@ export default class q extends Component {
     render() {
         return (
             <div>
-                <Header />
                 <Ticker />
-                <NavBar />
             </div>
         )
     }

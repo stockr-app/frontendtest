@@ -7,7 +7,6 @@ export default class Landing extends Component {
   render() {
     return (
       <div>
-        <Header />
         <div className="landingContent">
           <div className="leftPane">
           </div>

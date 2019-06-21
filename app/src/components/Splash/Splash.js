@@ -156,7 +156,6 @@ export default class Facebook extends Component {
             </Button>
           </Modal.Footer>
         </Modal>
-        <Header/>
         <div className="splashContent"> 
             <div className="splashText">
                 <p>

@@ -3,7 +3,7 @@ import Header from '../Header/Header'
 import Ticker from '../Ticker/Ticker';
 import NavBar from '../NavBar/NavBar';
 
-export default class KeyIndicators extends Component {
+export default class AboutUs extends Component {
     render() {
         return (
             <div>

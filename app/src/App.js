@@ -6,7 +6,7 @@ import './App.css';
 import Splash from './components/Splash/Splash';
 import Landing from './components/Landing/Landing';
 import Dashboard from './components/Dashboard/Dashboard';
-import KeyIndicators from './components/KeyIndicators/KeyIndicators';
+import AboutUs from './components/AboutUs/AboutUs';
 import Targets from './components/Targets/Targets';
 import Billing from './components/Billing/Billing';
 import AccountSettings from './components/AccountSettings/AccountSettings';
@@ -17,15 +17,15 @@ import Header from './components/Header/Header'
 function App() {
   return (
     <div className="App">
-      <Header />
       <Router>
+      <Header />
       <div>
         <Route path="/" exact component={Splash} />
         <Route path="/login" exact component={Landing} />
         <Route path="/home" exact component={Dashboard} />
         <Route path="/reports" exact component={Reports} />
         <Route path="/targets" exact component={Targets} />
-        <Route path="/keyindicators" exact component={KeyIndicators} />
+        <Route path="/aboutus" exact component={AboutUs} />
         <Route path="/billing" exact component={Billing} />
         <Route path="/settings" exact component={AccountSettings} />
       </div>

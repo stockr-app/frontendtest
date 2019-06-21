@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from "react-router-dom";
-import KeyIndicators from '../KeyIndicators/KeyIndicators';
+import AboutUs from '../AboutUs/AboutUs';
 import Targets from '../Targets/Targets';
 import Billing from '../Billing/Billing';
 import AccountSettings from '../AccountSettings/AccountSettings';

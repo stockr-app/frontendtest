@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Tooltip, OverlayTrigger } from 'react-bootstrap';
+
 import './Ticker.css';
 import MSFT from '../MSFT'
 import GOOGL from '../GOOGL'
@@ -22,32 +24,40 @@ import STZ from '../STZ'
 export default class Ticker extends Component {
     
     render() {
+        const tooltip = (
+            <Tooltip id="tooltip">
+                <p>
+                   Top 20 US stocks reported by some report somewhere.
+                </p>
+            </Tooltip>
+        );
         return (
 
 <div className="tech-slideshow">
   <div className="mover-1">
-      <div className="Div">
-      <MSFT /> 
-      <GOOGL />
-      <AMZN />
-
-      <MSFT />
-      <FB />
-      <ISRG />
-      <T />
-      <VZ />
-      <F />
-      <GM />
-      <OKE />
-      <TERP />
-      <BIP />  
-      <CTRE />
-      <LULU />
-      <W />
-      <NFLX />
-      <STZ />
-      
-      </div>
+  <OverlayTrigger placement="bottom" overlay={tooltip}>
+        <div className="Div">
+            <MSFT /> 
+            <GOOGL />
+            <AMZN />
+            <IRBT />
+            <MSFT />
+            <FB />
+            <ISRG />
+            <T />
+            <VZ />
+            <F />
+            <GM />
+            <OKE />
+            <TERP />
+            <BIP />  
+            <CTRE />
+            <LULU />
+            <W />
+            <NFLX />
+            <STZ />     
+        </div>
+      </OverlayTrigger>
     </div>
 </div>
 

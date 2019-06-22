@@ -38,15 +38,6 @@ export default class OKE extends Component {
             </div> 
         </div>
       )
-    
-
-
-
-    return (
-      <div >
-        <p>{this.state.stock.symbol}</p> 
-      </div>
-    );
   }
 }
 

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
+import moment from "moment";
 
 export default class Header extends Component {
   render() {
@@ -18,27 +19,29 @@ export default class Header extends Component {
               Home
             </Link>
             <Link id="Link" to="/reports">
-              <i class="far fa-sticky-note" />
+              <i className="far fa-sticky-note" />
               Reports
             </Link>
             <Link id="Link" to="/targets">
-              <i class="fas fa-crosshairs" />
+              <i className="fas fa-crosshairs" />
               Targets
             </Link>
             <Link id="Link" to="/keyIndicators">
-              <i class="fas fa-address-card" />About Us
+              <i className="fas fa-address-card" />About Us
             </Link>
             <Link id="Link" to="/settings">
-              <i class="fas fa-cog" />
+              <i className="fas fa-cog" />
               Account Settings
             </Link>
             <Link id="Link" to="/billing">
-              <i class="fas fa-file-invoice-dollar" />
+              <i className="fas fa-file-invoice-dollar" />
               Billing
             </Link>
           </div>
-
         </nav>
+        <div className="headerTime">
+        <p className="todaysDate">{moment().format("MMMM-DD-YYYY")}</p>
+        </div>
       </div>
     );
   }

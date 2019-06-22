@@ -5,6 +5,10 @@ import {Modal, Button} from 'react-bootstrap';
 import Header from '../Header/Header'
 import axios from 'axios';
 import './Splash.css';
+import StripeCheckout from "react-stripe-checkout";
+import { Tooltip, OverlayTrigger } from 'react-bootstrap';
+
+
 
 export default class Facebook extends Component {
 
@@ -64,6 +68,30 @@ export default class Facebook extends Component {
     let fbContent;
     let googleContent;
 
+    const nameTooltip = (
+      <Tooltip id="tooltip">
+          <p>
+             Please enter your full name.
+          </p>
+      </Tooltip>
+  );
+
+  const emailTooltip = (
+    <Tooltip id="tooltip">
+        <p>
+           Please enter your email address.
+        </p>
+    </Tooltip>
+);
+
+const phoneTooltip = (
+  <Tooltip id="tooltip">
+      <p>
+         We use your phone number to send you stock updates. No spam ever!
+      </p>
+  </Tooltip>
+);
+
     if (this.state.isLoggedIn) {
 
         // fbContent = (
@@ -111,11 +139,25 @@ export default class Facebook extends Component {
             onClick={this.googleClicked}
             onSuccess={resp => this.onSuccess(resp)}
             cookiePolicy={'single_host_origin'}
-            className="btnGoogle"
-            
+            className="btnGoogle"        
             />
       );
     }
+
+    function onToken(token) {
+      alert(token);
+    }
+
+    function onClickMonthly(e){
+      this.setState({premium: e.target.checked})
+      console.log(onClickMonthly)
+    }
+   
+    function onClickYearly(e){
+      this.setState({premium: e.target.checked})
+      console.log(onClickYearly)
+    }
+  
 
     return (
 
@@ -134,23 +176,31 @@ export default class Facebook extends Component {
                 leo. Aenean efficitur nulla in ante vulputate, et pretium ex 
                 maximus. Praesent condimentum metus id cursus interdum. In 
                 hac habitasse platea dictumst. Curabitur turpis neque, 
-                cursus feugiat auctor sit amet, faucibus convallis libero. 
-                Pellentesque eu condimentum ipsum, a laoreet lacus. Praesent 
-                consectetur tempor lorem et iaculis. Cras porta fringilla 
-                neque, eu molestie est viverra eu. 
+                cursus feugiat auctor sit amet, faucibus convallis libero.             
                 </p>
                 <div className="subscriptionBox">
                         <span className="subscriptionBoxes">
-                        <input className="subscriptionCheckbox" type="checkbox" name="Monthly"/>
-                        <h4>$9.99 Monthly</h4>
+                        <input className="subscriptionCheckbox" value="999" onClick={this.onClickMonthly} type="checkbox" name="Monthly" />
+                        <p>$9.99 Monthly</p>
                         </span>
                         <span className="subscriptionBoxes">
-                        <input className="subscriptionCheckbox" type="checkbox" name="Yearly"/>
-                        <h4>$99.99 Yearly</h4>
+                        <input className="subscriptionCheckbox" value="9999" onClick={this.onClickYearly} type="checkbox" name="Yearly"/>
+                        <p>$99.99 Yearly</p>
                         </span>
-                   </div>
+
+                        </div>
+                        
           </Modal.Body>
           <Modal.Footer>
+                            <StripeCheckout
+                              token={onToken}
+                              description="Stockr Premium Subscription"
+                              panelLabel="Go premium!"
+                              image="http://www.apimages.com/Images/Ap_Creative_Stock_Header.jpg" //Change to stockr bar logo
+                              amount="9.99"
+                              currency="USD"
+                              stripeKey="pk_test_VIG6vu8A1lvY50QaClqZWLm200rGu6pZrL"
+                            />
             <Button variant="secondary" onClick={this.handleClose}>
               Close
             </Button>
@@ -170,16 +220,11 @@ export default class Facebook extends Component {
                 cursus feugiat auctor sit amet, faucibus convallis libero. 
                 Pellentesque eu condimentum ipsum, a laoreet lacus. Praesent 
                 consectetur tempor lorem et iaculis. Cras porta fringilla 
-                neque, eu molestie est viverra eu. Pellentesque tellus dolor, 
-                vestibulum in volutpat eget, euismod non tortor. Etiam eget 
-                lectus vestibulum, accumsan massa eget, malesuada lorem. 
-                Mauris eget quam scelerisque, tempor diam vitae, rhoncus nisi. 
-                Quisque ultricies rutrum turpis, sit amet blandit odio sagittis 
-                in. Ut augue odio, egestas ut urna sit amet, maximus pretium 
-                massa. Duis sit amet rhoncus orci. Pellentesque iaculis porta 
-                magna scelerisque blandit. Pellentesque iaculis porta 
-                magna scelerisque blandit. Quisque ultricies rutrum turpis, 
-                sit amet blandit odio sagittis in. 
+                neque, eu molestie est viverra eu. Pellentesque eu condimentum ipsum, 
+                a laoreet lacus. Praesent consectetur tempor lorem et iaculis. Cras 
+                porta fringilla neque, eu molestie est viverra eu. Cras 
+                porta fringilla neque, eu molestie est viverra eu. Cras 
+                porta fringilla neque, eu molestie est viverra eu. 
                 </p>
             </div>
 
@@ -196,27 +241,29 @@ export default class Facebook extends Component {
                 <form>
                     <h1>Sign Up</h1>
                     <h3>Name</h3>
-                    <input type="text" defaultValue={this.state.name || this.state.name}></input>
+                    <OverlayTrigger placement="bottom" overlay={nameTooltip}>
+                      <input type="text" defaultValue={this.state.name || this.state.name}></input>
+                    </OverlayTrigger>
                     <h3>Email</h3>
-                    <input type="text" defaultValue={this.state.email || this.state.email} ></input>
+                    <OverlayTrigger placement="bottom" overlay={emailTooltip}>
+                      <input type="text" defaultValue={this.state.email || this.state.email} ></input>
+                    </OverlayTrigger>
                     <h3>Phone Number</h3>
-                    <input type="text" name="phoneNumber" placeholder="phone number"></input>
+                    <OverlayTrigger placement="bottom" overlay={phoneTooltip}>
+                      <input type="text" name="phoneNumber" placeholder="phone number"></input>
+                    </OverlayTrigger>
+
                     <br></br>
                     <br></br>
                     <div>
                         <div>{fbContent}</div>
                     </div>
-                    <br></br>
                     <div>
                       <div>{googleContent}</div>
                     </div>
                 </form>
                 <br></br>
                 <p>Learn more about <a href="#" onClick={this.handleShow}>Stockr Premium</a></p>
-                <div className="splashPremium">
-                <input id="checkbox" type="checkbox" checked></input><p>Go Premium!</p>
-                </div>
-                <br></br>
                 <Button className="formButton" onClick={this.FakeRegister}>Register</Button>
                 <img id="registerLogo" alt="StockrLogo" src={require("../../components/Splash/stockrlogo.png")}/>
             </div>

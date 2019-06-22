@@ -1,18 +1,59 @@
 import React, { Component } from 'react';
-import Header from '../Header/Header';
-import { Player } from 'video-react';
 import './Landing.css';
+import ReactPlayer from 'react-player'
+import Ticker from '../Ticker/Ticker'
+import FacebookLogin from "react-facebook-login";
+import GoogleLogin from 'react-google-login';
+import {Modal, Button} from 'react-bootstrap';
+
 
 export default class Landing extends Component {
   render() {
     return (
       <div>
-        <div className="landingContent">
-          <div className="leftPane">
-          </div>
-          <div className="rightPane">
-
+        <Ticker />
+        <div className="overlay">
+        <Modal.Dialog
+        size="lg"
+        centered
+        
+        >
+<h1>Login to Stockr</h1>
+  <FacebookLogin
+          appId="274333116817522"
+          autoLoad={false}
+          fields="name,email"
+          onClick={this.facebookClicked}
+          callback={this.responseFacebook}
+          cssClass="btnFacebook"
+          textButton='Sign in with Facebook'
+          />
+    <GoogleLogin
+            clientId="432634226022-37hop4nb2mal0810tile8vmlkf8f1rs3.apps.googleusercontent.com"
+            buttonText="Sign in with Google"
+            autoLoad={false}
+            icon={false}
+            onClick={this.googleClicked}
+            onSuccess={resp => this.onSuccess(resp)}
+            cookiePolicy={'single_host_origin'}
+            className="btnGoogle"        
+            />
+</Modal.Dialog>
 </div>
+        <div className="landingContent">        
+          <div className="firstPane">
+          <ReactPlayer 
+          url='https://www.youtube.com/watch?v=hPzfn1yIoRw' 
+          height='100%'
+          width='100%'
+          loop="true"
+          controls="false"
+          playing
+          />
+          </div>
+          <div className="secondPane">
+            <h2>Financial News</h2>
+          </div>
         </div>
       </div>
     )

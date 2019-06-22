@@ -1,9 +1,6 @@
 import React, { Component } from "react";
-import {StripeProvider, Elements} from 'react-stripe-elements';
 import { Button, Collapse, } from 'react-bootstrap';
 import './Billing.css';
-import Header from '../Header/Header';
-import NavBar from '../NavBar/NavBar';
 import PromoCode from './PromoCode/PromoCode';
 
 export default class Billing extends Component {
@@ -67,6 +64,7 @@ export default class Billing extends Component {
                     class="btn-round"
                     >Buy Now
                     </Button>
+                    
                     </div>
             </div>
         </div>

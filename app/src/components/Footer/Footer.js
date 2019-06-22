@@ -7,16 +7,16 @@ export default class Footer extends Component {
       <div className="footer">
         <div className="footer-lambda">Lambda School - 2019</div>
         <div className="socialBar">
-          <a href="">
+          <a href="/">
             <i className="fab fa-facebook" />
           </a>
-          <a href="">
+          <a href="/">
             <i className="fab fa-instagram" />
           </a>
-          <a href="">
+          <a href="/">
             <i className="fab fa-twitter-square" />
           </a>
-          <a href="">
+          <a href="/">
             <i className="fab fa-linkedin" />
           </a>
         </div>

@@ -38,15 +38,6 @@ export default class VZ extends Component {
             </div> 
         </div>
       )
-    
-
-
-
-    return (
-      <div >
-        <p>{this.state.stock.symbol}</p> 
-      </div>
-    );
   }
 }
 

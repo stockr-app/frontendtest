@@ -44,7 +44,7 @@ a {
     border: 1px solid lightgrey;
     border-radius: 25px;
     color: #152911;
-    height: 630px;
+    height: 600px;
     width: 290px;
     margin-left: 250px;
     margin-right: 25px;
@@ -79,15 +79,9 @@ a {
     margin: 0 auto;
 }
 
-.splashPremium {
-    display: flex;
-    flex-direction: row;
-    margin-left: 75px;
-}
-
 .splashText {
     width: 25%;
-    height: 630px;
+    height: 600px;
     border: 1px solid #152911;
     border-radius: 25px;
     margin-top: 20px;
@@ -99,7 +93,7 @@ a {
 }
 
 #registerLogo {
-    margin-top: 25px;
+    margin-top: 5px;
     width: 60%;
 }
 
@@ -124,7 +118,6 @@ a {
     width: 180px;
     height:35px;  
     border-radius: 10px;
-    background: #db3236;
     color:white;
     border:0px transparent;  
     text-align: center;

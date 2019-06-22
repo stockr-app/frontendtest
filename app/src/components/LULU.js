@@ -38,15 +38,6 @@ export default class LULU extends Component {
             </div> 
         </div>
       )
-    
-
-
-
-    return (
-      <div >
-        <p>{this.state.stock.symbol}</p> 
-      </div>
-    );
   }
 }
 

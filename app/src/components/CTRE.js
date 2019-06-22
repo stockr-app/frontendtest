@@ -38,15 +38,6 @@ export default class CTRE extends Component {
             </div> 
         </div>
       )
-    
-
-
-
-    return (
-      <div >
-        <p>{this.state.stock.symbol}</p> 
-      </div>
-    );
   }
 }
 

@@ -2,11 +2,13 @@ import React, { Component } from "react";
 import FacebookLogin from "react-facebook-login";
 import GoogleLogin from 'react-google-login';
 import {Modal, Button} from 'react-bootstrap';
-import Header from '../Header/Header'
 import axios from 'axios';
 import './Splash.css';
 import StripeCheckout from "react-stripe-checkout";
 import { Tooltip, OverlayTrigger } from 'react-bootstrap';
+import Dashboard from "../Dashboard/Dashboard";
+import { BrowserRouter as Router, Route} from "react-router-dom";
+
 
 
 
@@ -92,32 +94,7 @@ const phoneTooltip = (
   </Tooltip>
 );
 
-    if (this.state.isLoggedIn) {
-
-        // fbContent = (
-        //   <FacebookLogin
-        //     appId="274333116817522"
-        //     autoLoad={false}
-        //     fields="name,email"
-        //     onClick={this.facebookClicked}
-        //     callback={this.responseFacebook}
-        //     cssClass="btnFacebook"
-        //     textButton='Sign up with Facebook'
-        //     />)
-        // googleContent = (
-        //   <GoogleLogin
-        //       clientId="432634226022-37hop4nb2mal0810tile8vmlkf8f1rs3.apps.googleusercontent.com"
-        //       buttonText="Sign up with Google"
-        //       autoLoad={false}
-        //       icon={false}
-        //       onClick={this.googleClicked}
-        //       onSuccess={resp => this.onSuccess(resp)}
-        //       cookiePolicy={'single_host_origin'}
-        //       className="btnGoogle"
-        //       />)
-
-    } else {
-        
+       
       fbContent = (
         <FacebookLogin
           appId="274333116817522"
@@ -142,7 +119,7 @@ const phoneTooltip = (
             className="btnGoogle"        
             />
       );
-    }
+    
 
     function onToken(token) {
       alert(token);

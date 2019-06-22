@@ -11,27 +11,25 @@ import Targets from './components/Targets/Targets';
 import Billing from './components/Billing/Billing';
 import AccountSettings from './components/AccountSettings/AccountSettings';
 import Reports from './components/Reports/Reports';
-import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header'
 
 
 function App() {
   return (
     <div className="App">    
       <Router>
-      <Header />
       <div>
-        <Route path="/" exact component={Splash} />
-        <Route path="/login" exact component={Landing} />
-        <Route path="/home" exact component={Dashboard} />
-        <Route path="/reports" exact component={Reports} />
-        <Route path="/targets" exact component={Targets} />
-        <Route path="/aboutus" exact component={AboutUs} />
-        <Route path="/billing" exact component={Billing} />
-        <Route path="/settings" exact component={AccountSettings} />
-      </div>
-      <Footer />
-    </Router>
+       <Route path="/" exact component={Splash} />
+       <Route path="/app" component={Header} />
+       <Route path="/login" exact component={Landing} />
+       <Route path="/app/home" exact component={Dashboard} />
+       <Route path="/app/reports" exact component={Reports} />
+       <Route path="/app/targets" exact component={Targets} />
+       <Route path="/app/billing" exact component={Billing} />
+       <Route path="/app/settings" exact component={AccountSettings} />
+     </div>
+      </Router>
     </div>
   );
 }

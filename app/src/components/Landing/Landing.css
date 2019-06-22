@@ -1,8 +1,14 @@
 
+
 .landingContent {
     width: 100%;
     display: flex;
     flex-direction: row;
+}
+
+.landingOauth {
+    display: flex;
+    flex-direction: column;
 }
 
 .firstPane {

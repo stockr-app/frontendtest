@@ -13,7 +13,7 @@ export default class Header extends Component {
             alt="StockrLogo"
             src={require("../../components/Header/stockrlogo.png")}
           />
-          <div className="vertical-menu">
+          <div className="horizontal-menu">
             <Link id="Link" to="/home">
               <i className="fas fa-home" />
               Home

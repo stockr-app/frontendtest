@@ -11,15 +11,17 @@ export default class Landing extends Component {
   render() {
     return (
       <div>
+    
         <Ticker />
         <div className="overlay">
         <Modal.Dialog
         size="lg"
         centered
-        
         >
 <h1>Login to Stockr</h1>
-  <FacebookLogin
+<div className="landingOauth">
+
+      <FacebookLogin
           appId="274333116817522"
           autoLoad={false}
           fields="name,email"
@@ -28,16 +30,18 @@ export default class Landing extends Component {
           cssClass="btnFacebook"
           textButton='Sign in with Facebook'
           />
-    <GoogleLogin
+
+      <GoogleLogin
             clientId="432634226022-37hop4nb2mal0810tile8vmlkf8f1rs3.apps.googleusercontent.com"
-            buttonText="Sign in with Google"
             autoLoad={false}
             icon={false}
+            buttonText="Sign in with Google"
             onClick={this.googleClicked}
             onSuccess={resp => this.onSuccess(resp)}
             cookiePolicy={'single_host_origin'}
             className="btnGoogle"        
             />
+  </div>
 </Modal.Dialog>
 </div>
         <div className="landingContent">        

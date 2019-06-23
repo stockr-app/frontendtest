@@ -124,3 +124,7 @@ a {
     margin:5px;
     display: inline-block;
   }
+
+  .stripe-button-el span {
+      border: 1px solid red;
+  }

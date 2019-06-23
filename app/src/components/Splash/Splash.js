@@ -8,8 +8,7 @@ import StripeCheckout from "react-stripe-checkout";
 import { Tooltip, OverlayTrigger } from 'react-bootstrap';
 import Dashboard from "../Dashboard/Dashboard";
 import { BrowserRouter as Router, Route} from "react-router-dom";
-
-
+import HeaderNoNav from '../Header/HeaderNoNav';
 
 
 export default class Facebook extends Component {
@@ -137,8 +136,9 @@ const phoneTooltip = (
   
 
     return (
-
 <div>
+<HeaderNoNav />
+
         <Modal show={this.state.show} onHide={this.handleClose}>
           <Modal.Header closeButton>
             <Modal.Title>Get more with Stockr Premium!</Modal.Title>
@@ -155,34 +155,36 @@ const phoneTooltip = (
                 hac habitasse platea dictumst. Curabitur turpis neque, 
                 cursus feugiat auctor sit amet, faucibus convallis libero.             
                 </p>
-                <div className="subscriptionBox">
-                        <span className="subscriptionBoxes">
-                        <input className="subscriptionCheckbox" value="999" onClick={this.onClickMonthly} type="checkbox" name="Monthly" />
-                        <p>$9.99 Monthly</p>
-                        </span>
-                        <span className="subscriptionBoxes">
-                        <input className="subscriptionCheckbox" value="9999" onClick={this.onClickYearly} type="checkbox" name="Yearly"/>
-                        <p>$99.99 Yearly</p>
-                        </span>
-
-                        </div>
                         
           </Modal.Body>
-          <Modal.Footer>
+            <Modal.Footer>
                             <StripeCheckout
                               token={onToken}
                               description="Stockr Premium Subscription"
-                              panelLabel="Go premium!"
-                              image="http://www.apimages.com/Images/Ap_Creative_Stock_Header.jpg" //Change to stockr bar logo
-                              amount="9.99"
+                              panelLabel="Go Premium!"
+                              image="https://i.ibb.co/nkd4hdr/Stockr-Logo-No-BG.png" 
+                              amount="999"
                               currency="USD"
                               stripeKey="pk_test_VIG6vu8A1lvY50QaClqZWLm200rGu6pZrL"
+                              label="Go Premium: $9.99/mo"
                             />
-            <Button variant="secondary" onClick={this.handleClose}>
-              Close
-            </Button>
-          </Modal.Footer>
-        </Modal>
+
+                            <StripeCheckout
+                              token={onToken}
+                              description="Stockr Premium Subscription"
+                              panelLabel="Go Premium!"
+                              image="https://i.ibb.co/nkd4hdr/Stockr-Logo-No-BG.png"  
+                              amount="9999"
+                              currency="USD"
+                              stripeKey="pk_test_VIG6vu8A1lvY50QaClqZWLm200rGu6pZrL"
+                              label="Go Premium: $99.99/yr"
+                            />      
+                               
+                <Button variant="secondary" onClick={this.handleClose}>
+                  Close
+                </Button>
+              </Modal.Footer>
+            </Modal>
         <div className="splashContent"> 
             <div className="splashText">
                 <p>

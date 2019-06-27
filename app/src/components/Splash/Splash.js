@@ -9,7 +9,7 @@ import { Tooltip, OverlayTrigger } from 'react-bootstrap';
 import Dashboard from "../Dashboard/Dashboard";
 import { BrowserRouter as Router, Route} from "react-router-dom";
 import HeaderNoNav from '../Header/HeaderNoNav';
-
+import Footer from '../Footer/Footer';
 
 export default class Facebook extends Component {
 
@@ -136,9 +136,8 @@ const phoneTooltip = (
   
 
     return (
-<div>
+<div className="splashPage">
 <HeaderNoNav />
-
         <Modal show={this.state.show} onHide={this.handleClose}>
           <Modal.Header closeButton>
             <Modal.Title>Get more with Stockr Premium!</Modal.Title>
@@ -206,16 +205,6 @@ const phoneTooltip = (
                 porta fringilla neque, eu molestie est viverra eu. 
                 </p>
             </div>
-
-          <div className="logoParent">
-            <div className="splashLogoDiv">
-                    <img className="splashBigLogo" alt="StockrLogo" src={require("../../components/Splash/StockrLogoNoBG.png")} />
-            </div>
-
-            <div className="splashLogoDiv2">
-                    <img className="splashBigLogo2" id="overlayLogo" alt="StockrLogo" src={require("../../components/Splash/Stockrlogonostripenobg.png")} />
-            </div>
-          </div>
             <div className="splashForm">
                 <form>
                     <h1>Sign Up</h1>
@@ -247,7 +236,6 @@ const phoneTooltip = (
                 <img id="registerLogo" alt="StockrLogo" src={require("../../components/Splash/stockrlogo.png")}/>
             </div>
         </div>
-        
     </div>
     )}
 }

@@ -247,7 +247,7 @@ const phoneTooltip = (
                 <img id="registerLogo" alt="StockrLogo" src={require("../../components/Splash/stockrlogo.png")}/>
             </div>
         </div>
-        <Footer />
+        
     </div>
     )}
 }

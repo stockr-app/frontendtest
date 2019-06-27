@@ -12,7 +12,8 @@ import Billing from './components/Billing/Billing';
 import AccountSettings from './components/AccountSettings/AccountSettings';
 import Reports from './components/Reports/Reports';
 import Footer from './components/Footer/Footer';
-import Header from './components/Header/Header'
+import Header from './components/Header/Header';
+import NavBar from './components/NavBar/NavBar';
 
 
 function App() {
@@ -26,7 +27,6 @@ function App() {
           <Route path="/app/home" exact component={Dashboard} />
           <Route path="/app/reports" exact component={Reports} />
           <Route path="/app/targets" exact component={Targets} />
-          <Route path="/app/keyindicators" exact component={KeyIndicators} />
           <Route path="/app/billing" exact component={Billing} />
           <Route path="/app/settings" exact component={AccountSettings} />
           <Route path="/app/aboutus" exact component={AboutUs} />

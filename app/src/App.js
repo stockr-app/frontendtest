@@ -13,6 +13,7 @@ import AccountSettings from "./components/AccountSettings/AccountSettings";
 import Reports from "./components/Reports/Reports";
 import NavBar from "./components/NavBar/NavBar.js";
 import AboutUs from "./components/AboutUs/AboutUs.js";
+import NewsView from "./components/News/NewsView.js"
 
 function App() {
   return (
@@ -22,7 +23,8 @@ function App() {
           <Route path="/" exact component={Splash} />
           <Route path="/app" component={NavBar} />
           <Route path="/login" exact component={Landing} />
-          <Route path="/app/home" exact component={Dashboard} />
+          <Route path="/login" exact component={Landing} />
+          <Route path="/app/home" exact component={NewsView} />
           <Route path="/app/reports" exact component={Reports} />
           <Route path="/app/targets" exact component={Targets} />
           <Route path="/app/keyindicators" exact component={KeyIndicators} />

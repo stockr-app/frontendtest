@@ -1,5 +1,9 @@
-body {
-    background-color: lightgoldenrodyellow;
+a {
+    color: #152911;
+}
+
+#checkbox {
+    margin-top: 7px;
 }
 
 .logoParent {
@@ -7,7 +11,10 @@ body {
     margin-left: 20px;
     top: 0;
     left: 0;
+    
 }
+
+
 .splashBigLogo {
     top: 0;
     left: 0;    
@@ -15,14 +22,15 @@ body {
     margin-left: 40px;
     margin-top: 25px;
     position: relative;
+    
 }
 
 .splashBigLogo2 {
     top: 0;
     left: 0; 
-    width: 120%;
-    margin-left: 40px;
-    margin-top: 25px;
+    width: 110%;
+    margin-left: 89px;
+    margin-top: 20px;
     position: absolute;
 }
 
@@ -36,21 +44,22 @@ body {
     border: 1px solid lightgrey;
     border-radius: 25px;
     color: #152911;
-    height: 630px;
+    height: 600px;
     width: 290px;
     margin-left: 250px;
-    margin-top: 25px;
+    margin-right: 25px;
+    margin-top: 20px;
     background-color: lightgrey;
 
 }
 
-/* .splashLogoDiv {
+.splashLogoDiv {
     margin-left: 50px;
 }
 
 .splashLogoDiv2 {
     margin-left: 50px;
-} */
+}
 
 .splashLogo {
     height: 10%;
@@ -72,10 +81,10 @@ body {
 
 .splashText {
     width: 25%;
-    height: 630px;
+    height: 600px;
     border: 1px solid #152911;
     border-radius: 25px;
-    margin-top: 25px;
+    margin-top: 20px;
     margin-left: 25px;
     color: white;
     background-color: #152911;
@@ -84,8 +93,12 @@ body {
 }
 
 #registerLogo {
-    margin-top: 25px;
+    margin-top: 5px;
     width: 60%;
+}
+
+.formButton {
+    width: 70%;
 }
 
 .btnFacebook { 
@@ -96,7 +109,7 @@ body {
     color:white;
     border:0px transparent;  
     text-align: center;
-    margin:5px;
+    margin: 0 auto;
     display: inline-block;
     cursor: pointer;
   }
@@ -105,7 +118,6 @@ body {
     width: 180px;
     height:35px;  
     border-radius: 10px;
-    background: #db3236;
     color:white;
     border:0px transparent;  
     text-align: center;
@@ -113,3 +125,6 @@ body {
     display: inline-block;
   }
 
+  .stripe-button-el span {
+      border: 1px solid red;
+  }

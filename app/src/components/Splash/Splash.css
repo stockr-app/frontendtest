@@ -1,4 +1,16 @@
+a:hover {
+    text-decoration: none;
+    color:  #152911;
+}
+#Modal {
+    background-image: url("https://i.ibb.co/hYCm90Z/image-from-rawpixel-id-329641-jpeg-1.jpg");
+    color: white;
+    opacity: 0.9;
+}
 
+#modalContent {
+    width: 65%;
+}
 .splashContent {
     display: flex;
     flex-direction: row;
@@ -12,7 +24,7 @@
     border-radius: 25px;
     color: #152911;
     height: 600px;
-    width: 290px;
+    width: 25%;
     margin-left: 250px;
     margin-right: 25px;
     margin-top: 20px;

@@ -14,16 +14,19 @@ import Footer from '../Footer/Footer';
 export default class Facebook extends Component {
 
   state = {
+      username:"",
       name: "",
       email: "",
       phoneNumber: "",
-      premium: ""
+      premium: "",
+      isLoggedIn: false
     }
 
   onSuccess(resp) {
       this.setState({
         name: resp.profileObj.name,
-        email: resp.profileObj.email
+        email: resp.profileObj.email,
+        isLoggedIn: true
       })
   }
 
@@ -31,6 +34,7 @@ export default class Facebook extends Component {
     this.setState({
       name: response.name,
       email: response.email,
+      isLoggedIn: true
     });
   };
 
@@ -92,7 +96,6 @@ const phoneTooltip = (
       </p>
   </Tooltip>
 );
-
        
       fbContent = (
         <FacebookLogin
@@ -138,12 +141,13 @@ const phoneTooltip = (
     return (
 <div className="splashPage">
 <HeaderNoNav />
-        <Modal show={this.state.show} onHide={this.handleClose}>
+        <Modal  show={this.state.show} onHide={this.handleClose}>
+          <div id="Modal">
           <Modal.Header closeButton>
             <Modal.Title>Get more with Stockr Premium!</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <p>
+            <p id="modalContent">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                 Ut gravida, erat at semper semper, elit dui accumsan purus, 
                 nec tristique neque est ac odio. Proin sodales, orci non 
@@ -183,6 +187,7 @@ const phoneTooltip = (
                   Close
                 </Button>
               </Modal.Footer>
+              </div>
             </Modal>
         <div className="splashContent"> 
             <div className="splashText">

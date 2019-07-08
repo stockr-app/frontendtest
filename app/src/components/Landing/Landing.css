@@ -1,35 +1,25 @@
 
-
-.landingContent {
-    width: 100%;
+.loginContainer {
+    width: 100vw;
+    height: 100vh;
     display: flex;
-    flex-direction: row;
+    justify-content: center;
 }
-
-.landingOauth {
+.login {
+    position: fixed;
+    height: 75%;
+    width: 30%;
+    z-index: 10;
+    background-color:rgb(83, 85, 84);
+    margin-top: 80px;
+    border-radius: 5%;
     display: flex;
     flex-direction: column;
-}
-
-.firstPane {
-    width: 80%;
-    border: 1px solid red;
-    height: 530px;
-}
-
-.secondPane {
-    width: 20%;
-    border: 1px solid green;
-    height: 530px;
-}
-
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 10;
-    background-color: rgba(0,0,0,0.5);
+    text-align: center;
   }
+
+  input {
+      width: 300px;
+  }
+
 

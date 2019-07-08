@@ -6,59 +6,57 @@ import axios from 'axios';
 import './Splash.css';
 import StripeCheckout from "react-stripe-checkout";
 import { Tooltip, OverlayTrigger } from 'react-bootstrap';
-import Dashboard from "../Dashboard/Dashboard";
-import { BrowserRouter as Router, Route} from "react-router-dom";
 import HeaderNoNav from '../Header/HeaderNoNav';
-import Footer from '../Footer/Footer';
+import { Redirect } from 'react-router-dom'
+import moment from 'moment';
 
-export default class Facebook extends Component {
+export default class Splash extends Component {
 
+  
   state = {
       username:"",
-      name: "",
+      first_name: "",
+      last_name: "",
       email: "",
       phoneNumber: "",
-      premium: "",
-      isLoggedIn: false
+      premium: "",   
+      redirect: false,
+      sign_up_date: moment().format("MMMM-DD-YYYY")
     }
+
+    constructor(props, context) {
+      super(props, context);
+
+this.handleShow = this.handleShow.bind(this);
+this.handleClose = this.handleClose.bind(this);
+};
 
   onSuccess(resp) {
       this.setState({
-        name: resp.profileObj.name,
+        first_name: resp.profileObj.givenName,
+        last_name: resp.profileObj.familyName,
         email: resp.profileObj.email,
-        isLoggedIn: true
       })
+      console.log(this.state)
   }
 
   responseFacebook = response => {
     this.setState({
-      name: response.name,
+      first_name: response.first_name,
+      last_name: response.last_name,
       email: response.email,
-      isLoggedIn: true
     });
   };
 
-  FakeRegister = () => {
-    console.log(this.state)
-  }
-
-  addUser = () => {
-    axios.post('https://stockrbackend.herokuapp.com/users', this.state).then((response) => {
+addUser = () => {
+    axios.post('https://stocking.firebaseio.com/users/.json?auth=qorpL6CkR2Qc5JGiMYCobKt6AV2BG9b1ydmkjqJ4', this.state)
+  .then((response) => {
     console.log(response)
-    });
-    document.getElementById("overlayLogo").style.display = "none";
-  };
-
-  constructor(props, context) {
-    super(props, context);
-
-    this.handleShow = this.handleShow.bind(this);
-    this.handleClose = this.handleClose.bind(this);
-
-    this.state = {
-      show: false,
-    };
-  }
+    this.setState({ 
+      redirect: true
+    })
+  });
+}
 
   handleClose() {
     this.setState({ show: false });
@@ -70,16 +68,31 @@ export default class Facebook extends Component {
 
 
   render() {
+
     let fbContent;
     let googleContent;
 
-    const nameTooltip = (
+    const { redirect } = this.state;
+
+    if (redirect) {
+      return <Redirect to='/app/home'/>;
+    }
+
+    const firstnameTooltip = (
       <Tooltip id="tooltip">
           <p>
-             Please enter your full name.
+             Please enter your first name.
           </p>
       </Tooltip>
   );
+
+  const lastnameTooltip = (
+    <Tooltip id="tooltip">
+        <p>
+           Please enter your last name.
+        </p>
+    </Tooltip>
+);
 
   const emailTooltip = (
     <Tooltip id="tooltip">
@@ -96,17 +109,19 @@ const phoneTooltip = (
       </p>
   </Tooltip>
 );
+
        
       fbContent = (
         <FacebookLogin
           appId="274333116817522"
           autoLoad={false}
-          fields="name,email"
+          fields="first_name,last_name,email"
           onClick={this.facebookClicked}
           callback={this.responseFacebook}
           cssClass="btnFacebook"
           textButton='Sign up with Facebook'
           />
+
       );
 
       googleContent = (
@@ -116,7 +131,7 @@ const phoneTooltip = (
             autoLoad={false}
             icon={false}
             onClick={this.googleClicked}
-            onSuccess={resp => this.onSuccess(resp)}
+            onSuccess={resp => this.onSuccess(resp, console.log(resp))}
             cookiePolicy={'single_host_origin'}
             className="btnGoogle"        
             />
@@ -127,46 +142,34 @@ const phoneTooltip = (
       alert(token);
     }
 
-    function onClickMonthly(e){
-      this.setState({premium: e.target.checked})
-      console.log(onClickMonthly)
-    }
-   
-    function onClickYearly(e){
-      this.setState({premium: e.target.checked})
-      console.log(onClickYearly)
-    }
-  
-
     return (
 <div className="splashPage">
 <HeaderNoNav />
-        <Modal  show={this.state.show} onHide={this.handleClose}>
+        <Modal show={this.state.show} onHide={this.handleClose} size="md">
           <div id="Modal">
-          <Modal.Header closeButton>
-            <Modal.Title>Get more with Stockr Premium!</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <p id="modalContent">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                Ut gravida, erat at semper semper, elit dui accumsan purus, 
-                nec tristique neque est ac odio. Proin sodales, orci non 
-                condimentum aliquam, erat lacus sollicitudin arcu, vel auctor 
-                ex justo sit amet neque. Etiam at cursus lacus, vel laoreet 
-                leo. Aenean efficitur nulla in ante vulputate, et pretium ex 
-                maximus. Praesent condimentum metus id cursus interdum. In 
-                hac habitasse platea dictumst. Curabitur turpis neque, 
-                cursus feugiat auctor sit amet, faucibus convallis libero.             
-                </p>
-                        
-          </Modal.Body>
-            <Modal.Footer>
+            <Modal.Header closeButton>
+              <Modal.Title>Get more with Stockr Premium!</Modal.Title>
+                </Modal.Header>
+                  <Modal.Body>
+                    <p id="modalContent">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Ut gravida, erat at semper semper, elit dui accumsan purus, 
+                        nec tristique neque est ac odio. Proin sodales, orci non 
+                        condimentum aliquam, erat lacus sollicitudin arcu, vel auctor 
+                        ex justo sit amet neque. Etiam at cursus lacus, vel laoreet 
+                        leo. Aenean efficitur nulla in ante vulputate, et pretium ex 
+                        maximus. Praesent condimentum metus id cursus interdum. In 
+                        hac habitasse platea dictumst. Curabitur turpis neque, 
+                        cursus feugiat auctor sit amet, faucibus convallis libero.             
+                        </p>                        
+                  </Modal.Body>
+                    <Modal.Footer>
                             <StripeCheckout
                               token={onToken}
                               description="Stockr Premium Subscription"
                               panelLabel="Go Premium!"
                               image="https://i.ibb.co/nkd4hdr/Stockr-Logo-No-BG.png" 
-                              amount="999"
+                              amount = {999}
                               currency="USD"
                               stripeKey="pk_test_VIG6vu8A1lvY50QaClqZWLm200rGu6pZrL"
                               label="Go Premium: $9.99/mo"
@@ -177,15 +180,12 @@ const phoneTooltip = (
                               description="Stockr Premium Subscription"
                               panelLabel="Go Premium!"
                               image="https://i.ibb.co/nkd4hdr/Stockr-Logo-No-BG.png"  
-                              amount="9999"
+                              amount={9999}
                               currency="USD"
                               stripeKey="pk_test_VIG6vu8A1lvY50QaClqZWLm200rGu6pZrL"
                               label="Go Premium: $99.99/yr"
-                            />      
-                               
-                <Button variant="secondary" onClick={this.handleClose}>
-                  Close
-                </Button>
+                            />                                    
+                <Button variant="secondary" onClick={this.handleClose}>Close</Button>
               </Modal.Footer>
               </div>
             </Modal>
@@ -212,32 +212,35 @@ const phoneTooltip = (
             </div>
             <div className="splashForm">
                 <form>
-                    <h1>Sign Up</h1>
-                    <h3>Name</h3>
-                    <OverlayTrigger placement="bottom" overlay={nameTooltip}>
-                      <input type="text" defaultValue={this.state.name || this.state.name}></input>
+                  
+                  <h1>Register For Access</h1>
+                    <OverlayTrigger placement="bottom" overlay={firstnameTooltip}>
+                      <input id="formInput" type="text" placeholder="First name" defaultValue={this.state.first_name || this.state.first_name}></input>
                     </OverlayTrigger>
-                    <h3>Email</h3>
+                    <br></br>
+                    <OverlayTrigger placement="bottom" overlay={lastnameTooltip}>
+                      <input id="formInput" type="text" placeholder="Last name" defaultValue={this.state.last_name || this.state.last_name}></input>
+                    </OverlayTrigger>
+                    <br></br>
                     <OverlayTrigger placement="bottom" overlay={emailTooltip}>
-                      <input type="text" defaultValue={this.state.email || this.state.email} ></input>
+                      <input id="formInput" type="text" placeholder="Email" defaultValue={this.state.email || this.state.email} ></input>
                     </OverlayTrigger>
-                    <h3>Phone Number</h3>
+                    <br></br>
                     <OverlayTrigger placement="bottom" overlay={phoneTooltip}>
-                      <input type="text" name="phoneNumber" placeholder="phone number"></input>
+                      <input id="formInput" type="text" name="phoneNumber" placeholder="Phone Number"></input>
                     </OverlayTrigger>
-
                     <br></br>
-                    <br></br>
-                    <div>
-                        <div>{fbContent}</div>
-                    </div>
-                    <div>
-                      <div>{googleContent}</div>
-                    </div>
+                    <p>or</p>
+                    <div>{fbContent}</div>
+                    <div>{googleContent}</div>
                 </form>
                 <br></br>
-                <p>Learn more about <a href="#" onClick={this.handleShow}>Stockr Premium</a></p>
-                <Button className="formButton" onClick={this.FakeRegister}>Register</Button>
+                <div className="premiumBox">
+                <input type="checkbox" className="premiumCheckbox"></input>
+                <p>Go Premium!</p>
+                </div>
+                <p>Learn more about <a href="#/" onClick={this.handleShow}>Stockr Premium</a></p>
+                <Button  className="formButton" onClick={this.addUser}>Register</Button>
                 <img id="registerLogo" alt="StockrLogo" src={require("../../components/Splash/stockrlogo.png")}/>
             </div>
         </div>

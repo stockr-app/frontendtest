@@ -11,17 +11,18 @@
 
 .footer-lambda {
   margin-left: 2.5%;
-  color: white;
+  color: black;
   font-size: 10px;
 }
 
+.icon {
+  font-size: 15px;
+}
+
 .socialBar {
-  width: 10%;
+  width: 5%;
   display: flex;
   justify-content: space-between;
   margin-right: 2.5%;
 }
 
-i {
-  color: white;
-}

@@ -5,10 +5,11 @@ a:hover {
 
 #formInput {
     margin-top: 5px;
-    border-bottom: 2px solid green;
+    border-bottom: 1px solid green;
     border-top: none;
     border-right: none;
     border-left: none;
+    width: 50%;
 }
 
 
@@ -51,7 +52,7 @@ a:hover {
     margin-right: 25px;
     margin-top: 20px;
     background-color: lightgrey;
-    opacity: 0.9;
+    opacity: 0.8;
     text-align: center;
 }
 

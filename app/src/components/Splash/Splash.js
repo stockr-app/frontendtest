@@ -66,7 +66,6 @@ addUser = () => {
     this.setState({ show: true });
   }
 
-
   render() {
 
     let fbContent;
@@ -235,10 +234,6 @@ const phoneTooltip = (
                     <div>{googleContent}</div>
                 </form>
                 <br></br>
-                <div className="premiumBox">
-                <input type="checkbox" className="premiumCheckbox"></input>
-                <p>Go Premium!</p>
-                </div>
                 <p>Learn more about <a href="#/" onClick={this.handleShow}>Stockr Premium</a></p>
                 <Button  className="formButton" onClick={this.addUser}>Register</Button>
                 <img id="registerLogo" alt="StockrLogo" src={require("../../components/Splash/stockrlogo.png")}/>

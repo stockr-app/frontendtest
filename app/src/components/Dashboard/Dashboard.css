@@ -2,3 +2,11 @@
     /* border: 2px solid red; */
     visibility: visible;
 }
+
+#darkmode {
+    display: none;
+}
+
+#lightMode {
+    display: none;
+}

@@ -1,0 +1,17 @@
+.lightSettings {
+    margin-left: 1425px;
+}
+.quickSettings {
+    display: flex;
+    flex-direction: row;
+    background-color: lightgray;
+    margin-top: -5px;
+}
+
+#darkMode {
+    cursor: pointer;
+}
+
+#lightMode {
+    cursor: pointer;
+}

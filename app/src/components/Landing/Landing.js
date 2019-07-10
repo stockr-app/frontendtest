@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Landing.css';
-import ReactPlayer from 'react-player'
-import Ticker from '../Ticker/Ticker'
+import ReactPlayer from 'react-player';
+import Ticker from '../Ticker/Ticker';
 import FacebookLogin from "react-facebook-login";
 import GoogleLogin from 'react-google-login';
 import {Modal, Button} from 'react-bootstrap';
@@ -54,9 +54,6 @@ export default class Landing extends Component {
           controls="false"
           playing
           />
-          </div>
-          <div className="secondPane">
-            <h2>Financial News</h2>
           </div>
         </div>
       </div>

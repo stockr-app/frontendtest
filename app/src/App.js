@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route} from "react-router-dom";
 import './App.css';
 
 //components
+
 import Splash from './components/Splash/Splash';
 import Landing from './components/Landing/Landing';
 import Dashboard from './components/Dashboard/Dashboard';
@@ -14,7 +15,7 @@ import Reports from './components/Reports/Reports';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import NavBar from './components/NavBar/NavBar';
-
+import NewsView from "./components/News/NewsView.js"
 
 function App() {
   return (
@@ -23,7 +24,8 @@ function App() {
         <div>
           <Route path="/" exact component={Splash} />
           <Route path="/app" component={NavBar} />
-          <Route path="/app/login" exact component={Landing} />
+          <Route path="/login" exact component={Landing} />
+          <Route path="/app/home" exact component={NewsView} />
           <Route path="/app/home" exact component={Dashboard} />
           <Route path="/app/reports" exact component={Reports} />
           <Route path="/app/targets" exact component={Targets} />

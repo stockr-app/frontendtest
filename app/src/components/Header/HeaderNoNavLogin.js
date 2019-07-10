@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./HeaderNoNav.css";
+import "./HeaderNoNavLogin.css";
 
 export default class HeaderNoNav extends Component {
   render() {
@@ -9,7 +9,11 @@ export default class HeaderNoNav extends Component {
             id="logo"
             alt="StockrLogo"
             src={require("../../components/Header/stockrlogo.png")}
-         />         
+         />    
+         <div className="loginSignup">
+             <p>Login</p>
+             <a href="/">Sign Up</a>
+        </div>     
         </div>
     );
   }

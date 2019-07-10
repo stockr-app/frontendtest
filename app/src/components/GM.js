@@ -28,10 +28,10 @@ export default class GM extends Component {
               </div>
                 <div>
                   <div className="activity">
-                    <i class="fas fa-caret-up"></i><p id="high">{this.state.stock.high}</p>
+                    <i className="fas fa-caret-up"></i><p id="high">{this.state.stock.high}</p>
                   </div>
                   <div className="activity">
-                    <i class="fas fa-caret-down"></i><p id="low">{this.state.stock.low}</p>
+                    <i className="fas fa-caret-down"></i><p id="low">{this.state.stock.low}</p>
                   </div>
                 </div>
               </div>

@@ -1,8 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import "./AboutUs.css";
-import Header from "../Header/Header";
-import Footer from "../Footer/Footer";
 import AA from "./AA.png";
 import AO from "./AO.png";
 import MB from "./MB.png";
@@ -12,7 +9,6 @@ class AboutUs extends Component {
   render() {
     return (
       <div>
-        <Header />
         <div className="image-container">
           <div className="profile-image">
             <img src={AA} alt="AA" className="image" />
@@ -20,7 +16,7 @@ class AboutUs extends Component {
             <a className="link" href="https://github.com/acarmstrong98">
               <i className="fab fa-github" />
             </a>
-            <a className="link" href="">
+            <a className="link" href="/">
               <i className="fab fa-linkedin" />
             </a>
           </div>
@@ -64,7 +60,6 @@ class AboutUs extends Component {
             </a>
           </div>
         </div>
-        <Footer />
       </div>
     );
   }

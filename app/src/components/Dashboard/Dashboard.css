@@ -1,4 +1,28 @@
-.vertical-menu {
-    /* border: 2px solid red; */
-    visibility: visible;
+.container {
+    display: block;
+    border: solid red;
+}
+
+h1 {
+    margin: 20px;
+}
+
+.ticker {
+    display: block;
+    width: 100%;
+    border: solid blue;
+}
+
+.news-panel {
+    display: block;
+    width: 100%;
+    border: solid green;    
+}
+
+.article {
+    border: solid orange;
+}
+
+img {
+    width: 100%
 }

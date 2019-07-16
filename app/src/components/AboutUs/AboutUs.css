@@ -1,18 +1,22 @@
 .image-container {
-    width: 85%;
+    
     float: right;
     display: flex;
     flex-wrap: wrap;
-    margin-top: 1%;
+    margin-top: 3%;
 }
 
 .profile-image {
     width: 30%;
     border-radius: 5%;
     margin: 0 10% 2%;
-    padding: 1% 0 1% 0;
+    padding: 10px;
     background-color: lightgray;
     box-shadow: 10px 10px 5px gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .image {
@@ -22,7 +26,7 @@
 }
 
 .name {
-    font-family: "Ubuntu", sans-serif;
+    font-family: 'Oswald', sans-serif;
     font-weight: bold;
     font-size: 25px;
 }
@@ -35,4 +39,20 @@
 
 .fab:hover {
     text-shadow: 2px 2px 4px #000000;
+}
+.profile-image p{
+    background-color: white;
+    font-family: 'Rubik', sans-serif;
+    padding: 10px;
+    border-radius: 5px;
+}
+.profile-image a{
+    margin: 10px;
+}
+.tagline{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    ruby-align: center;
+    font-family: 'Oswald', sans-serif;
 }

@@ -45,7 +45,7 @@ export default class App extends React.Component {
                 <Route path="/app/targets" exact component={Targets} />
                 <Route path="/app/billing" exact component={Billing} />
                 <Route path="/app/settings" exact component={AccountSettings} />
-                <Route path="/app/aboutus" exact component={AboutUs} />
+                <Route path="/app/meettheteam" exact component={AboutUs} />
                 <Route path="/app" component={Footer} />
               </div>
             </Router>   

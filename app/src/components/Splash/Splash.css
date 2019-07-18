@@ -12,7 +12,6 @@ a:hover {
     width: 50%;
 }
 
-
 #Modal {
     background-image: url("https://i.ibb.co/hYCm90Z/image-from-rawpixel-id-329641-jpeg-1.jpg");
     color: white;
@@ -93,6 +92,10 @@ a:hover {
     padding-right: 10px;
     padding-top: 50px;
     opacity: 0.9;
+}
+
+.tooltip {
+    color: white;
 }
 
 #registerLogo {

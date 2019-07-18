@@ -8,7 +8,6 @@ import Splash from './components/Splash/Splash';
 import Landing from './components/Landing/Landing';
 import Dashboard from './components/Dashboard/Dashboard';
 import AboutUs from './components/AboutUs/AboutUs';
-import Targets from './components/Targets/Targets';
 import Billing from './components/Billing/Billing';
 import Reports from './components/Reports/Reports';
 import AccountSettings from './components/AccountSettings/AccountSettings';

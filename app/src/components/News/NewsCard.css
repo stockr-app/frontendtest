@@ -3,6 +3,7 @@
     border: 1px solid black;
     margin: 0 auto;
     margin-bottom: 5px;
+    background-color: black;
 }
 
 .NewsCard:hover {
@@ -14,11 +15,11 @@
     height: 150px;
 }
 
-a {
+.aCard {
     text-decoration: none;
+    color: white;
 }
 
-p {
-    color: black;
+.pCard {
     font-size: 10px;
 }

@@ -29,12 +29,12 @@ export default class Landing extends Component {
           <h1>Stocking Login</h1>
           <div>
           <i class="far fa-user"></i>
-          <input id="formInput" type="text" placeholder="USERNAME"></input>
+          <input className="landingInput" type="text" placeholder="USERNAME"></input>
           </div>
           <br></br>
           <div>
           <i class="fas fa-unlock"></i>
-          <input id="formInput" type="text" placeholder="password"></input>
+          <input className="landingInput" type="text" placeholder="password"></input>
           </div>
           <br></br>
           <div>

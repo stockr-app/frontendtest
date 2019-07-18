@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import NewsCard from "./NewsCard.js"
 import axios from "axios";
-
+import './NewsView.css';
 class News extends Component {
   state = { articles: [] };
 

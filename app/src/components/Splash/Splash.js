@@ -78,7 +78,7 @@ addUser = () => {
     }
 
     const firstnameTooltip = (
-      <Tooltip id="tooltip">
+      <Tooltip className="tooltip">
           <p>
              Please enter your first name.
           </p>
@@ -86,7 +86,7 @@ addUser = () => {
   );
 
   const lastnameTooltip = (
-    <Tooltip id="tooltip">
+    <Tooltip className="tooltip">
         <p>
            Please enter your last name.
         </p>
@@ -94,7 +94,7 @@ addUser = () => {
 );
 
   const emailTooltip = (
-    <Tooltip id="tooltip">
+    <Tooltip className="tooltip">
         <p>
            Please enter your email address.
         </p>
@@ -102,7 +102,7 @@ addUser = () => {
 );
 
 const phoneTooltip = (
-  <Tooltip id="tooltip">
+  <Tooltip className="tooltip">
       <p>
          We use your phone number to send you stock updates. No spam ever!
       </p>

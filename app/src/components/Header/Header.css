@@ -16,6 +16,8 @@ i {
     position: relative;
     padding-left: 30px;
     margin: 0 auto;
+    border-bottom: 3px solid white;
+    margin-bottom: 5px;
 }
 
 .horizontal-menu {

@@ -86,31 +86,6 @@ class AboutUs extends Component {
               </a>
             </div>
           </div>
-          <div className="profile-image">
-            <img src={MR} alt="MR" className="image" />
-            <div className="name">Mitchell Robles</div>
-            <p>
-              Spicy jalapeno bacon ipsum dolor amet sausage shank pancetta,
-              t-bone tail doner pork belly capicola shankle tongue. Landjaeger
-              ground round prosciutto corned beef pork, strip steak tail.
-              Brisket ham hock andouille tongue pork chop rump ground round.
-              Tongue prosciutto pancetta porchetta corned beef salami. Hamburger
-              frankfurter ham hock turkey, kielbasa brisket sausage. Meatball
-              flank kevin pancetta bresaola frankfurter bacon hamburger beef
-              ribs leberkas rump tongue salami kielbasa.
-            </p>
-            <div>
-              <a className="link" href="https://github.com/mitchellr92">
-                <i className="fab fa-github" />
-              </a>
-              <a
-                className="link"
-                href="https://www.linkedin.com/in/mitchell-robles-aa7980165/"
-              >
-                <i className="fab fa-linkedin" />
-              </a>
-            </div>
-          </div>
         </div>
       </div>
     );

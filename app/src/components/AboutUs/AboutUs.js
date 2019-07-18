@@ -3,7 +3,7 @@ import "./AboutUs.css";
 import AA from "./AA.png";
 import AO from "./AO.png";
 import MB from "./MB.png";
-import MR from "./MR.png";
+
 
 class AboutUs extends Component {
   render() {

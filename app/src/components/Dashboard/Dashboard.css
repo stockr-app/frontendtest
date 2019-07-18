@@ -1,0 +1,13 @@
+
+
+.Dashboard {
+    display: flex;
+}
+
+.News {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    
+
+}

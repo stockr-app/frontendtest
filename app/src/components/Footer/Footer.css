@@ -1,0 +1,28 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lightgray;
+  padding: 0.5% 0 0.5% 0;
+  height: 15px;
+  position: absolute;
+  width: 100vw;
+}
+
+.footer-lambda {
+  margin-left: 2.5%;
+  color: black;
+  font-size: 10px;
+}
+
+.icon {
+  font-size: 15px;
+}
+
+.socialBar {
+  width: 5%;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 2.5%;
+}
+

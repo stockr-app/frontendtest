@@ -1,0 +1,12 @@
+.HeaderNoNav {
+    height: 30px;
+    background-color: lightgray;
+}
+
+#logo {
+    width: 5%;
+    display: flex;
+    align-self: flex-start;
+    padding-top: 8px;
+    margin-left: 50px;
+}

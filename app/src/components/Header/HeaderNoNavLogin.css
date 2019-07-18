@@ -1,0 +1,23 @@
+.HeaderNoNav {
+    height: 30px;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#logo {
+    width: 5%;
+    display: flex;
+    align-self: flex-start;
+    padding-top: 8px;
+    margin-left: 50px;
+}
+
+.loginSignup {
+    display: flex;
+    flex-direction: row;
+    margin-right: 50px;
+    width: 150px;
+    justify-content: space-between;
+}

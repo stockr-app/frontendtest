@@ -10,7 +10,7 @@ class AboutUs extends Component {
     return (
       <div>
       <div className = "tagline">
-      <h1>Meet The Team</h1>
+      <h1>Meet The Team !</h1>
       </div>
         <div className="image-container">
           <div className="profile-image">

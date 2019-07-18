@@ -21,10 +21,6 @@ export default class Header extends Component {
               <i className="far fa-sticky-note" />
               Reports
             </Link>
-            <Link id="Link" to="/app/targets">
-              <i className="fas fa-crosshairs" />
-              Targets
-            </Link>
             <Link id="Link" to="/app/aboutus">
               <i className="fas fa-address-card" />About Us
             </Link>

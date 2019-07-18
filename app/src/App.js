@@ -26,7 +26,6 @@ export default class App extends React.Component {
                 <Route path="/app" component={Header} />
                 <Route path="/app/settings" component={ComponentB} />
                 <Route path="/app/reports" component={ComponentB} />
-                <Route path="/app/targets" component={ComponentB} />
                 <Route path="/app/billing" component={ComponentB} />
                 <Route path="/app/aboutus" component={ComponentB} />
                 <Route path="/app/home" component={ComponentB} />
@@ -34,7 +33,6 @@ export default class App extends React.Component {
                 <Route path="/login" exact component={Landing} />                            
                 <Route path="/app/home" exact component={Dashboard} />
                 <Route path="/app/reports" exact component={Reports} />
-                <Route path="/app/targets" exact component={Targets} />
                 <Route path="/app/billing" exact component={Billing} />
                 <Route path="/app/settings" exact component={AccountSettings} />
                 <Route path="/app/meettheteam" exact component={AboutUs} />

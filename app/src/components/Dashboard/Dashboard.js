@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import './Dashboard.css';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
-import Newsview from "../NewsComponent/NewsView";
+import Newsview from "./NewsComponent/NewsView";
 import Ticker from '../Ticker/Ticker';
+import Search from './Search/Search'
 
 
 export default class Dashboard extends Component {
@@ -13,13 +14,9 @@ export default class Dashboard extends Component {
         }
     }
 
-    updateSearch (e) {
-        this.setState({search: e.target.value})
-    }
     render() {
 
-        let filteredArticles = this.props.articles
-        console.log(filteredArticles)
+
 
         return (
             <div className = 'container'>
@@ -27,6 +24,10 @@ export default class Dashboard extends Component {
                 <div className = 'ticker'>
                     <Ticker />
                     <p>Dashboard</p>
+                </div>
+
+                <div className = 'stockSearch'>
+                    <Search />
                 </div>
 
                 <div className="news-panel">

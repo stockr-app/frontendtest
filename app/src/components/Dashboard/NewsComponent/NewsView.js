@@ -22,7 +22,6 @@ updateSearch = (e) => {
         `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=1cf2cd707d2d4071a43410b68c7aaa3b`
       )
       .then(res => {
-        console.log(res.data)
         this.setState({articles: res.data.articles});
       });
     

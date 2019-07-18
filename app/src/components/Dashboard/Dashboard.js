@@ -36,6 +36,7 @@ export default class Dashboard extends Component {
                     <Newsview />
                     </div>
                 </div>
+                </div>
         )
     }
 }

@@ -8,6 +8,7 @@ class AboutUs extends Component {
   render() {
     return (
       <div>
+        <h1>About Us</h1>
         <div className="image-container">
           <div className="profile-image">
             <img src={AA} alt="AA" className="image" />

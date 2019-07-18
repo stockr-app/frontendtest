@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-
 export default class AMZN extends Component {
 
   state = {
@@ -16,6 +15,7 @@ export default class AMZN extends Component {
 
 
   render() {
+
       return (
         <div className="stock">
           <h4>{this.state.stock.symbol}</h4>
@@ -28,10 +28,10 @@ export default class AMZN extends Component {
               </div>
                 <div>
                   <div className="activity">
-                    <i class="fas fa-caret-up"></i><p id="high">{this.state.stock.high}</p>
+                    <i className="fas fa-caret-up"></i><p id="high">{this.state.stock.high}</p>
                   </div>
                   <div className="activity">
-                    <i class="fas fa-caret-down"></i><p id="low">{this.state.stock.low}</p>
+                    <i className="fas fa-caret-down"></i><p id="low">{this.state.stock.low}</p>
                   </div>
                 </div>
               </div>

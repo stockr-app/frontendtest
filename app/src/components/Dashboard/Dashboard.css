@@ -25,4 +25,16 @@ h1 {
 
 img {
     width: 100%
+
+.Dashboard {
+    display: flex;
+}
+
+.News {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    
+
+
 }

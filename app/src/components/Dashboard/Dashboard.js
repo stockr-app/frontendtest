@@ -4,8 +4,9 @@ import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import Newsview from "../NewsComponent/NewsView";
 import Ticker from '../Ticker/Ticker';
-
-
+import News from '../News/NewsView'
+import './Dashboard.css'
+import QuickSearch from '../QuickSearch/QuickSearch'
 export default class Dashboard extends Component {
     constructor() {
         super ();
@@ -35,8 +36,6 @@ export default class Dashboard extends Component {
                     <Newsview />
                     </div>
                 </div>
-
-            </div>
         )
     }
 }

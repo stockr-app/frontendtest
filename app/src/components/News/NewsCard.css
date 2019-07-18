@@ -1,0 +1,24 @@
+.NewsCard {
+    width: 250px;
+    border: 1px solid black;
+    margin: 0 auto;
+    margin-bottom: 5px;
+}
+
+.NewsCard:hover {
+    border: 5px solid gold;
+}
+
+#newsImg {
+    width: 100%;
+    height: 150px;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    color: black;
+    font-size: 10px;
+}

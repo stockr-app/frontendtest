@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import './Landing.css';
-import ReactPlayer from 'react-player'
+import ReactPlayer from 'react-player';
+import Ticker from '../Ticker/Ticker';
+import FacebookLogin from "react-facebook-login";
+import GoogleLogin from 'react-google-login';
+import {Modal, Button} from 'react-bootstrap';
 import HeaderNoNavLogin from '../Header/HeaderNoNavLogin';
-
 
 export default class Landing extends Component {
 

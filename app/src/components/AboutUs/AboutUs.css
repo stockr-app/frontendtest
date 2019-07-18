@@ -1,28 +1,91 @@
-.image-container {
-    width: 85%;
-    float: right;
+.aboutUs {
+    width: 100vw;
+}
+
+.aboutDev {
+    width: 30%;
+}
+
+.AAName {
+    position: absolute;
+    top: 450px;
+    color: white;
+    background-color: black;
+    width: 350px;
+    opacity: 0.7;
+}
+
+.AOName {
+    position: absolute;
+    top: 810px;
+    color: white;
+    background-color: black;
+    width: 350px;
+    opacity: 0.7;
+}
+
+.MBName {
+    position: absolute;
+    top: 1190px;
+    color: white;
+    background-color: black;
+    width: 350px;
+    opacity: 0.7;
+}
+.contactForm {
     display: flex;
-    flex-wrap: wrap;
-    margin-top: 1%;
+    flex-direction: column;
+    width: 500px;
+}
+
+.devCard {
+    background-color: lightgrey;
+    background-image: linear-gradient(to right, black , grey, lightgrey, white);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 25px;
+    border-radius: 5%;
+
+}
+
+.Image {
+    width: 350px;
+    border-top-left-radius: 5%;
+}
+
+#subject {
+    height: 85px;
+}
+
+/* .image-container {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
 }
 
 .profile-image {
-    width: 30%;
+    width: 50%;
     border-radius: 5%;
-    margin: 0 10% 2%;
-    padding: 1% 0 1% 0;
+    padding: 10px;
     background-color: lightgray;
     box-shadow: 10px 10px 5px gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .image {
-    width: 70%;
+    width: 50%;
     height: auto;
     border-radius: 30%;
 }
 
 .name {
-    font-family: "Ubuntu", sans-serif;
+    font-family: 'Oswald', sans-serif;
     font-weight: bold;
     font-size: 25px;
 }
@@ -36,3 +99,19 @@
 .fab:hover {
     text-shadow: 2px 2px 4px #000000;
 }
+.profile-image p{
+    background-color: white;
+    font-family: 'Rubik', sans-serif;
+    padding: 10px;
+    border-radius: 5px;
+}
+.profile-image a{
+    margin: 10px;
+}
+.tagline{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    ruby-align: center;
+    font-family: 'Oswald', sans-serif;
+} */

@@ -13,7 +13,6 @@ class News extends Component {
       .then(res => {
         this.setState(res.data);
       });
-    console.log(this.state);
   }
   render() {
     return (
@@ -27,8 +26,7 @@ class News extends Component {
           text={p.text}
           url = {p.url}
           source={p.source_name}
-          date={p.date}
-          
+          date={p.date}          
         />
           );
         })}

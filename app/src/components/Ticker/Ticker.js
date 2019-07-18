@@ -26,8 +26,8 @@ export default class Ticker extends Component {
     render() {
         const tooltip = (
             <Tooltip id="tooltip">
-                <p>
-                   Top 20 US stocks reported by some report somewhere.
+                <p className="tooltipText">
+                   Top 20 US stocks reported by Fiancial Times.
                 </p>
             </Tooltip>
         );

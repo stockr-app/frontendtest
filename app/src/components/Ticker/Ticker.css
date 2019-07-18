@@ -68,6 +68,10 @@ color: red;
     animation: moveSlideshow 20s linear infinite;
     margin-left: -25px;
   }
+
+  .tooltipText{
+    color: white;
+  }
   
   @keyframes moveSlideshow {
     100% { 

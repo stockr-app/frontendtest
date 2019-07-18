@@ -1,12 +1,13 @@
-.vertical-menu {
-    /* border: 2px solid red; */
-    visibility: visible;
+
+
+.Dashboard {
+    display: flex;
 }
 
-#darkmode {
-    display: none;
-}
+.News {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    
 
-#lightMode {
-    display: none;
 }

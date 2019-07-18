@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import './Landing.css';
 import ReactPlayer from 'react-player'
-import FacebookLogin from "react-facebook-login";
-import GoogleLogin from 'react-google-login';
-import {Modal} from 'react-bootstrap';
-import axios from 'axios';
 import HeaderNoNavLogin from '../Header/HeaderNoNavLogin';
 
 

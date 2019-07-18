@@ -14,15 +14,8 @@ import Reports from './components/Reports/Reports';
 import AccountSettings from './components/AccountSettings/AccountSettings';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-import NewsView from "./components/News/NewsView.js"
 
 export default class App extends React.Component {
-  
-
-
-
-
-
 
   render(){
 
@@ -37,7 +30,6 @@ export default class App extends React.Component {
                 <Route path="/app/billing" component={ComponentB} />
                 <Route path="/app/aboutus" component={ComponentB} />
                 <Route path="/app/home" component={ComponentB} />
-                <Route path="/app/home" exact component={NewsView} />
                 <Route path="/" exact component={Splash} />
                 <Route path="/login" exact component={Landing} />                            
                 <Route path="/app/home" exact component={Dashboard} />

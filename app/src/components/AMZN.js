@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-
 export default class AMZN extends Component {
 
   state = {
@@ -16,6 +15,7 @@ export default class AMZN extends Component {
 
 
   render() {
+
       return (
         <div className="stock">
           <h4>{this.state.stock.symbol}</h4>

@@ -21,9 +21,6 @@ export default class Header extends Component {
               <i className="far fa-sticky-note" />
               Reports
             </Link>
-            <Link id="Link" to="/app/aboutus">
-              <i className="fas fa-address-card" />About Us
-            </Link>
             <Link id="Link" to="/app/settings">
               <i className="fas fa-cog" />
               Account Settings
@@ -31,6 +28,9 @@ export default class Header extends Component {
             <Link id="Link" to="/app/billing">
               <i className="fas fa-file-invoice-dollar" />
               Billing
+            </Link>
+            <Link id="Link" to="/app/aboutus">
+              <i className="fas fa-address-card" />About Us
             </Link>
           </div>
         </nav>

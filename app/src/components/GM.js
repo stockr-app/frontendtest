@@ -21,20 +21,18 @@ export default class GM extends Component {
           <h4>{this.state.stock.symbol}</h4>
           <p id="stockName">{this.state.stock.companyName}</p>
           <div className="stockInfo">
-            <div className="stockActivity">
-              <div className="dailyActivity">
-                <p>O: {this.state.stock.open}</p>
-                <p>C: {this.state.stock.close}</p>
+          <div className="dailyActivity">
+                <p>O: {this.state.stock.latestPrice}</p>
+                <p>C: {this.state.stock.previousClose}</p>
               </div>
                 <div>
                   <div className="activity">
-                    <i className="fas fa-caret-up"></i><p id="high">{this.state.stock.high}</p>
+                    <i className="fas fa-caret-up"></i><p id="high">{this.state.stock.week52High}</p>
                   </div>
                   <div className="activity">
-                    <i className="fas fa-caret-down"></i><p id="low">{this.state.stock.low}</p>
+                    <i className="fas fa-caret-down"></i><p id="low">{this.state.stock.week52Low}</p>
                   </div>
                 </div>
-              </div>
             </div> 
         </div>
       )

@@ -9,6 +9,11 @@
     display: flex;
     justify-content: center;
 }
+
+.loginLogo {
+    position: absolute;
+    width: 5%;
+}
 .login {
     position: fixed;
     height: 100vh;

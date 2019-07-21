@@ -32,7 +32,7 @@ export default class MSFT extends Component {
                   <div className="activity">
                     <i className="fas fa-caret-down"></i><p id="low">{this.state.stock.week52Low}</p>
                   </div>
-              </div>
+                </div>
             </div> 
         </div>
       )

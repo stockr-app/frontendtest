@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Line } from 'react-chartjs-2';
-import Ticker from '../Ticker/Ticker';
+import './Reports.css'
 export default class q extends Component {
 
     
@@ -35,8 +35,9 @@ export default class q extends Component {
 
         return (
             <div>
-                <Ticker />
-                <Line ref="chart" data={data} />
+              <div className="Charts">
+                {/* <Line ref="chart" data={data}/> */}
+              </div>
             </div>
         )
     }

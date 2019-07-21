@@ -16,7 +16,7 @@ class News extends Component {
   }
   render() {
     return (
-      <>
+      <div className="News">
         {this.state.articles.map(p => {
           return (
             <NewsCard
@@ -30,7 +30,7 @@ class News extends Component {
         />
           );
         })}
-      </>
+      </div>
     );
   }
 }

@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import moment from 'moment';
 import "./Header.css";
-
+import Darkmode from '../Darkmode/Darkmode';
 export default class Header extends Component {
   render() {
     return (
@@ -13,30 +14,20 @@ export default class Header extends Component {
             src={require("../../components/Header/stockrlogo.png")}
           />
           <div className="horizontal-menu">
-            <Link id="Link" to="/app/home">
               <i className="fas fa-home" />
-              Home
-            </Link>
-            <Link id="Link" to="/app/reports">
-              <i className="far fa-sticky-note" />
-              Reports
-            </Link>
-            <Link id="Link" to="/app/settings">
-              <i className="fas fa-cog" />
-              Account Settings
-            </Link>
-            <Link id="Link" to="/app/billing">
-              <i className="fas fa-file-invoice-dollar" />
-              Billing
-            </Link>
-            <Link id="Link" to="/app/aboutus">
-              <i className="fas fa-address-card" />About Us
-            </Link>
+              <div className="headerTime">
+              <p className="todaysDate">{moment().format("MMMM-DD-YYYY")}</p>
+              </div>
+              <div id="icons" >
+                <i className="fas fa-cog" />
+                <i className="fas fa-file-invoice-dollar" />
+                <i class="fas fa-cloud-moon"></i>
+              </div>
+
           </div>
+
         </nav>
-        {/* <div className="headerTime">
-        <p className="todaysDate">{moment().format("MMMM-DD-YYYY")}</p>
-        </div> */}
+
       </div>
     );
   }

@@ -22,11 +22,11 @@ export default class App extends React.Component {
             <Router>
               <div>         
                 <Route path="/app" component={Header} />
-                <Route path="/app/settings" component={ComponentB} />
+                {/* <Route path="/app/settings" component={ComponentB} />
                 <Route path="/app/reports" component={ComponentB} />
                 <Route path="/app/billing" component={ComponentB} />
                 <Route path="/app/aboutus" component={ComponentB} />
-                <Route path="/app/home" component={ComponentB} />
+                <Route path="/app/home" component={ComponentB} /> */}
                 <Route path="/" exact component={Splash} />
                 <Route path="/login" exact component={Landing} />                            
                 <Route path="/app/home" exact component={Dashboard} />
@@ -43,27 +43,27 @@ export default class App extends React.Component {
   
 }
 
-class ComponentB extends React.Component {
-  darkMode(){
-    document.body.style.backgroundColor="black";
-    document.body.style.color="white";
-    console.log('Dark mode activated')
-}
-lightMode(){
-  document.body.style.backgroundColor="white";
-  document.body.style.color="black";
-  console.log('Light mode activated')
-}
+// class ComponentB extends React.Component {
+//   darkMode(){
+//     document.body.style.backgroundColor="black";
+//     document.body.style.color="white";
+//     console.log('Dark mode activated')
+// }
+// lightMode(){
+//   document.body.style.backgroundColor="white";
+//   document.body.style.color="black";
+//   console.log('Light mode activated')
+// }
 
-render(){
-  return(
-    <div className="quickSettings">
-      <div className="lightSettings">
-      <i class="fas fa-moon" id="darkMode" onClick={this.darkMode} ></i>
-      <i class="far fa-moon" id="lightMode" onClick={this.lightMode}></i>
-      </div>
-    </div>
-  )
-}
-}
+// render(){
+//   return(
+//     <div className="quickSettings">
+//       <div className="lightSettings">
+//       <i class="fas fa-moon" id="darkMode" onClick={this.darkMode} ></i>
+//       <i class="far fa-moon" id="lightMode" onClick={this.lightMode}></i>
+//       </div>
+//     </div>
+//   )
+// }
+// }
 

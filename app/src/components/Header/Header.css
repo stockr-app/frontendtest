@@ -3,6 +3,10 @@ i {
   margin-right: 10px;
 }
 
+#icons {
+  margin-left: 1100px;
+}
+
 #Link {
   color: black;
 }
@@ -12,7 +16,7 @@ i {
     flex-direction: row;
     background-color: lightgrey;
     justify-content: space-between;
-    width: 100vw;
+    width: 100%;
     position: relative;
     padding-left: 30px;
     margin: 0 auto;
@@ -24,10 +28,12 @@ i {
     width: 100vw;
     display: flex;
     background-color: lightgrey;
-    justify-content: space-around;
     align-items: center;    
   }
   
+.todaysDate {
+  margin-top: 15px;
+}
  
 
 

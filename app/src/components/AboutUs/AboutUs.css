@@ -1,3 +1,8 @@
+.image-container {
+    width: 85%;
+    float: right;
+}
+
 .aboutUs {
     width: 100vw;
 }
@@ -62,13 +67,17 @@
 
 /* .image-container {
     display: flex;
+    flex-wrap: wrap;
+    margin-top: 1%;
     flex-direction: row;
     width: 100vw;
 }
-
 .profile-image {
+    width: 30%;
     width: 50%;
     border-radius: 5%;
+    margin: 0 10% 2%;
+    padding: 1% 0 1% 0;
     padding: 10px;
     background-color: lightgray;
     box-shadow: 10px 10px 5px gray;
@@ -77,28 +86,23 @@
     justify-content: center;
     align-items: center;
 }
-
 .image {
+    width: 70%;
     width: 50%;
     height: auto;
     border-radius: 30%;
 }
-
 .name {
+    font-family: "Ubuntu", sans-serif;
     font-family: 'Oswald', sans-serif;
     font-weight: bold;
     font-size: 25px;
 }
-
-.fab {
-    color: black;
-    width: 25%;
-    font-size: 45px;
-}
-
+@@ -35,4 +98,20 @@
 .fab:hover {
     text-shadow: 2px 2px 4px #000000;
-}
+} 
+
 .profile-image p{
     background-color: white;
     font-family: 'Rubik', sans-serif;
@@ -114,4 +118,4 @@
     width: 100%;
     ruby-align: center;
     font-family: 'Oswald', sans-serif;
-} */
+} */ 

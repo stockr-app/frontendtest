@@ -12,7 +12,6 @@ import Billing from './components/Billing/Billing';
 import Reports from './components/Reports/Reports';
 import AccountSettings from './components/AccountSettings/AccountSettings';
 import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
 
 export default class App extends React.Component {
 

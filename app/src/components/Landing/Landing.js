@@ -5,16 +5,6 @@ import HeaderNoNavLogin from '../Header/HeaderNoNavLogin';
 
 
 export default class Landing extends Component {
-
-  // state = {
-  //   news: [],
-  // }
-  
-  // componentDidMount() {
-  //   axios.get('https://stocknewsapi.com/api/v1/category?section=alltickers&items=50&token=ibh6f0uwymhw9lxkqfb25hagrr9zassome19fxtx').then((response) => {
-  //     this.setState({news: response.data})
-  //   });
-  // }
   
   render() {
     return (
@@ -22,8 +12,7 @@ export default class Landing extends Component {
       <HeaderNoNavLogin />
       <div className="loginContainer">
         <div className="login">         
-        </div>
-     
+        </div>     
       <div className="loginForm">
           <i class="fas fa-users fa-10x"></i>
           <h1>Stocking Login</h1>

@@ -32,7 +32,7 @@ export default class QuickSearch extends Component {
 
         return (
             <div>
-                <button onClick={this.fetchStocks}>Search for a Stock Symbol!</button>    
+                <a onClick={this.fetchStocks}>Search a symbol</a>    
                     <input
                     className="stockSearch"
                     type="text"

@@ -1,33 +1,11 @@
-.container {
-    display: block;
-    border: solid red;
+
+
+.Dashboard {
+    display: flex;
 }
 
-h1 {
-    margin: 20px;
-}
-
-.ticker {
-    display: block;
+.News {
     width: 100%;
-    border: solid blue;
-}
-
-.news-panel {
-    display: block;
-    width: 100%;
-    border: solid green;    
-}
-
-.article {
-    border: solid orange;
-}
-
-img {
-    width: 100%
-}
-
-.stockSearch {
-    border: solid black;
-    height: 80px;
+    display: flex;
+    flex-wrap: wrap;
 }

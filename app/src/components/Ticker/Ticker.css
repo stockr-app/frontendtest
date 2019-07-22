@@ -7,7 +7,6 @@
 
 .dailyActivity {
   margin-top: -7px;
-
 }
 
 #high {
@@ -24,6 +23,7 @@ color: red;
   height: 100px;
   border: 1px solid white;
   width: 200px;
+  text-align: center;
 }
 
 .stockActivity{
@@ -66,6 +66,10 @@ color: red;
   .tech-slideshow .mover-1 {
     animation: moveSlideshow 20s linear infinite;
     margin-left: -25px;
+  }
+
+  .tooltipText{
+    color: white;
   }
   
   @keyframes moveSlideshow {

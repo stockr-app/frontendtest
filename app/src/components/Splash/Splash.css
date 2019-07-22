@@ -1,3 +1,37 @@
+a:hover {
+    text-decoration: none;
+    color:  #152911;
+}
+
+#formInput {
+    margin-top: 5px;
+    border-bottom: 1px solid green;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    width: 50%;
+}
+
+#Modal {
+    background-image: url("https://i.ibb.co/hYCm90Z/image-from-rawpixel-id-329641-jpeg-1.jpg");
+    color: white;
+    opacity: 0.9;
+}
+
+#modalContent {
+    width: 75%;
+}
+
+.premiumBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.premiumCheckbox{
+    margin-top: 7px;
+    margin-right: 5px;
+}
 
 .splashContent {
     display: flex;
@@ -12,15 +46,14 @@
     border-radius: 25px;
     color: #152911;
     height: 600px;
-    width: 290px;
+    width: 25%;
     margin-left: 250px;
     margin-right: 25px;
     margin-top: 20px;
     background-color: lightgrey;
-    opacity: 0.9;
-
+    opacity: 0.8;
+    text-align: center;
 }
-
 
 .splashLogo {
     height: 10%;
@@ -61,13 +94,17 @@
     opacity: 0.9;
 }
 
+.tooltip {
+    color: white;
+}
+
 #registerLogo {
     margin-top: 35px;
     width: 60%;
 }
 
 .formButton {
-    width: 70%;
+    width: 50%;
 }
 
 .btnFacebook { 

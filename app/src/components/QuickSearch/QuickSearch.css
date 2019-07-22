@@ -1,0 +1,50 @@
+
+#Results {
+    background-color: rgb(151, 184, 124);
+}
+.stockSearch {
+    width: 1404px;
+    border-right: none;
+    border-top: none;
+    border-left: none;
+    padding-left: 10px;
+    margin-top: 15px;
+}
+
+.searchResults {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    justify-content: space-evenly;
+}
+
+.vl {
+    border-left: 3px solid black;
+    height: 70px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+
+  .v2 {
+    border-left: 3px solid black;
+    height: 70px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+
+  }
+
+  .v3 {
+    border-left: 3px solid black;
+    height: 70px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+
+  }
+
+  .v4 {
+    border-left: 3px solid black;
+    height: 70px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+
+  }

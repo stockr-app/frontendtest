@@ -1,35 +1,7 @@
-nav {
-position:fixed;
-  background-size: 100%;
-  background-repeat: none;
-  background-position: center;
-  background-attachment: fixed;
-  background-color:#152911;
-  width: 15%;
-  text-align: center;
-  margin-top: 75px;
-  padding: 25px;
-
-}
-.NavLinks {
-  color: #f7f9cf;
-  font-family: "Ubuntu", sans-serif;
-  margin-top: 50px;
-  
-
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
- 
-}
-.NavLinks:hover {
-  background-color: black;
-  color: #e27689;
-  padding: 25px;
-}
-a {
-  text-decoration: none;
-  font-family: "Ubuntu", sans-serif;
-  color: #f7f9cf;
-  margin-left: 10px;
+.Nav {
+    background-color: lightgrey;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    
 }

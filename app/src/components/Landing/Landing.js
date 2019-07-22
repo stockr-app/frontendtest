@@ -1,62 +1,49 @@
 import React, { Component } from 'react';
 import './Landing.css';
-import ReactPlayer from 'react-player';
-import Ticker from '../Ticker/Ticker';
-import FacebookLogin from "react-facebook-login";
-import GoogleLogin from 'react-google-login';
-import {Modal, Button} from 'react-bootstrap';
+import ReactPlayer from 'react-player'
+import HeaderNoNavLogin from '../Header/HeaderNoNavLogin';
 
 
 export default class Landing extends Component {
+  
   render() {
     return (
       <div>
-    
-        <Ticker />
-        <div className="overlay">
-        <Modal.Dialog
-        size="lg"
-        centered
-        >
-<h1>Login to Stockr</h1>
-<div className="landingOauth">
-
-      <FacebookLogin
-          appId="274333116817522"
-          autoLoad={false}
-          fields="name,email"
-          onClick={this.facebookClicked}
-          callback={this.responseFacebook}
-          cssClass="btnFacebook"
-          textButton='Sign in with Facebook'
-          />
-
-      <GoogleLogin
-            clientId="432634226022-37hop4nb2mal0810tile8vmlkf8f1rs3.apps.googleusercontent.com"
-            autoLoad={false}
-            icon={false}
-            buttonText="Sign in with Google"
-            onClick={this.googleClicked}
-            onSuccess={resp => this.onSuccess(resp)}
-            cookiePolicy={'single_host_origin'}
-            className="btnGoogle"        
-            />
-  </div>
-</Modal.Dialog>
-</div>
-        <div className="landingContent">        
-          <div className="firstPane">
+      <HeaderNoNavLogin />
+      <div className="loginContainer">
+        <div className="login">         
+        </div>     
+      <div className="loginForm">
+          <i class="fas fa-users fa-10x"></i>
+          <h1>Stocking Login</h1>
+          <div>
+          <i class="far fa-user"></i>
+          <input className="landingInput" type="text" placeholder="USERNAME"></input>
+          </div>
+          <br></br>
+          <div>
+          <i class="fas fa-unlock"></i>
+          <input className="landingInput" type="text" placeholder="password"></input>
+          </div>
+          <br></br>
+          <div>
+          <input type="button" id="button" value="Login"></input>
+          </div> 
+        </div>  
+        <div>     
           <ReactPlayer 
-          url='https://www.youtube.com/watch?v=hPzfn1yIoRw' 
-          height='100%'
-          width='100%'
+          url='https://youtu.be/LQiMbIBtPgE' 
+          height='50vw'
+          width='100vw'
           loop="true"
           controls="false"
-          playing
+          playing="true"
+          volume="0"
           />
-          </div>
         </div>
       </div>
+    </div>
+
     )
   }
 }

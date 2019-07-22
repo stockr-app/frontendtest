@@ -1,0 +1,22 @@
+.NewsCard {
+    width: 300px;
+    border: 1px solid black;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    background-color: black;
+}
+#newsImg {
+    width: 100%;
+    height: 150px;
+    margin-top: 15px;
+}
+
+.aCard {
+    text-decoration: none;
+    color: white;
+    font-size: 9px;
+}
+
+.pCard {
+    font-size: 10px;
+}

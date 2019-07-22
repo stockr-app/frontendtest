@@ -1,9 +1,19 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import moment from 'moment';
 import "./Header.css";
-import moment from "moment";
+import Darkmode from '../Darkmode/Darkmode';
 
 export default class Header extends Component {
+
+  openScreenSaver(){
+    document.getElementById("myNav").style.width = "100%";
+  }
+  
+  closeScreenSaver(){
+    document.getElementById("myNav").style.width = "0%";
+  }
+
   render() {
     return (
       <div>
@@ -14,34 +24,23 @@ export default class Header extends Component {
             src={require("../../components/Header/stockrlogo.png")}
           />
           <div className="horizontal-menu">
-            <Link id="Link" to="/home">
               <i className="fas fa-home" />
-              Home
-            </Link>
-            <Link id="Link" to="/reports">
-              <i className="far fa-sticky-note" />
-              Reports
-            </Link>
-            <Link id="Link" to="/targets">
-              <i className="fas fa-crosshairs" />
-              Targets
-            </Link>
-            <Link id="Link" to="/keyIndicators">
-              <i className="fas fa-address-card" />About Us
-            </Link>
-            <Link id="Link" to="/settings">
-              <i className="fas fa-cog" />
-              Account Settings
-            </Link>
-            <Link id="Link" to="/billing">
-              <i className="fas fa-file-invoice-dollar" />
-              Billing
-            </Link>
+              <div className="headerTime">
+              <p className="todaysDate">{moment().format("MMMM-DD-YYYY")}</p>
+              </div>
+              <div id="icons" >
+                <a><i className="fas fa-cog" /></a>
+                <a><i className="fas fa-file-invoice-dollar" /></a>
+                <a href="#/" onClick={this.openScreenSaver}><i class="fas fa-cloud-moon"></i></a>
+              </div>
           </div>
         </nav>
-        <div className="headerTime">
-        <p className="todaysDate">{moment().format("MMMM-DD-YYYY")}</p>
-        </div>
+        <div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onClick={this.closeScreenSaver}>&times;</a>
+  <div class="overlay-content">
+    <h1>Screensaver</h1>
+  </div>
+</div>
       </div>
     );
   }

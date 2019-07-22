@@ -4,7 +4,7 @@ i {
 }
 
 #icons {
-  margin-left: 1100px;
+
 }
 
 #Link {
@@ -19,24 +19,31 @@ i {
     display: flex;
     flex-direction: row;
     background-color: lightgrey;
-    justify-content: space-between;
+    justify-content: flex-start;
     width: 100%;
     position: relative;
     padding-left: 30px;
     margin: 0 auto;
     border-bottom: 3px solid white;
     margin-bottom: 5px;
+
 }
 
 .horizontal-menu {
-    width: 100vw;
+    width: 89.5%;
+    height: 40px;
     display: flex;
     background-color: lightgrey;
-    align-items: center;    
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
   
 .todaysDate {
-  margin-top: 15px;
+}
+
+.headerTime {
+  height: 100%
 }
  
 .overlay {

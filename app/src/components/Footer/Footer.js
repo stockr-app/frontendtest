@@ -16,7 +16,7 @@ export default class Footer extends Component {
     return (
       <div className="footer">
         <div className="footer-lambda">Lambda School - 2019</div>
-        <a href="#/" onClick={this.openAboutUs}>About Us</a>
+        <a className = 'aboutUs1' href="#/" onClick={this.openAboutUs}>About Us</a>
         <div className="socialBar">
           <a href="/">
             <i className="fab fa-facebook icon" />

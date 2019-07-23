@@ -23,10 +23,10 @@ export default class Dashboard extends Component {
                 <Ticker />
                 <NavBar />
                 <QuickSearch />
+                <Reports />
                     <div className="Dashboard">
                     <div className="News">
                     <News />
-                    <Reports />
                     </div>
                 </div>
                 <Footer />

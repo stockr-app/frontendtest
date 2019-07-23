@@ -76,3 +76,32 @@
   }
 }
 
+@media (max-width: 500px) {
+  .footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: #9F9FA0;
+    height: 15%;
+  }
+
+  .footer-lambda {
+    display: none;
+  }
+
+  .aboutUs1 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  a {
+    color: black;
+  }
+
+  .socialBar {
+    display: flex;
+    width:100%;
+    justify-content: space-evenly;
+  }
+}

@@ -9,7 +9,7 @@ const NewsCard = props => {
       <a className="aCard" href={props.url} rel="noopener noreferrer" target="_blank">
         <p>{props.title}</p></a>
       {/* <p className="pCard">{props.text}</p> */}
-      <h4 className="pCard">{props.source}    -    {props.date}</h4>
+      <h4 className="pCard">{props.source}  -  {props.date}</h4>
       {/* <p className="pCard">{props.date}</p> */}
     </div>
     

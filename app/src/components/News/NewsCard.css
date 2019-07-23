@@ -23,21 +23,26 @@
 
 @media (max-width: 500px) {
     .NewsCard {
-        background-color: #454647;
+        background-color: white;
+        border: none;
         display: flex;
         flex-wrap: wrap;
         width: 80%;
-        padding: 20px;
+        padding: 5px 10px;
+        margin: 10px auto;
+        /* border: solid red; */
     }
 
     .pCard {
         font-size: 12px;
-        color: white;
+        font-weight: bold;
+        color: #97989B;
         width:100%;
         /* border: solid green; */
     }
 
     .aCard {
+        color: black;
         font-size: 20px;
         font-weight: bold;
         /* border: solid blue; */

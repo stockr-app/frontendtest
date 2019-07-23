@@ -37,7 +37,7 @@ i {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-  }
+}
   
 .todaysDate {
 }
@@ -93,5 +93,26 @@ i {
   font-size: 40px;
   top: 15px;
   right: 35px;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .splashNav {
+    justify-content: space-around;
+  }
+
+  .horizontal-menu {
+    display: none;
+  }
+
+  #icons {
+    display: none;
+  }
+
+  .splashLogo {
+    width: 40%;
+    margin: 0px;
+    padding: 10px;
   }
 }

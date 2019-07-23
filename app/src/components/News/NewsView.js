@@ -22,11 +22,11 @@ class News extends Component {
             <NewsCard
           key={p.url}
           title={p.title}
+          // text={p.text}
           image = {p.urlToImage}
-          text={p.text}
           url = {p.url}
-          source={p.source_name}
-          date={p.date}          
+          source={p.source.name}
+          date={p.publishedAt}          
         />
           );
         })}

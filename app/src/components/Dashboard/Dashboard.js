@@ -6,6 +6,7 @@ import QuickSearch from '../QuickSearch/QuickSearch';
 import Footer from '../Footer/Footer';
 import Reports from '../Reports/Reports';
 import NavBar from '../NavBar/NavBar';
+
 export default class Dashboard extends Component {
     constructor() {
         super ();

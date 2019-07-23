@@ -20,3 +20,31 @@
 .pCard {
     font-size: 10px;
 }
+
+@media (max-width: 500px) {
+    .NewsCard {
+        background-color: #454647;
+        display: flex;
+        flex-wrap: wrap;
+        width: 80%;
+        padding: 20px;
+    }
+
+    .pCard {
+        font-size: 12px;
+        color: white;
+        width:100%;
+        /* border: solid green; */
+    }
+
+    .aCard {
+        font-size: 20px;
+        font-weight: bold;
+        /* border: solid blue; */
+    }
+
+    #newsImg {
+        width: 100%;
+        /* border: solid purple; */
+    }
+}

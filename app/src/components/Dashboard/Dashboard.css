@@ -11,5 +11,9 @@
 }
 
 @media (max-width: 500px) {
-    
+
+    body {
+        border: solid red;
+        background: #191919;
+    }
 }

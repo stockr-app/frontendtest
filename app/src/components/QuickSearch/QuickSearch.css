@@ -48,3 +48,8 @@
     margin-top: 5px;
 
   }
+
+  .companyInfo {
+    display: flex;
+    flex-direction: row;
+  }

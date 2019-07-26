@@ -3,14 +3,10 @@ a:hover {
     color:  #152911;
 }
 
-#formInput {
-    margin-top: 5px;
-    border-bottom: 1px solid green;
-    border-top: none;
-    border-right: none;
-    border-left: none;
-    width: 50%;
+.backContent {
+  margin-top: 40px;
 }
+
 
 #Modal {
     background-image: url("https://i.ibb.co/hYCm90Z/image-from-rawpixel-id-329641-jpeg-1.jpg");
@@ -36,41 +32,16 @@ a:hover {
 .splashContent {
     display: flex;
     flex-direction: row;
-    width: 95%;
+    width: 100%;
     justify-content: center;
 
 }
 
-.splashForm {
-    border: 1px solid lightgrey;
-    border-radius: 25px;
-    color: #152911;
-    height: 600px;
-    width: 25%;
-    margin-left: 250px;
-    margin-right: 25px;
-    margin-top: 20px;
-    background-color: lightgrey;
-    opacity: 0.8;
-    text-align: center;
+.splashH1 {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 80px;
 }
 
-.splashLogo {
-    height: 10%;
-    width: 10%;
-    margin-left: 5px;
-    padding: 15px;
-}
-
-.splashNav {
-    display: flex;
-    flex-direction: row;
-    background-color: lightgrey;
-    width: 100%;
-    position: relative;
-    padding-left: 30px;
-    margin: 0 auto;
-}
 
 .splashPage {
     background-image: url("https://images.pexels.com/photos/159888/pexels-photo-159888.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200");
@@ -79,50 +50,62 @@ a:hover {
     background-size: cover; 
 }
 
-.splashText {
-    width: 25%;
-    height: 600px;
-    border: 1px solid #152911;
-    border-radius: 25px;
-    margin-top: 20px;
-    margin-left: 25px;
-    color: white;
-    background-color: #152911;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 50px;
-    opacity: 0.9;
-}
-
-.tooltip {
-    color: white;
-}
-
 #registerLogo {
     margin-top: 35px;
     width: 60%;
 }
 
-.formButton {
-    width: 50%;
-}
-
-.btnFacebook { 
-    width: 180px;
-    height:35px;  
-    border-radius: 4px;
-    background: #3b5998;
-    color:white;
-    border:0px transparent;  
+  .flip-card {
+    background-color:lightgrey;
+    width: 800px;
+    height: 200px;
+    perspective: 1000px;
+    margin-top: 250px;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
     text-align: center;
-    margin: 0 auto;
-    display: inline-block;
-    cursor: pointer;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+    background-color: lightgrey;
+  }
+  
+  .flip-card-back {
+    background-color: lightgrey;
+    transform: rotateY(180deg);
   }
 
-  .btnGoogle { 
-    width: 180px;
-    height:35px;  
-    margin:5px;
-    display: inline-block;
+  .splashOauth {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 70px;
+    width: 100%
   }
+
+
+
+
+
+
+
+  

@@ -32,7 +32,7 @@ export default class Footer extends Component {
           </a>
         </div>
         <div id="aboutUs" class="overlay">
-  <a href="javascript:void(0)" class="closebtn" onClick={this.closeAboutUs}>&times;</a>
+  <a href="#/" class="closebtn" onClick={this.closeAboutUs}>&times;</a>
   <div class="overlay-content">
     <AboutUs />
   </div>

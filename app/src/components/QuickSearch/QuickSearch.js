@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './QuickSearch.css';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import "react-tabs/style/react-tabs.css";
 export default class QuickSearch extends Component {
 
     constructor(props) {
@@ -32,7 +34,7 @@ export default class QuickSearch extends Component {
 
         return (
             <div>
-                <a onClick={this.fetchStocks}>Search a symbol</a>    
+                <a href="#/" onClick={this.fetchStocks}>Search a symbol</a>    
                     <input
                     className="stockSearch"
                     type="text"
@@ -69,7 +71,31 @@ export default class QuickSearch extends Component {
                     </div>
                     </div>
                 </div>
-
+                <Tabs>
+    <TabList>
+      <Tab>{this.state.stocks.symbol}</Tab>
+      <Tab>Balance Sheet</Tab>
+      <Tab>Cash Flow</Tab>
+      <Tab>Earnings</Tab>
+      <Tab>Estimates</Tab>
+    </TabList>
+ 
+    <TabPanel>
+      <h2>Company Info</h2>
+    </TabPanel>
+    <TabPanel>
+      <h2>Balance Sheet</h2>
+    </TabPanel>
+    <TabPanel>
+      <h2>Cash Flow</h2>
+    </TabPanel>
+    <TabPanel>
+      <h2>Earnings</h2>
+    </TabPanel>
+    <TabPanel>
+      <h2>Estimates</h2>
+    </TabPanel>
+  </Tabs>
 
         </div>
         )

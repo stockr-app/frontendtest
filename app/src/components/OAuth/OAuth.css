@@ -1,0 +1,90 @@
+.OAuth {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+}
+
+.OAuthform {
+  background-color: lightgrey;
+  color: black;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 25px;
+}
+
+#formInput {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  margin-left: 5px;
+  height: 25px;
+}
+
+.formButton {
+  background-color: lightgrey;
+  border: none;
+  margin-left: -115px;
+}
+
+.formEnd {
+  margin-left: -85px;
+}
+
+.formButton:hover {
+  background-color: lightgrey;
+  color: green;
+}
+
+#formInput[type="text"], textarea {
+
+  background-color : lightgrey; 
+
+}
+
+.btnFacebook { 
+    width: 400px;
+    height:70px;  
+    background: #3b5998;
+    color:white;
+    border:0px transparent;  
+    text-align: center;
+    margin: 0 auto;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .btnGoogle { 
+    width: 400px;
+    height:70px;  
+    display: inline-block;
+    cursor: pointer;
+    
+  }
+
+  .formButton {
+    height: 25px;
+    width: 25%;
+    animation:blinkingText 0.4s infinite;
+    cursor: pointer;
+  }
+
+  .buttonFixed{
+    position: absolute;
+    color:black;
+    margin-left: -18px;
+    cursor: pointer;
+  }
+
+
+@keyframes blinkingText{
+    0%{     color: yellowgreen;    }
+    49%{    color: transparent; }
+    50%{    color: transparent; }
+    99%{    color:transparent;  }
+    100%{   color: #000;    }
+}

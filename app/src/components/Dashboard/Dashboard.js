@@ -6,8 +6,30 @@ import QuickSearch from '../QuickSearch/QuickSearch';
 import Footer from '../Footer/Footer';
 import Reports from '../Reports/Reports';
 import NavBar from '../NavBar/NavBar';
+import {Redirect} from 'react-router-dom';
 export default class Dashboard extends Component {
+
+
+state = {
+    first_name: ''
+}
+ 
+  
+
+    componentDidMount(){
+        let data = JSON.parse(sessionStorage.getItem('STATE'));
+        console.log(data)
+        this.setState({
+            first_name: data.first_name,
+            sign_up_date: data.sign_up_date
+        });
+    }
+    
     render() {
+        //IF NO ITEM IN LOCALSTORAGE, USER IS REDIRECTED TO SPLASH PAGE
+        if(!sessionStorage.getItem('STATE')){
+            return(<Redirect to={'/'}/>)
+          }
         return (
             <div>
                 <Ticker />
@@ -15,8 +37,8 @@ export default class Dashboard extends Component {
                 <QuickSearch />
                     <div className="Dashboard">
                     <div className="News">
-                    <News />
                     <Reports />
+                    <News />               
                     </div>
                 </div>
                 <Footer />

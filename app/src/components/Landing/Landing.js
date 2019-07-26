@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './Landing.css';
 import ReactPlayer from 'react-player'
-import HeaderNoNavLogin from '../Header/HeaderNoNavLogin';
 
 
 export default class Landing extends Component {
@@ -9,7 +8,6 @@ export default class Landing extends Component {
   render() {
     return (
       <div>
-      <HeaderNoNavLogin />
       <div className="loginContainer">
         <div className="login">         
         </div>     
@@ -31,15 +29,6 @@ export default class Landing extends Component {
           </div> 
         </div>  
         <div>     
-          <ReactPlayer 
-          url='https://youtu.be/LQiMbIBtPgE' 
-          height='50vw'
-          width='100vw'
-          loop="true"
-          controls="false"
-          playing="true"
-          volume="0"
-          />
         </div>
       </div>
     </div>

@@ -96,7 +96,6 @@ export default class QuickSearch extends Component {
       <h2>Estimates</h2>
     </TabPanel>
   </Tabs>
-
         </div>
         )
     }

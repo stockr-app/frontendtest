@@ -6,6 +6,7 @@ export default class NavBar extends Component {
             <nav className="Nav">
                 <a href="#/">Reports</a>
                 <a href="#/">My Portfolio</a>
+                <a href="#/">IPO</a>
             </nav>
         )
     }

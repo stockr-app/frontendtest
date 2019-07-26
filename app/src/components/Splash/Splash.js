@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import './Splash.css';
 import OAuth from '../OAuth/OAuth';
-
 export default class Splash extends Component {
 
   render() {

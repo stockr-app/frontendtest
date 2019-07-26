@@ -37,7 +37,7 @@ state = {
                 <QuickSearch />
                     <div className="Dashboard">
                     <div className="News">
-                    <Reports />
+                        <hr></hr>
                     <News />               
                     </div>
                 </div>

@@ -9,7 +9,6 @@ import './OAuth.css';
 
 export default class Splash extends Component {
 
-  
   state = {
       user_id:"",
       first_name: "",
@@ -17,15 +16,22 @@ export default class Splash extends Component {
       email: "",
       premium: "false",   
       redirect: false,
-      sign_up_date: moment().format("MMMM-DD-YYYY")
+      sign_up_date: moment().format("MMMM-DD-YYYY"),
+      showLogin: false
     }
 
     constructor(props, context) {
       super(props, context);
-
-this.onSuccess = this.onSuccess.bind(this);
-this.responseFacebook = this.responseFacebook.bind(this);
+      this.onSuccess = this.onSuccess.bind(this);
+      this.responseFacebook = this.responseFacebook.bind(this);
 };
+
+toggleLoginHandler = () => {
+  const isVisible = this.state.showLogin;
+  this.setState({
+    showLogin: !isVisible
+    });
+  }
 
   onSuccess(resp) {
       this.setState({
@@ -62,8 +68,18 @@ addUser = () => {
 
   render() {
 
-
-    
+    let Login = null;
+    if (this.state.showLogin) {
+      Login = (
+        <form id="OAuthform" className="OAuthform">    
+        <p>Welcome</p>          
+        <input id="formInput" type="text" defaultValue={this.state.first_name || this.state.first_name}></input>
+        <a className="formButton" >REGISTER HERE</a>
+        <p className="buttonFixed" onClick={this.addUser}>REGISTER HERE</p>
+        <p className="formEnd">to use this application.</p>
+        </form> 
+      );
+    }
 
     let fbContent;
     let googleContent;
@@ -83,11 +99,13 @@ addUser = () => {
           callback={this.responseFacebook}
           cssClass="btnFacebook"
           textButton='Sign in with Facebook'
+          onClick={this.toggleLoginHandler}
           />
 
       );
 
       googleContent = (
+        
         <GoogleLogin
             clientId="432634226022-37hop4nb2mal0810tile8vmlkf8f1rs3.apps.googleusercontent.com"
             buttonText="Sign in with Google"
@@ -96,7 +114,8 @@ addUser = () => {
             onClick={this.googleClicked}
             onSuccess={resp => this.onSuccess(resp, console.log(resp))}
             cookiePolicy={'single_host_origin'}
-            className="btnGoogle"        
+            className="btnGoogle"    
+            onClick={this.toggleLoginHandler}    
             />
       );
     
@@ -108,13 +127,7 @@ addUser = () => {
             <div>{fbContent}</div>
             <div>{googleContent}</div>
             </div>
-            <form id="OAuthform" className="OAuthform">    
-                <p>Welcome</p>          
-                <input id="formInput" type="text" defaultValue={this.state.first_name || this.state.first_name}></input>
-                <a  className="formButton" >REGISTER HERE</a>
-                <p className="buttonFixed" onClick={this.addUser}>REGISTER HERE</p>
-                <p className="formEnd">to use this application.</p>
-            </form>
+            <div>{Login}</div>
             </div>
         </div>
     </div>

@@ -35,6 +35,10 @@
   margin-left: -85px;
 }
 
+.hide{
+  visibility: hidden;
+}
+
 .formButton:hover {
   background-color: lightgrey;
   color: green;

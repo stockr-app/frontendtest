@@ -74,7 +74,6 @@ addUser = () => {
         <form id="OAuthform" className="OAuthform">    
         <p>Welcome</p>          
         <input id="formInput" type="text" defaultValue={this.state.first_name || this.state.first_name}></input>
-        <a className="formButton" >REGISTER HERE</a>
         <p className="buttonFixed" onClick={this.addUser}>REGISTER HERE</p>
         <p className="formEnd">to use this application.</p>
         </form> 

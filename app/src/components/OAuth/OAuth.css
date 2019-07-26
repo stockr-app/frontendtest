@@ -32,7 +32,6 @@
 }
 
 .formEnd {
-  margin-left: -85px;
 }
 
 .hide{
@@ -80,15 +79,6 @@
   .buttonFixed{
     position: absolute;
     color:black;
-    margin-left: -18px;
+    margin-left: -15px;
     cursor: pointer;
   }
-
-
-@keyframes blinkingText{
-    0%{     color: yellowgreen;    }
-    49%{    color: transparent; }
-    50%{    color: transparent; }
-    99%{    color:transparent;  }
-    100%{   color: #000;    }
-}

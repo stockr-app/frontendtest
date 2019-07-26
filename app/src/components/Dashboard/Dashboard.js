@@ -7,6 +7,7 @@ import Footer from '../Footer/Footer';
 import Reports from '../Reports/Reports';
 import NavBar from '../NavBar/NavBar';
 import {Redirect} from 'react-router-dom';
+import IPO from '../IPO/IPO';
 export default class Dashboard extends Component {
 
 
@@ -40,7 +41,8 @@ state = {
                         <hr></hr>
                     <News />               
                     </div>
-                </div>
+                    </div>
+                    <IPO />
                 <Footer />
             </div>
         )

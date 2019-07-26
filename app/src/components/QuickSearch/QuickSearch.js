@@ -9,7 +9,8 @@ export default class QuickSearch extends Component {
         super(props);
         this.state = {
           stocks: [],
-          symbol: ""
+          symbol: "",
+          earnings: []
         };
       }
 
@@ -24,6 +25,17 @@ export default class QuickSearch extends Component {
           .catch(err => {
             this.setState({ error: "Unrecognized Symbol" });
           });
+        axios
+          .get(`https://sandbox.iexapis.com/stable/stock/${this.state.symbol}/earnings/quote?token=Tpk_521edcea4a3542dca944cb368cc0ec7b`)
+          .then(response => {
+            this.setState({ earnings: response.data});
+            console.log(this.state.earnings)
+          })
+          .catch(err => {
+            this.setState({ error: "Unrecognized Symbol" });
+          });
+          
+
       };
 
       inputChange = e => {
@@ -34,6 +46,7 @@ export default class QuickSearch extends Component {
 
         return (
             <div>
+              <h1>Earnings: {this.state.earnings.EPSReportDate}</h1>
                 <a href="#/" onClick={this.fetchStocks}>Search a symbol</a>    
                     <input
                     className="stockSearch"
@@ -78,6 +91,8 @@ export default class QuickSearch extends Component {
       <Tab>Cash Flow</Tab>
       <Tab>Earnings</Tab>
       <Tab>Estimates</Tab>
+      <Tab>Open/Close</Tab>
+      <Tab>Income Statement</Tab>
     </TabList>
  
     <TabPanel>
@@ -95,7 +110,14 @@ export default class QuickSearch extends Component {
     <TabPanel>
       <h2>Estimates</h2>
     </TabPanel>
+    <TabPanel>
+      <h2>Open/Close</h2>
+    </TabPanel>
+    <TabPanel>
+      <h2>Income Statement</h2>
+    </TabPanel>
   </Tabs>
+  <hr></hr>
         </div>
         )
     }

@@ -7,46 +7,16 @@ a:hover {
   margin-top: 40px;
 }
 
-#Modal {
-    background-image: url("https://i.ibb.co/hYCm90Z/image-from-rawpixel-id-329641-jpeg-1.jpg");
-    color: white;
-    opacity: 0.9;
-}
-
-#modalContent {
-    width: 75%;
-}
-
-.premiumBox {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.premiumCheckbox{
-    margin-top: 7px;
-    margin-right: 5px;
-}
-
 .splashContent {
     display: flex;
     flex-direction: row;
     width: 100%;
     justify-content: center;
-
 }
 
 .splashH1 {
     font-family: 'Fjalla One', sans-serif;
     font-size: 80px;
-}
-
-
-.splashPage {
-    background-image: url("https://images.pexels.com/photos/159888/pexels-photo-159888.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200");
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover; 
 }
 
 #registerLogo {
@@ -98,13 +68,30 @@ a:hover {
     flex-direction: row;
     justify-content: center;
     margin-top: 70px;
-    width: 100%
+    width: 100%;
   }
 
+  .videoTag {
+    position: absolute;
+  }
 
+  .fullscreen-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+}
 
-
-
+.fullscreen-bg__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 
 
   

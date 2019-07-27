@@ -11,7 +11,8 @@ export default class QuickSearch extends Component {
           stocks: [],
           symbol: "",
           earnings: [],
-          balanceSheet: []
+          balanceSheet: [],
+          cashflow: []
         };
       }
 
@@ -38,6 +39,15 @@ export default class QuickSearch extends Component {
           .then(response => {
             this.setState({ balanceSheet: response.data.balancesheet});
             console.log('STATE', this.state.balanceSheet)
+          })
+          .catch(err => {
+            this.setState({ error: "Unrecognized Symbol" });
+          });
+          axios
+          .get(`https://sandbox.iexapis.com/stable/stock/AMZN/cash-flow/quote?token=Tpk_521edcea4a3542dca944cb368cc0ec7b`)
+          .then(response => {
+            this.setState({ cashflow: response.data.cashflow});
+            console.log('STATE', this.state.cashflow)
           })
           .catch(err => {
             this.setState({ error: "Unrecognized Symbol" });
@@ -137,13 +147,31 @@ export default class QuickSearch extends Component {
         <p>Capital Surplus: {balanceSheet.capitalSurplus}</p>
         <p>Shareholder Equity: {balanceSheet.shareholderEquity}</p>
         <p>Net Tangible Assets: {balanceSheet.netTangibleAssets}</p>
-
-
         </div>
       </div>))}
     </TabPanel>
     <TabPanel>
       <h2>Cash Flow</h2>
+      {this.state.cashflow.map((cashflow, index) => (
+      <div key={index}>
+        <div>
+        <p>Report Date: {cashflow.reportDate}</p>
+        <p>Net Income: {cashflow.netIncome}</p>
+        <p>Depreciation: {cashflow.depreciation}</p>
+        <p>Changes In Receivables: {cashflow.changesInReceivables}</p>
+        <p>Cash Change: {cashflow.cashChange}</p>
+        <p>Cash Flow: {cashflow.cashFlow}</p>
+        <p>Capital Expenditures: {cashflow.capitalExpenditures}</p>
+        <p>Investments: {cashflow.investments}</p>
+        <p>Other Investment Activity: {cashflow.investingActivityOther}</p>
+        <p>Total Investment CashFlow: {cashflow.totalInvestingCashFlows}</p>
+        <p>Dividends Paid: {cashflow.dividendsPaid}</p>
+        <p>Net Borrowings: {cashflow.netBorrowings}</p>
+        <p>Other Financing Cash Flows: {otherFinancingCashFlows}</p>
+        <p>Cash Flow Financing: {cashflow.cashFlowFinancing}</p>
+        <p>Exchange Rate Effect: {cashflow.exchangeRateEffect}</p>
+        </div>
+        </div>))}
     </TabPanel>
     <TabPanel>
       {this.state.earnings.map((earningsData, index) => (

@@ -12,7 +12,8 @@ export default class QuickSearch extends Component {
           symbol: "",
           earnings: [],
           balanceSheet: [],
-          cashflow: []
+          cashflow: [],
+          estimates: []
         };
       }
 
@@ -44,10 +45,19 @@ export default class QuickSearch extends Component {
             this.setState({ error: "Unrecognized Symbol" });
           });
           axios
-          .get(`https://sandbox.iexapis.com/stable/stock/AMZN/cash-flow/quote?token=Tpk_521edcea4a3542dca944cb368cc0ec7b`)
+          .get(`https://sandbox.iexapis.com/stable/stock/${this.state.symbol}/cash-flow/quote?token=Tpk_521edcea4a3542dca944cb368cc0ec7b`)
           .then(response => {
             this.setState({ cashflow: response.data.cashflow});
             console.log('STATE', this.state.cashflow)
+          })
+          .catch(err => {
+            this.setState({ error: "Unrecognized Symbol" });
+          });
+          axios
+          .get(`https://sandbox.iexapis.com/stable/stock/${this.state.symbol}/estimates/quote?token=Tpk_521edcea4a3542dca944cb368cc0ec7b`)
+          .then(response => {
+            this.setState({ estimates: response.data.estimates});
+            console.log('STATE', this.state.estimates)
           })
           .catch(err => {
             this.setState({ error: "Unrecognized Symbol" });
@@ -151,7 +161,6 @@ export default class QuickSearch extends Component {
       </div>))}
     </TabPanel>
     <TabPanel>
-      <h2>Cash Flow</h2>
       {this.state.cashflow.map((cashflow, index) => (
       <div key={index}>
         <div>
@@ -167,7 +176,7 @@ export default class QuickSearch extends Component {
         <p>Total Investment CashFlow: {cashflow.totalInvestingCashFlows}</p>
         <p>Dividends Paid: {cashflow.dividendsPaid}</p>
         <p>Net Borrowings: {cashflow.netBorrowings}</p>
-        <p>Other Financing Cash Flows: {otherFinancingCashFlows}</p>
+        <p>Other Financing Cash Flows: {cashflow.otherFinancingCashFlows}</p>
         <p>Cash Flow Financing: {cashflow.cashFlowFinancing}</p>
         <p>Exchange Rate Effect: {cashflow.exchangeRateEffect}</p>
         </div>
@@ -191,7 +200,17 @@ export default class QuickSearch extends Component {
       </div>))}
     </TabPanel>
     <TabPanel>
-      <h2>Estimates</h2>
+      {this.state.estimates.map((estimates, index) => (
+      <div key={index}>
+        <div>
+        <p>Consensus EPS: {estimates.consensusEPS}</p>
+        <p>Announce Time: {estimates.announceTime}</p>
+        <p>Number of Estimates: {estimates.numberOfEstimates}</p>
+        <p>Report Date: {estimates.reportDate}</p>
+        <p>Fiscal Period: {estimates.fiscalPeriod}</p>
+        <p>Fiscal End Date: {estimates.fiscalEndDate}</p>
+        </div>
+      </div>))}
     </TabPanel>
     <TabPanel>
       <h2>Open/Close</h2>

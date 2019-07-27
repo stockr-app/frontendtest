@@ -13,7 +13,8 @@ export default class QuickSearch extends Component {
           earnings: [],
           balanceSheet: [],
           cashflow: [],
-          estimates: []
+          estimates: [],
+          income: []
         };
       }
 
@@ -30,7 +31,6 @@ export default class QuickSearch extends Component {
           .get(`https://sandbox.iexapis.com/stable/stock/${this.state.symbol}/earnings/quote?token=Tpk_521edcea4a3542dca944cb368cc0ec7b`)
           .then(response => {
             this.setState({ earnings: response.data.earnings});
-            console.log('STATE', this.state.earnings)
           })
           .catch(err => {
             this.setState({ error: "Unrecognized Symbol" });
@@ -39,7 +39,6 @@ export default class QuickSearch extends Component {
           .get(`https://sandbox.iexapis.com/stable/stock/${this.state.symbol}/balance-sheet/quote?token=Tpk_521edcea4a3542dca944cb368cc0ec7b`)
           .then(response => {
             this.setState({ balanceSheet: response.data.balancesheet});
-            console.log('STATE', this.state.balanceSheet)
           })
           .catch(err => {
             this.setState({ error: "Unrecognized Symbol" });
@@ -48,7 +47,6 @@ export default class QuickSearch extends Component {
           .get(`https://sandbox.iexapis.com/stable/stock/${this.state.symbol}/cash-flow/quote?token=Tpk_521edcea4a3542dca944cb368cc0ec7b`)
           .then(response => {
             this.setState({ cashflow: response.data.cashflow});
-            console.log('STATE', this.state.cashflow)
           })
           .catch(err => {
             this.setState({ error: "Unrecognized Symbol" });
@@ -57,12 +55,18 @@ export default class QuickSearch extends Component {
           .get(`https://sandbox.iexapis.com/stable/stock/${this.state.symbol}/estimates/quote?token=Tpk_521edcea4a3542dca944cb368cc0ec7b`)
           .then(response => {
             this.setState({ estimates: response.data.estimates});
-            console.log('STATE', this.state.estimates)
           })
           .catch(err => {
             this.setState({ error: "Unrecognized Symbol" });
           });
-
+          axios
+          .get(`https://sandbox.iexapis.com/stable/stock/${this.state.symbol}/income/quote?token=Tpk_521edcea4a3542dca944cb368cc0ec7b`)
+          .then(response => {
+            this.setState({ income: response.data.income});
+          })
+          .catch(err => {
+            this.setState({ error: "Unrecognized Symbol" });
+          });
       };
 
       inputChange = e => {
@@ -217,6 +221,26 @@ export default class QuickSearch extends Component {
     </TabPanel>
     <TabPanel>
       <h2>Income Statement</h2>
+      {this.state.income.map((income, index) => (
+      <div key={index}>
+        <div>
+        <p>Report Date: {income.reportDate}</p>
+        <p>Total Revenue: {income.totalRevenue}</p>
+        <p>Cost of Revenue: {income.costOfRevenue}</p>
+        <p>Gross Profit: {income.grossProfit}</p>
+        <p>Research and Development: {income.researchAndDevelopment}</p>
+        <p>Selling General and Admin: {income.sellingGeneralAndAdmin}</p>
+        <p>Operating Expense: {income.operatingExpense}</p>
+        <p>Operating Income: {income.operatingIncome}</p>
+        <p>Other Income Expense Net: {income.otherIncomeExpenseNet}</p>
+        <p>Ebit: {income.ebit}</p>
+        <p>Interest Income: {income.interestIncome}</p>
+        <p>Pre-tax Income: {income.pretaxIncome}</p>
+        <p>Income Tax: {income.incomeTax}</p>
+        <p>Minority Interest: {income.minorityInterest}</p>
+        <p>Net Income Basic: {income.netIncomeBasic}</p>
+        </div>
+      </div>))}
     </TabPanel>
   </Tabs>
   <hr></hr>

@@ -1,0 +1,26 @@
+.Username {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(163, 56, 56);
+    border-radius: 15px;
+    width: 1000px;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 25px;
+    color: white;
+}
+
+.userInput {
+    background-color: rgb(163, 56, 56);
+    color: white;
+    border: none;
+    margin-left: 15px;
+}
+
+.userInput:focus {
+    outline: none;
+}
+
+::placeholder {
+color: black;
+}

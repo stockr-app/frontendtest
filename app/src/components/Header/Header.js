@@ -4,6 +4,7 @@ import "./Header.css";
 import Countdown from '../Countdown/Countdown';
 import AccountSettings from '../AccountSettings/AccountSettings';
 import Billing from '../Billing/Billing';
+import Username from '../Username/Username';
 export default class Header extends Component {
       
       state = {
@@ -54,6 +55,7 @@ export default class Header extends Component {
           </div>
             <div className="greetingLogout">
             <p className="Greeting">Welcome to your dashboard {this.state.first_name}</p>
+            <Username />
             <a href="/"><p className="Logout"  onClick={this.Logout}>Logout</p></a>
             </div>
         </div>

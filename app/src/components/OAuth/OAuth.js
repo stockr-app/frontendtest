@@ -26,6 +26,7 @@ export default class Splash extends Component {
 };
 
 toggleLoginHandler = () => {
+  console.log('FIRED')
   const isVisible = this.state.showLogin;
   this.setState({
     showLogin: !isVisible
@@ -33,13 +34,14 @@ toggleLoginHandler = () => {
   }
 
   onSuccess(resp) {
+    console.log("Response", resp)
       this.setState({
         first_name: resp.profileObj.givenName,
         last_name: resp.profileObj.familyName,
         email: resp.profileObj.email,
         user_id: resp.profileObj.googleId
       })
-      console.log(this.state)
+      console.log("State", this.state)
   }
 
   responseFacebook = response => {
@@ -47,15 +49,15 @@ toggleLoginHandler = () => {
       first_name: response.first_name,
       last_name: response.last_name,
       email: response.email,
-      
+      user_id: response.id
     });
   };
 
 addUser = () => {
+  console.log('STATE', this.state)
   sessionStorage.setItem('STATE', JSON.stringify(this.state));  
-    axios.post('https://stocking.firebaseio.com/users/.json?auth=qorpL6CkR2Qc5JGiMYCobKt6AV2BG9b1ydmkjqJ4', this.state)
+    axios.post('http://stockrapp-env.us-west-2.elasticbeanstalk.com/api/stock', this.state)
   .then((response) => {
-    console.log(response)
     this.setState({ 
       redirect: true
     })
@@ -93,17 +95,14 @@ addUser = () => {
           appId="274333116817522"
           autoLoad={false}
           fields="first_name,last_name,email"
-          onClick={this.facebookClicked}
           callback={this.responseFacebook}
           cssClass="btnFacebook"
           textButton='Sign in with Facebook'
-          onClick={this.toggleLoginHandler}
           />
 
       );
 
       googleContent = (
-        
         <GoogleLogin
             clientId="432634226022-37hop4nb2mal0810tile8vmlkf8f1rs3.apps.googleusercontent.com"
             buttonText="Sign in with Google"
@@ -112,8 +111,8 @@ addUser = () => {
             onClick={this.googleClicked}
             onSuccess={resp => this.onSuccess(resp, console.log(resp))}
             cookiePolicy={'single_host_origin'}
-            className="btnGoogle"    
-            onClick={this.toggleLoginHandler}    
+            className="btnGoogle" 
+            onClick={this.googleClicked}
             />
       );
     
@@ -122,8 +121,10 @@ addUser = () => {
         <div className="splashContent">  
             <div className="splashForm">
             <div className="OAuth">
-            <div>{fbContent}</div>
-            <div>{googleContent}</div>
+            <div onClick={this.toggleLoginHandler}
+              >{fbContent}</div>
+            <div onClick={this.toggleLoginHandler}               
+              >{googleContent}</div>
             </div>
             <div>{Login}</div>
             </div>

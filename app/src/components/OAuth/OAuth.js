@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import FacebookLogin from "react-facebook-login";
 import GoogleLogin from 'react-google-login';
-import {Button} from 'react-bootstrap';
 import axios from 'axios';
 import { Redirect } from 'react-router-dom'
 import moment from 'moment';

@@ -11,7 +11,6 @@ export default class Header extends Component {
       componentDidMount(){
         
         let data = JSON.parse(sessionStorage.getItem('STATE'));
-        console.log(data)
         this.setState({
         first_name: data.first_name,
         });
@@ -26,7 +25,6 @@ export default class Header extends Component {
       }
 
       Logout(){
-        console.log('Logging out')
         sessionStorage.removeItem("STATE");
       }
 
@@ -39,10 +37,10 @@ export default class Header extends Component {
             <i id="homeIcon" className="fas fa-home"/>
             <p className="todaysDate">{moment().format("MMMM-DD-YYYY")}</p>
             <div className="icons" >
-                <a href="#/"><i class="fas fa-inbox"></i></a>
+                <a href="#/"><i className="fas fa-inbox"></i></a>
                 <a href="#/"><i className="fas fa-cog" /></a>
                 <a href="#/"><i className="fas fa-file-invoice-dollar" /></a>
-                <a href="#/" onClick={this.openScreenSaver}><i class="fas fa-cloud-moon"></i></a>
+                <a href="#/" onClick={this.openScreenSaver}><i className="fas fa-cloud-moon"></i></a>
               </div>
           </div>
             <div className="greetingLogout">
@@ -50,9 +48,9 @@ export default class Header extends Component {
             <a href="/"><p className="Logout"  onClick={this.Logout}>Logout</p></a>
             </div>
         </div>
-               <div id="myNav" class="overlay">
-             <a href="#/" class="closebtn" onClick={this.closeScreenSaver}>&times;</a>
-               <div class="overlay-content">
+               <div id="myNav" className="overlay">
+             <a href="#/" className="closebtn" onClick={this.closeScreenSaver}>&times;</a>
+               <div className="overlay-content">
                <Countdown />
                </div>
            </div>

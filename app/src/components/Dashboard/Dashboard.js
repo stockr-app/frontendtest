@@ -4,7 +4,6 @@ import News from '../News/NewsView'
 import './Dashboard.css';
 import QuickSearch from '../QuickSearch/QuickSearch';
 import Footer from '../Footer/Footer';
-import Reports from '../Reports/Reports';
 import NavBar from '../NavBar/NavBar';
 import {Redirect} from 'react-router-dom';
 import IPO from '../IPO/IPO';
@@ -19,7 +18,6 @@ state = {
 
     componentDidMount(){
         let data = JSON.parse(sessionStorage.getItem('STATE'));
-        console.log(data)
         this.setState({
             first_name: data.first_name,
             sign_up_date: data.sign_up_date

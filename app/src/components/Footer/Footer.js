@@ -31,9 +31,9 @@ export default class Footer extends Component {
             <i className="fab fa-linkedin icon" />
           </a>
         </div>
-        <div id="aboutUs" class="overlay">
-  <a href="#/" class="closebtn" onClick={this.closeAboutUs}>&times;</a>
-  <div class="overlay-content">
+        <div id="aboutUs" className="overlay">
+  <a href="#/" className="closebtn" onClick={this.closeAboutUs}>&times;</a>
+  <div className="overlay-content">
     <AboutUs />
   </div>
 </div>

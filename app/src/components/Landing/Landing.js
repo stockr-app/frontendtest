@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './Landing.css';
-import ReactPlayer from 'react-player'
 
 
 export default class Landing extends Component {

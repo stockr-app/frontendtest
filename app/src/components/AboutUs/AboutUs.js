@@ -16,28 +16,28 @@ class AboutUs extends Component {
           <h2 className="AAName">Andrew Armstrong</h2>
           </div>
           <div className="aboutDev">
-          <p>
-              Spicy jalapeno bacon ipsum dolor amet sausage shank pancetta,
-              t-bone tail doner pork belly capicola shankle tongue. Landjaeger
-              ground round prosciutto corned beef pork, strip steak tail.
-              Brisket ham hock andouille tongue pork chop rump ground round.
-              Tongue prosciutto pancetta porchetta corned beef salami. Hamburger
-              frankfurter ham hock turkey, kielbasa brisket sausage. Meatball
-              flank kevin pancetta bresaola frankfurter bacon hamburger beef
-              ribs leberkas rump tongue salami kielbasa.
-            </p>
+          {/* <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+          sed do eiusmod tempor incididunt ut labore et dolore magna 
+          aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+          ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+          Duis aute irure dolor in reprehenderit in voluptate velit 
+          esse cillum dolore eu fugiat nulla pariatur. Excepteur 
+          sint occaecat cupidatat non proident, sunt in culpa qui 
+          officia deserunt mollit anim id est laborum.
+            </p> */}
           </div>
             <form className="contactForm">
-              <label for="fname">First Name</label>
+              <label htmlFor="fname">First Name</label>
               <input type="text" id="fname" name="firstname" placeholder="Your name..."/>
 
-              <label for="lname">Last Name</label>
+              <label htmlFor="lname">Last Name</label>
               <input type="text" id="lname" name="lastname" placeholder="Your last name..."/>
 
-              <label for="email">Email Address</label>
+              <label htmlFor="email">Email Address</label>
               <input type="text" id="email" name="email" placeholder="Your email address..."/>
 
-              <label for="subject">Subject</label>
+              <label htmlFor="subject">Subject</label>
               <textarea id="subject" name="subject" placeholder="Send Andrew a messaage.."></textarea>
 
               <input type="submit" value="Submit"/>
@@ -49,7 +49,7 @@ class AboutUs extends Component {
           <h2 className="AOName">Andrew Ogle</h2>
           </div>
           <div className="aboutDev">
-          <p>
+          {/* <p>
               Spicy jalapeno bacon ipsum dolor amet sausage shank pancetta,
               t-bone tail doner pork belly capicola shankle tongue. Landjaeger
               ground round prosciutto corned beef pork, strip steak tail.
@@ -58,19 +58,19 @@ class AboutUs extends Component {
               frankfurter ham hock turkey, kielbasa brisket sausage. Meatball
               flank kevin pancetta bresaola frankfurter bacon hamburger beef
               ribs leberkas rump tongue salami kielbasa.
-            </p>
+            </p> */}
           </div>
             <form className="contactForm">
-              <label for="fname">First Name</label>
+              <label htmlFor="fname">First Name</label>
               <input type="text" id="fname" name="firstname" placeholder="Your name..."/>
 
-              <label for="lname">Last Name</label>
+              <label htmlFor="lname">Last Name</label>
               <input type="text" id="lname" name="lastname" placeholder="Your last name..."/>
 
-              <label for="email">Email Address</label>
+              <label htmlFor="email">Email Address</label>
               <input type="text" id="email" name="email" placeholder="Your email address..."/>
 
-              <label for="subject">Subject</label>
+              <label htmlFor="subject">Subject</label>
               <textarea id="subject" name="subject" placeholder="Send Andrew a messaage.."></textarea>
 
               <input type="submit" value="Submit"/>
@@ -82,7 +82,7 @@ class AboutUs extends Component {
           <h2 className="MBName">Marcus Bass</h2>
           </div>
           <div className="aboutDev">
-          <p>
+          {/* <p>
               Spicy jalapeno bacon ipsum dolor amet sausage shank pancetta,
               t-bone tail doner pork belly capicola shankle tongue. Landjaeger
               ground round prosciutto corned beef pork, strip steak tail.
@@ -91,19 +91,19 @@ class AboutUs extends Component {
               frankfurter ham hock turkey, kielbasa brisket sausage. Meatball
               flank kevin pancetta bresaola frankfurter bacon hamburger beef
               ribs leberkas rump tongue salami kielbasa.
-            </p>
+            </p> */}
           </div>
             <form className="contactForm">
-              <label for="fname">First Name</label>
+              <label htmlFor="fname">First Name</label>
               <input type="text" id="fname" name="firstname" placeholder="Your name..."/>
 
-              <label for="lname">Last Name</label>
+              <label htmlFor="lname">Last Name</label>
               <input type="text" id="lname" name="lastname" placeholder="Your last name..."/>
 
-              <label for="email">Email Address</label>
+              <label htmlFor="email">Email Address</label>
               <input type="text" id="email" name="email" placeholder="Your email address..."/>
 
-              <label for="subject">Subject</label>
+              <label htmlFor="subject">Subject</label>
               <textarea id="subject" name="subject" placeholder="Send Marcus a messaage.."></textarea>
 
               <input type="submit" value="Submit"/>

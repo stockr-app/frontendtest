@@ -25,7 +25,7 @@ export default class Countdown extends Component {
       }, second)
     
         return (
-            <div class="container">
+            <div className="container">
             <h1 id="head">Countdown until market opens:</h1>
                 <ul>
                     <li><span id="markethours"></span>Hours</li>

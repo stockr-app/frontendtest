@@ -88,6 +88,19 @@ i {
   opacity: 0.95;
 }
 
+.AccountSettings {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: black;
+  overflow-x: hidden;
+  transition: 0.5s;
+  opacity: 0.95;
+}
+
 .overlay-content {
   top: 25%;
   width: 100%;

@@ -22,11 +22,7 @@ export default class App extends React.Component {
             <Router>
               <div>         
                 <Route path="/app" component={Header} />
-                {/* <Route path="/app/settings" component={ComponentB} />
-                <Route path="/app/reports" component={ComponentB} />
-                <Route path="/app/billing" component={ComponentB} />
-                <Route path="/app/aboutus" component={ComponentB} />
-                <Route path="/app/home" component={ComponentB} /> */}
+                {/* <Route path="/app/home" component={ComponentB} /> */}
                 <Route path="/" exact component={Splash} />
                 <Route path="/login" exact component={Landing} />                            
                 <Route path="/app/home" exact component={Dashboard} />

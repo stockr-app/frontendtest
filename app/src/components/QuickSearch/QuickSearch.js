@@ -23,6 +23,7 @@ export default class QuickSearch extends Component {
           .get(`https://sandbox.iexapis.com/stable/stock/${this.state.symbol}/quote?token=Tpk_521edcea4a3542dca944cb368cc0ec7b`)
           .then(response => {
             this.setState({ stocks: response.data});
+            document.getElementById('Results').style.backgroundColor = "seagreen";
           })
           .catch(err => {
             this.setState({ error: "Unrecognized Symbol" });
@@ -123,7 +124,6 @@ export default class QuickSearch extends Component {
       <Tab>Cash Flow</Tab>
       <Tab>Earnings</Tab>
       <Tab>Estimates</Tab>
-      <Tab>Open/Close</Tab>
       <Tab>Income Statement</Tab>
     </TabList>
  
@@ -215,9 +215,6 @@ export default class QuickSearch extends Component {
         <p>Fiscal End Date: {estimates.fiscalEndDate}</p>
         </div>
       </div>))}
-    </TabPanel>
-    <TabPanel>
-      <h2>Open/Close</h2>
     </TabPanel>
     <TabPanel>
       <h2>Income Statement</h2>

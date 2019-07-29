@@ -13,10 +13,11 @@ export default class Splash extends Component {
       first_name: "",
       last_name: "",
       email: "",
-      premium: "false",   
+      premium: false,   
       redirect: false,
       sign_up_date: moment().format("MMMM-DD-YYYY"),
-      showLogin: false
+      showLogin: false,
+      timestamp: 201907280745
     }
 
     constructor(props, context) {
@@ -53,19 +54,26 @@ toggleLoginHandler = () => {
     });
   };
 
+  hours = moment().format("HH");
+  minutes = 60 - moment().format("mm");
+  seconds = 60 - moment().format("ss");
+  day = moment().format("DD");
+  month = moment().format("MM");
+  year = moment().format("YYYY");
+  
+  timestamp = this.year + this.month + this.day + this.minutes + this.seconds;
+
 addUser = () => {
   console.log('STATE', this.state)
+  console.log('Timestamp', this.timestamp)
   sessionStorage.setItem('STATE', JSON.stringify(this.state));  
-    axios.post('http://stockrapp-env.us-west-2.elasticbeanstalk.com/api/stock', this.state)
+    axios.post('http://stockrapp-env.us-west-2.elasticbeanstalk.com/api/stock ', this.state)
   .then((response) => {
     this.setState({ 
       redirect: true
-    })
-    
+    })   
   });
 }
-
-
 
   render() {
 

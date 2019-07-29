@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-
+import React, { Component } from 'react';
+import Darkmode from '../Darkmode/Darkmode';
 export default class AccountSettings extends Component {
 
     render() {
@@ -7,7 +7,7 @@ export default class AccountSettings extends Component {
             <div>
                 <h1>Account Settings</h1>
                 <p>Education Mode</p>
-                <p>Dark/Light Mode</p>
+                <Darkmode />
                 <h1>Billing</h1>
             </div>
         )

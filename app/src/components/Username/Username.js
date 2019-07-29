@@ -21,7 +21,7 @@ export default class Username extends Component {
         return (
             <div id="Username" className="Username">
                 <p>To start your personal stock portfolio, you must create a unique username:</p>
-                <input className="userInput" placeholder="Enter Username"></input>
+                <input className="userInput" placeholder="Enter Username..."></input>
             </div>
         )
     }

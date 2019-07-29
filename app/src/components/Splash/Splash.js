@@ -17,7 +17,7 @@ export default class Splash extends Component {
               <div className="flip-card-inner">
                 <div className="flip-card-front">
                   <img id="registerLogo" alt="StockrLogo" src={require("../../components/Splash/stockrlogo.png")}/>
-                  <p>A new way to find, monitor and enjoy your trading experience.</p>
+                  <p className="frontFlipContent">A new way to find, monitor and enjoy your trading experience.</p>
                 </div>
                   <div className="flip-card-back">
                     <p className="backContent">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 

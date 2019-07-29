@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-
+import React, { Component } from 'react';
+import './Darkmode.css';
 export default class Darkmode extends Component {
 
     darkMode(){
@@ -16,10 +16,8 @@ export default class Darkmode extends Component {
     render(){
       return(
         <div className="quickSettings">
-          <div>
               <button id="darkMode" onClick={this.darkMode}>Dark Mode</button>
               <button id="lightMode" onClick={this.lightMode}>Light Mode</button>
-          </div>
         </div>
       )
     }

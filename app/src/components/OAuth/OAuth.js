@@ -67,7 +67,7 @@ addUser = () => {
   console.log('STATE', this.state)
   console.log('Timestamp', this.timestamp)
   sessionStorage.setItem('STATE', JSON.stringify(this.state));  
-    axios.post('http://stockrapp-env.us-west-2.elasticbeanstalk.com/api/stock ', this.state)
+    axios.post('https://stockr-5ab2c.firebaseio.com/users.json/', this.state)
   .then((response) => {
     this.setState({ 
       redirect: true

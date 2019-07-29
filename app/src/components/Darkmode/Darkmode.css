@@ -1,0 +1,30 @@
+.quickSettings {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#darkMode {
+    margin-right: 5px;
+    background-color: white;
+    color: black;
+    border: 3px solid white;
+    border-radius: 5px;
+}
+
+#darkMode:hover {
+    background-color: black;
+    color: white;
+}
+
+#lightMode {
+    background-color: black;
+    color: white;
+    border: 3px solid white;
+    border-radius: 5px;
+}
+
+#lightMode:hover {
+    background-color: white;
+    color: black;
+}

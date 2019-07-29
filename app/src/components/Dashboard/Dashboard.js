@@ -35,13 +35,8 @@ state = {
                 <Ticker />
                 <NavBar />
                 <QuickSearch />
-                    <div className="Dashboard">
-                    <div className="News">
-                        <hr></hr>
-                    <News />               
-                    </div>
-                    </div>
-                    <Stocktable />
+                <Stocktable />
+                    <News />                                
                     <IPO />
                 <Footer />
             </div>

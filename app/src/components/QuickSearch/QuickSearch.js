@@ -128,7 +128,6 @@ export default class QuickSearch extends Component {
     </TabList>
  
     <TabPanel>
-      <h2>Company Info</h2>
     </TabPanel>
     <TabPanel>
       {this.state.balanceSheet.map((balanceSheet, index) => (
@@ -217,7 +216,6 @@ export default class QuickSearch extends Component {
       </div>))}
     </TabPanel>
     <TabPanel>
-      <h2>Income Statement</h2>
       {this.state.income.map((income, index) => (
       <div key={index}>
         <div>
@@ -240,7 +238,6 @@ export default class QuickSearch extends Component {
       </div>))}
     </TabPanel>
   </Tabs>
-  <hr></hr>
         </div>
         )
         

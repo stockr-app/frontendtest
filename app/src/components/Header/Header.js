@@ -69,6 +69,7 @@ export default class Header extends Component {
                   <a href="#/" className="closebtn" onClick={this.closeAccountSettings}>&times;</a>
                <div className="overlay-content">
                 <AccountSettings />
+                <Billing />
                </div>
               </div>
       </div>

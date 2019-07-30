@@ -101,8 +101,20 @@
       height: 100%;
     }
 
-    Tab {
-      width: 100%;
-      border: solid red;
+    .searchField {
+      display: flex;
+    }
+
+    .stockSearch {
+      width: 75%;
+      padding: 0px;
+      margin: 0px 0px 0px 10px;
+      border: 1px solid black;
+    }
+
+    .search {
+      width: 10%;
+      margin: 0px 0px 0px 30px;
+      border: 1px solid black;
     }
   }

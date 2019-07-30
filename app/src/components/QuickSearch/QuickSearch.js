@@ -80,14 +80,21 @@ export default class QuickSearch extends Component {
 
         return (
             <div>
-                <a href="#/" onClick={this.fetchStocks}>Search a symbol</a>    
+
+              <div className = 'searchField'>
+
+                <a className = 'search' href="#/" onClick={this.fetchStocks}>Search</a>    
                     <input
                     className="stockSearch"
                     type="text"
                     name="symbol"
                     onChange={this.inputChange}
                     value={this.state.symbol}
+                    placeholder = 'Search a symbol...'
                     />
+
+              </div>
+
                     <div id="Results">
 
                    <h1 className="companyName">{this.state.stocks.companyName}</h1>

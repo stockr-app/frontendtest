@@ -91,7 +91,7 @@ export default class QuickSearch extends Component {
                     <div id="Results">
                    <h1 className="companyName">{this.state.stocks.companyName}</h1>
                     <div className="searchResults">
-                    <div>
+                    <div className="v0">
                         <p>Symbol: {this.state.stocks.symbol}</p>
                         <p>Latest Price: {this.state.stocks.latestPrice}</p>
                     </div>

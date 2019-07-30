@@ -50,3 +50,34 @@
     display: flex;
     flex-direction: row;
   }
+
+  @media (max-width: 500px) {
+
+    input {
+      border: solid green;
+    }
+
+    .searchResults{
+      border: solid blue;
+    }
+
+    .v0 {
+      border: none;
+    }
+
+    .v1 {
+      border: solid red;;
+    }
+
+    .v2 {
+      border: none;
+    }
+
+    .v3 {
+      border: none;
+    }
+
+    .v4 {
+      border: none;
+    }
+  }

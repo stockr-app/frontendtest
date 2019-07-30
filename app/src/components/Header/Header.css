@@ -125,3 +125,40 @@ i {
   right: 35px;
   }
 }
+
+@media (max-width: 500px) {
+  .icons {
+    display: none;
+  }
+
+  .Logout {
+    display: none;
+  }
+
+  #homeIcon{
+    display: none;
+  }
+
+  #Username.Username {
+    display: none;
+  }
+
+  .Greeting {
+    display: none;
+  }
+
+  .B {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .splashLogo {
+    width: 40%;
+    margin: 0px;
+  }
+
+  .todaysDate {
+    width: 30%;
+    justify-content: center;
+  }
+}

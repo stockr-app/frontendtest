@@ -19,6 +19,7 @@ state = {
 
     componentDidMount(){
         let data = JSON.parse(sessionStorage.getItem('STATE'));
+        console.log(data)
         this.setState({
             first_name: data.first_name,
             sign_up_date: data.sign_up_date

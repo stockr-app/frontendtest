@@ -54,7 +54,7 @@ export default class Header extends Component {
               </div>
           </div>
             <div className="greetingLogout">
-            <p className="Greeting">Welcome to your dashboard {this.state.first_name}</p>
+            <p className="Greeting">Welcome to your dashboard {this.state.first_name}!</p>
             <Username />
             <a href="/"><p className="Logout"  onClick={this.Logout}>Logout</p></a>
             </div>

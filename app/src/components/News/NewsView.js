@@ -25,8 +25,8 @@ class News extends Component {
           image = {p.urlToImage}
           text={p.text}
           url = {p.url}
-          source={p.source_name}
-          date={p.date}          
+          source={p.source.name}
+          date={p.publishedAt}          
         />
           );
         })}

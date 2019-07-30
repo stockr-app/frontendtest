@@ -89,12 +89,13 @@ export default class QuickSearch extends Component {
                     value={this.state.symbol}
                     />
                     <div id="Results">
-                      
+
                    <h1 className="companyName">{this.state.stocks.companyName}</h1>
 
                     <div className="searchResults">
 
-
+                    <div className = 'panel-1'>
+                      
                       <div className="v1">
                           <p>Symbol: {this.state.stocks.symbol}</p>
                           <p>Latest Price: {this.state.stocks.latestPrice}</p>
@@ -106,6 +107,9 @@ export default class QuickSearch extends Component {
                           <p>Calculation Price: {this.state.stocks.calculationPrice}</p>
                       </div>
 
+                    </div>
+
+                    <div className = 'panel-2'>
 
                       <div className="v3">
                           <p>Previous Close: {this.state.stocks.previousClose}</p>
@@ -118,12 +122,16 @@ export default class QuickSearch extends Component {
                           <p>52 Week Low: {this.state.stocks.week52Low}</p>
                       </div>
 
+                    </div>
+
+                    <div className = 'panel-3'>
 
                       <div className="v5">
                           <p>YTD Change: {this.state.stocks.ytdChange}</p>
                           <p>peRatio: {this.state.stocks.peRatio}</p>
                       </div>
 
+                    </div>
 
                     </div>
                 </div>

@@ -58,11 +58,21 @@
     }
 
     .searchResults{
-      border: solid blue;
+      display: flex;
+      flex-wrap: wrap;
     }
 
-    .v0 {
-      border: none;
+    .panel-1 {
+      width: 40%;
+    }
+
+    .panel-2 {
+      width: 40%;
+    }
+    .panel-3 {
+      width: 100%;
+      display:flex;
+      justify-content: space-around;
     }
 
     .v1 {
@@ -79,5 +89,20 @@
 
     .v4 {
       border: none;
+    }
+
+    .v5 {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+    }
+
+    .v5 p {
+      height: 100%;
+    }
+
+    Tab {
+      width: 100%;
+      border: solid red;
     }
   }

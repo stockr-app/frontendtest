@@ -76,3 +76,27 @@
   }
 }
 
+@media (max-width: 500px) {
+
+  .footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 20%;
+  }
+
+  .footer-lambda {
+    display: none;
+  }
+
+  a {
+    display:flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .socialBar {
+    width: 100%;
+  }
+}
+

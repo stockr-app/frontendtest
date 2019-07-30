@@ -89,32 +89,42 @@ export default class QuickSearch extends Component {
                     value={this.state.symbol}
                     />
                     <div id="Results">
+                      
                    <h1 className="companyName">{this.state.stocks.companyName}</h1>
+
                     <div className="searchResults">
-                    <div className="v0">
-                        <p>Symbol: {this.state.stocks.symbol}</p>
-                        <p>Latest Price: {this.state.stocks.latestPrice}</p>
-                    </div>
-                    <div className="vl"></div>
-                    <div>
-                        <p>Exchange: {this.state.stocks.primaryExchange}</p>
-                        <p>Calculation Price: {this.state.stocks.calculationPrice}</p>
-                    </div>
-                    <div className="v2"></div>
-                    <div>
-                        <p>Previous Close: {this.state.stocks.previousClose}</p>
-                        <p>Change: {this.state.stocks.change}</p>
-                    </div>
-                    <div className="v3"></div>
-                    <div>
-                        <p>52 Week High: {this.state.stocks.week52High}</p>
-                        <p>52 Week Low: {this.state.stocks.week52Low}</p>
-                    </div>
-                    <div className="v4"></div>
-                    <div>
-                        <p>YTD Change: {this.state.stocks.ytdChange}</p>
-                        <p>peRatio: {this.state.stocks.peRatio}</p>
-                    </div>
+
+
+                      <div className="v1">
+                          <p>Symbol: {this.state.stocks.symbol}</p>
+                          <p>Latest Price: {this.state.stocks.latestPrice}</p>
+                      </div>
+
+
+                      <div className="v2">
+                          <p>Exchange: {this.state.stocks.primaryExchange}</p>
+                          <p>Calculation Price: {this.state.stocks.calculationPrice}</p>
+                      </div>
+
+
+                      <div className="v3">
+                          <p>Previous Close: {this.state.stocks.previousClose}</p>
+                          <p>Change: {this.state.stocks.change}</p>
+                      </div>
+
+
+                      <div className="v4">
+                          <p>52 Week High: {this.state.stocks.week52High}</p>
+                          <p>52 Week Low: {this.state.stocks.week52Low}</p>
+                      </div>
+
+
+                      <div className="v5">
+                          <p>YTD Change: {this.state.stocks.ytdChange}</p>
+                          <p>peRatio: {this.state.stocks.peRatio}</p>
+                      </div>
+
+
                     </div>
                 </div>
                 <Tabs>

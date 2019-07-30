@@ -1,5 +1,5 @@
 
-#formInput{
+#landingInput{
     border-bottom: 2px solid rgb(226, 130, 96);
 }
 
@@ -8,6 +8,11 @@
     height: 100vh;
     display: flex;
     justify-content: center;
+}
+
+.loginLogo {
+    position: absolute;
+    width: 5%;
 }
 .login {
     position: fixed;

@@ -1,3 +1,38 @@
+.B {
+  display: flex;
+  flex-direction: row;
+  width: 100%
+}
+
+.Greeting {
+  margin-left: 20px;
+  margin-top: -15px;
+  font-family: 'Quattrocento Sans', sans-serif;
+}
+
+.greetingLogout{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.Logout {
+  margin-right: 80px;
+  margin-top: -10px;
+  cursor: pointer;
+}
+
+#homeIcon {
+  margin-top: 20px;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  margin-top: 25px;
+  margin-right: 50px;
+}
 
 i {
   margin-right: 10px;
@@ -7,25 +42,86 @@ i {
   color: black;
 }
 
+.Modal {
+  width: 100%
+}
+
+.splashLogo {
+  height: 10%;
+  width: 10%;
+  margin-left: 5px;
+  padding: 15px;
+}
+
 .splashNav {
     display: flex;
     flex-direction: row;
     background-color: lightgrey;
     justify-content: space-between;
-    width: 100vw;
+    width: 100%;
     position: relative;
     padding-left: 30px;
     margin: 0 auto;
 }
 
 .horizontal-menu {
-    width: 100vw;
+    width: 100%;
     display: flex;
     background-color: lightgrey;
-    justify-content: space-around;
     align-items: center;    
   }
   
+.todaysDate {
+  margin-top: 15px;
+  width: 100%;
+}
  
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: black;
+  overflow-x: hidden;
+  transition: 0.5s;
+  opacity: 0.95;
+}
 
+.AccountSettings {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: black;
+  overflow-x: hidden;
+  transition: 0.5s;
+  opacity: 0.95;
+}
 
+.overlay-content {
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  color: white;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}

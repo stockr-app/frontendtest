@@ -16,21 +16,7 @@ export default class Billing extends Component {
         return (
             <div>
 
-               <div className="billingContainer">
-                   <div className="premiumPane">
-                   <h1>Stockr Premium</h1>
-                   <h3>$9.99 / Month</h3>
-                   <p>or $99.99 / Year</p>
-                   <h4>Unlimited Stock Tracking</h4>
-                   <p id="premiumInfo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                Ut gravida, erat at semper semper, elit dui accumsan purus, 
-                nec tristique neque est ac odio. Proin sodales, orci non 
-                condimentum aliquam, erat lacus sollicitudin arcu, vel auctor 
-                ex justo sit amet neque. Etiam at cursus lacus, vel laoreet 
-                leo. Aenean efficitur nulla in ante vulputate, et pretium ex 
-                maximus. Praesent condimentum metus id cursus interdum. In 
-                hac habitasse platea dictumst.</p>
-                   </div>              
+               <div className="billingContainer">             
                <div className="billingPane">
                    <h2>Choose Subscription</h2>
                    <div className="subscriptionBox">
@@ -53,9 +39,14 @@ export default class Billing extends Component {
                 </Button>
                 <h1>Billing Details</h1>
                 <Collapse in={this.state.open}>
-                    <div>                      
-                        <input placeholder="Name on Card"></input>
-                        <input placeholder="Card Number"></input>
+                    <div className="cardInfo">                      
+                        <input className="cardInput" placeholder="Name on Card"></input>
+                        <input className="cardInput" placeholder="Card Number"></input>
+                        <input className="cardInput" placeholder="Address 1"></input>
+                        <input className="cardInput" placeholder="Address 2 "></input>
+                        <input className="cardInput" placeholder="City"></input>
+                        <input className="cardInput" placeholder="State"></input>
+                        <input className="cardInput" placeholder="Zip"></input>
                     </div>
                 </Collapse>
                     <Button 
@@ -63,8 +54,7 @@ export default class Billing extends Component {
                     variant="success"
                     class="btn-round"
                     >Buy Now
-                    </Button>
-                    
+                    </Button>                    
                     </div>
             </div>
         </div>

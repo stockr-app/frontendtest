@@ -3,123 +3,105 @@ a:hover {
     color:  #152911;
 }
 
-#formInput {
-    margin-top: 5px;
-    border-bottom: 1px solid green;
-    border-top: none;
-    border-right: none;
-    border-left: none;
-    width: 50%;
-}
-
-
-#Modal {
-    background-image: url("https://i.ibb.co/hYCm90Z/image-from-rawpixel-id-329641-jpeg-1.jpg");
-    color: white;
-    opacity: 0.9;
-}
-
-#modalContent {
-    width: 75%;
-}
-
-.premiumBox {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.premiumCheckbox{
-    margin-top: 7px;
-    margin-right: 5px;
+.backContent {
+  margin-top: 40px;
 }
 
 .splashContent {
     display: flex;
     flex-direction: row;
-    width: 95%;
-    justify-content: center;
-
-}
-
-.splashForm {
-    border: 1px solid lightgrey;
-    border-radius: 25px;
-    color: #152911;
-    height: 600px;
-    width: 25%;
-    margin-left: 250px;
-    margin-right: 25px;
-    margin-top: 20px;
-    background-color: lightgrey;
-    opacity: 0.8;
-    text-align: center;
-}
-
-.splashLogo {
-    height: 10%;
-    width: 10%;
-    margin-left: 5px;
-    padding: 15px;
-}
-
-.splashNav {
-    display: flex;
-    flex-direction: row;
-    background-color: lightgrey;
     width: 100%;
-    position: relative;
-    padding-left: 30px;
-    margin: 0 auto;
+    justify-content: center;
 }
 
-.splashPage {
-    background-image: url("https://images.pexels.com/photos/159888/pexels-photo-159888.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200");
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover; 
-}
-
-.splashText {
-    width: 25%;
-    height: 600px;
-    border: 1px solid #152911;
-    border-radius: 25px;
-    margin-top: 20px;
-    margin-left: 25px;
-    color: white;
-    background-color: #152911;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 50px;
-    opacity: 0.9;
+.splashH1 {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 80px;
 }
 
 #registerLogo {
-    margin-top: 35px;
-    width: 60%;
+    width: 100%;
 }
 
-.formButton {
-    width: 50%;
-}
-
-.btnFacebook { 
-    width: 180px;
-    height:35px;  
-    border-radius: 4px;
-    background: #3b5998;
-    color:white;
-    border:0px transparent;  
+  .flip-card {
+    width: 800px;
+    height: 200px;
+    perspective: 1000px;
+    margin-top: 250px;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
     text-align: center;
-    margin: 0 auto;
-    display: inline-block;
-    cursor: pointer;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border: none;
+  }
+  
+  .flip-card-front {
+    color: white;
+    border: none;
+  }
+  
+  .flip-card-back {
+    transform: rotateY(180deg);
+    font-family: 'Francois One', sans-serif;
+    color: white;
+    border: none;
+    font-size: 25px;
+    line-height: 25px;
   }
 
-  .btnGoogle { 
-    width: 180px;
-    height:35px;  
-    margin:5px;
-    display: inline-block;
+  .frontFlipContent {
+    font-family: 'Francois One', sans-serif;
+    font-size: 25px;
   }
+
+  .splashOauth {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 70px;
+    width: 100%;
+  }
+
+  .videoTag {
+    position: absolute;
+
+  }
+
+  .fullscreen-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+
+}
+
+.fullscreen-bg__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+  

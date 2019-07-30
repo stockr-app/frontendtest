@@ -1,23 +1,24 @@
-import React, { Component } from 'react'
-
+import React, { Component } from 'react';
+import './Darkmode.css';
 export default class Darkmode extends Component {
 
     darkMode(){
-        document.getElementById().style.backgroundColor="black";
+        document.body.style.backgroundColor="black";
+        document.body.style.color="white";
         console.log('Dark mode activated')
     }
     lightMode(){
-      document.getElementById().style.backgroundColor="white";
+      document.body.style.backgroundColor="white";
+      document.body.style.color="black";
       console.log('Light mode activated')
     }
-
-    render() {
-        
-        return (
-            <div>
-                <button id="darkMode" onClick={this.darkMode}>Dark</button>
-                <button id="lightMode" onClick={this.lightMode}>Light</button>
-            </div>
-        )
+    
+    render(){
+      return(
+        <div className="quickSettings">
+              <button id="darkMode" onClick={this.darkMode}>Dark Mode</button>
+              <button id="lightMode" onClick={this.lightMode}>Light Mode</button>
+        </div>
+      )
     }
 }

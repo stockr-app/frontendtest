@@ -2,30 +2,32 @@
     width: 100%;
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 .billingPane{
     text-align: center;
-    width: 50%
+    width: 100%
+}
+
+.cardInfo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+}
+
+.cardInput {
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 5px;
 }
 
 .premiumButton {
     width: 50%;
 }
 
-#premiumInfo {
-    width: 50%;
-    margin: 0 auto;
-}
 
-.premiumPane {
-    text-align: center;
-    width: 50%;
-    height: 100%;
-    color: white;
-    background-color: rgb(58, 57, 57);
-    height: 660px;
-}
 
 span {
     display: flex;
@@ -51,23 +53,8 @@ span {
 .uiCheckbox {
     display: flex;
     flex-direction: column;
-    
 }
-/* const Container = styled.section`
-margin-left: 50px;
-`;
 
-const Wrapper = styled.section`
-border: 1px solid black;
-width: 250px;
-text-align: center;
-padding: 25px;
-margin-bottom 25px;
-`;
-
-const Button = styled.button`
-margin-top: 25px;
-height: 100px;
-width: 250px;
-font-size: 35px;
-`; */
+.payment-details-button {
+    color: white;
+}

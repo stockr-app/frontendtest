@@ -1,0 +1,20 @@
+.Nav {
+    background-color: lightgrey;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Roboto', sans-serif;
+}
+
+.aNav {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    width: 25%;
+    text-align: center;
+}
+
+.aNav:hover {
+    background-color: grey;
+    color: white;
+}

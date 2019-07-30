@@ -5,9 +5,8 @@ const NewsCard = props => {
   return (
       
     <div className="NewsCard">
-      <a className="aCard" href={props.url} rel="noopener noreferrer" target="_blank"><p>{props.title}</p></a>
       <img id="newsImg" src={props.image} alt={props.title} />
-      <p className="pCard">{props.text}</p>
+      <a className="aCard" href={props.url} rel="noopener noreferrer" target="_blank"><p>{props.title}</p></a>
       <h4 className="pCard">{props.source} - {props.date}</h4>
     </div>
     

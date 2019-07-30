@@ -20,3 +20,32 @@
 .pCard {
     font-size: 10px;
 }
+
+@media (max-width: 500px) {
+    .NewsCard {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 80%;
+        border: none;
+        background: #CDCDCD;
+        border-radius: 5px;
+        margin: 10px 10%;
+    }
+
+    .NewsCard h4 {
+        width: 100%;
+        font-weight: bold;
+    }
+
+    .NewsCard a {
+        width: 100%;
+        color: black;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    #newsImg {
+        /* width: 80%; */
+    }
+}

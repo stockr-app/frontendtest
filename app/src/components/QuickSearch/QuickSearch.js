@@ -71,7 +71,7 @@ export default class QuickSearch extends Component {
       };
 
       inputChange = e => {
-        this.setState({ symbol: e.target.value });
+        this.setState({ symbol: e.target.value.toUpperCase() });
       };
 
 
@@ -91,6 +91,7 @@ export default class QuickSearch extends Component {
                     onChange={this.inputChange}
                     value={this.state.symbol}
                     placeholder = 'Search a symbol...'
+                    maxLength = '5'
                     />
 
               </div>
